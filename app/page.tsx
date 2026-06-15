@@ -11,11 +11,18 @@ import { NotificationBanner } from '@/components/notification-banner';
 
 const JOIN_FORM_URL = 'https://docs.qq.com/form/page/DTXNGUmNiTmNnV016';
 
+const WechatIcon = ({ className }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+    <path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.295.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c-.276-.94-.418-1.92-.418-2.91C8.276 9.47 13.137 6 19.14 6c.275 0 .548.012.82.036C18.573 3.666 13.932 2.188 8.691 2.188zm-1.47 3.11a1.123 1.123 0 1 1 0 2.246 1.123 1.123 0 0 1 0-2.246zm5.576 0a1.123 1.123 0 1 1 0 2.246 1.123 1.123 0 0 1 0-2.246zM19.14 7.2c-5.28 0-9.498 3.516-9.498 7.83 0 4.312 4.217 7.83 9.498 7.83.958 0 1.882-.126 2.74-.354a.73.73 0 0 1 .602.082l1.498.878a.27.27 0 0 0 .14.046.247.247 0 0 0 .247-.247c0-.06-.024-.118-.04-.177l-.327-1.238a.495.495 0 0 1 .18-.558C25.696 20.104 27 18.236 27 16.03c0-4.314-4.217-7.83-9.498-7.83h1.638zm-3.107 5.027a.94.94 0 1 1 0 1.88.94.94 0 0 1 0-1.88zm5.107 0a.94.94 0 1 1 0 1.88.94.94 0 0 1 0-1.88z"/>
+  </svg>
+);
+
 export default function HomePage() {
   const [showAllEvents, setShowAllEvents] = useState(false);
   const [selectedEventType, setSelectedEventType] = useState<'all' | 'seminar' | 'lecture' | 'course'>('all');
   const [showComingSoon, setShowComingSoon] = useState(false);
-  const { t } = useLanguage();
+  const [showWechatQR, setShowWechatQR] = useState(false);
+  const { t, language } = useLanguage();
   const { events, loading, error, refresh } = useEvents();
 
   useEffect(() => {
@@ -70,6 +77,12 @@ export default function HomePage() {
             >
               {t.nav.resources}
             </a>
+            <a
+              href="/about"
+              className="text-on-surface-variant hover:text-primary transition-colors"
+            >
+              {t.nav.about}
+            </a>
           </div>
 
           {/* Right side: Language switcher + Join button */}
@@ -111,12 +124,11 @@ export default function HomePage() {
                   {t.hero.primaryButton}
                 </button>
               </a>
-              <button
-                onClick={() => setShowComingSoon(true)}
-                className="bg-surface-container-high text-primary px-6 py-3 rounded-xl font-bold text-base hover:bg-surface-container-highest transition-colors cursor-pointer"
-              >
-                {t.hero.secondaryButton}
-              </button>
+              <a href="/about">
+                <button className="bg-surface-container-high text-primary px-6 py-3 rounded-xl font-bold text-base hover:bg-surface-container-highest transition-colors cursor-pointer">
+                  {t.hero.secondaryButton}
+                </button>
+              </a>
             </div>
           </div>
 
@@ -262,26 +274,56 @@ export default function HomePage() {
                     </p>
                   </div>
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 flex-1">
-                  {t.resources.categories.courses.items.map((item, i) => (
-                    <a
-                      key={i}
-                      href={item.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`flex flex-col justify-between bg-white/10 hover:bg-white/20 rounded-2xl p-5 transition-colors group ${i === 0 ? 'sm:row-span-2' : ''
-                        }`}
-                    >
-                      <div>
-                        <div className={`font-bold mb-2 ${i === 0 ? 'text-xl' : 'text-lg'}`}>{item.name}</div>
-                        <p className={`opacity-70 leading-relaxed ${i === 0 ? 'text-sm' : 'text-sm line-clamp-3'}`}>{item.description}</p>
-                      </div>
-                      <div className="flex items-center gap-1.5 text-sm font-semibold mt-4 opacity-70 group-hover:opacity-100 transition-opacity">
-                        <span>Visit</span>
-                        <ExternalLink className="h-3.5 w-3.5" />
-                      </div>
-                    </a>
-                  ))}
+                <div className="flex flex-col sm:flex-row gap-3 flex-1 min-h-0">
+                  {/* New course — left, full height */}
+                  {(() => {
+                    const item = t.resources.categories.courses.items[0];
+                    return (
+                      <a
+                        href={item.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex flex-col justify-between bg-white/10 hover:bg-white/20 rounded-2xl p-5 transition-colors group sm:w-1/2 shrink-0"
+                      >
+                        <div>
+                          <div className="font-bold text-xl mb-2 flex items-center gap-2">
+                            {item.name}
+                            {item.badge && (
+                              <span className="text-xs font-bold bg-white/30 text-white px-2 py-0.5 rounded-full shrink-0">
+                                {item.badge}
+                              </span>
+                            )}
+                          </div>
+                          <p className="opacity-70 leading-relaxed text-sm">{item.description}</p>
+                        </div>
+                        <div className="flex items-center gap-1.5 text-sm font-semibold mt-4 opacity-70 group-hover:opacity-100 transition-opacity">
+                          <span>Visit</span>
+                          <ExternalLink className="h-3.5 w-3.5" />
+                        </div>
+                      </a>
+                    );
+                  })()}
+                  {/* Old courses — right column, stacked vertically */}
+                  <div className="flex flex-col gap-3 sm:w-1/2 min-h-0">
+                    {t.resources.categories.courses.items.slice(1).map((item, i) => (
+                      <a
+                        key={i}
+                        href={item.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex flex-col justify-between bg-white/10 hover:bg-white/20 rounded-2xl p-4 transition-colors group flex-1 min-h-0"
+                      >
+                        <div>
+                          <div className="font-bold text-base mb-1 leading-tight">{item.name}</div>
+                          <p className="opacity-70 text-xs leading-relaxed line-clamp-2">{item.description}</p>
+                        </div>
+                        <div className="flex items-center gap-1.5 text-xs font-semibold mt-2 opacity-70 group-hover:opacity-100 transition-opacity">
+                          <span>Visit</span>
+                          <ExternalLink className="h-3 w-3" />
+                        </div>
+                      </a>
+                    ))}
+                  </div>
                 </div>
               </div>
               {/* Decorative */}
@@ -422,6 +464,14 @@ export default function HomePage() {
                   <Github className="h-4 w-4" />
                   <span>{t.about.contact.github}</span>
                 </a>
+                <button
+                  onClick={() => setShowWechatQR(true)}
+                  className="inline-flex items-center gap-1.5 text-sm text-on-surface-variant hover:text-primary transition-colors cursor-pointer"
+                  title="微信公众号"
+                >
+                  <WechatIcon className="h-4 w-4" />
+                  <span>{language === 'zh' ? '公众号' : 'WeChat'}</span>
+                </button>
               </div>
             </div>
           </div>
@@ -445,7 +495,7 @@ export default function HomePage() {
           {/* Copyright */}
           <div className="py-6 border-t border-outline/10 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-on-surface-variant">
             <p>{t.footer.copyright}</p>
-            <a href="mailto:wjg172184@163.com" className="hover:text-primary transition-colors" aria-label="Email"><Mail className="h-4 w-4" /></a>
+            <a href="mailto:sarah.sun@aisafety-cn.com" className="hover:text-primary transition-colors" aria-label="Email"><Mail className="h-4 w-4" /></a>
           </div>
         </div>
       </footer>
@@ -460,6 +510,33 @@ export default function HomePage() {
           Coming Soon
         </div>
       </div>
+
+      {/* WeChat QR Modal */}
+      {showWechatQR && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm"
+          onClick={() => setShowWechatQR(false)}
+        >
+          <div
+            className="bg-white rounded-2xl p-6 shadow-2xl flex flex-col items-center gap-4 max-w-xs w-full mx-4"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h3 className="text-base font-bold text-gray-800">OCASC 微信公众号</h3>
+            <img
+              src="/ocasc-qrcode.png"
+              alt="OCASC微信公众号二维码"
+              className="w-56 h-56 object-contain rounded-xl"
+            />
+            <p className="text-xs text-gray-500">扫描二维码关注我们</p>
+            <button
+              onClick={() => setShowWechatQR(false)}
+              className="text-sm text-gray-400 hover:text-gray-600 transition-colors cursor-pointer"
+            >
+              关闭
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

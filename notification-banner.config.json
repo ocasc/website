@@ -1,8 +1,8 @@
 {
-  "enabled": false,
-  "message": "<填写主文案>",
-  "detailUrl": "<填写详情链接>",
-  "detailText": "<填写详情文本>",
-  "ctaUrl": "<填写CTA链接>",
-  "ctaText": "<填写CTA文本>"
+  "enabled": true,
+  "message": "🎓 前沿AI安全课程（中文版BlueDot）正在招生！覆盖 AGI 战略、技术安全与前沿治理，7月5日开课，第一期免费，名额有限。",
+  "detailUrl": "https://mp.weixin.qq.com/s/Eca3ROQZ4_1ub1x4Nzl_vA",
+  "detailText": "课程详情",
+  "ctaUrl": "https://wj.qq.com/s2/26468655/ea97/",
+  "ctaText": "立即申请"
 }
