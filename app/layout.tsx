@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Manrope, Inter } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import { LanguageProvider } from "@/lib/language-context";
 
@@ -98,6 +99,8 @@ export default function RootLayout({
     }
   };
 
+  const gaId = process.env.NEXT_PUBLIC_GA_ID;
+
   return (
     <html lang="zh-CN">
       <body
@@ -111,6 +114,7 @@ export default function RootLayout({
           {children}
         </LanguageProvider>
       </body>
+      {gaId && <GoogleAnalytics gaId={gaId} />}
     </html>
   );
 }
