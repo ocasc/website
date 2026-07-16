@@ -7,7 +7,6 @@ import { LanguageSwitcher } from '@/components/language-switcher';
 import { EventCard } from '@/components/event-card';
 import { HeroStats } from '@/components/hero-stats';
 import { useEvents } from '@/lib/use-events';
-import { NotificationBanner } from '@/components/notification-banner';
 
 const JOIN_FORM_URL = 'https://docs.qq.com/form/page/DTXNGUmNiTmNnV016';
 
@@ -53,7 +52,6 @@ export default function HomePage() {
     <div className="min-h-screen bg-surface font-body text-on-surface overflow-x-hidden">
       {/* ===== Top Navigation ===== */}
       <nav className="fixed top-0 w-full z-50 glass-nav shadow-sm">
-        <NotificationBanner />
         <div className="flex justify-between items-center px-6 md:px-12 lg:px-16 py-4 max-w-6xl mx-auto">
           {/* Logo / Site Name */}
           <div className="flex items-center gap-1.5 text-lg md:text-xl font-bold tracking-tighter text-on-surface font-headline">

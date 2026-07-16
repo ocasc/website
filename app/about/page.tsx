@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import { Mail, Tv, Linkedin, Github, Target, ExternalLink } from 'lucide-react';
 import { useLanguage } from '@/lib/language-context';
 import { LanguageSwitcher } from '@/components/language-switcher';
-import { NotificationBanner } from '@/components/notification-banner';
 
 const ZhihuIcon = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor">
@@ -90,7 +89,6 @@ export default function AboutPage() {
     <div className="min-h-screen bg-surface font-body text-on-surface overflow-x-hidden">
       {/* ===== Top Navigation ===== */}
       <nav className="fixed top-0 w-full z-50 glass-nav shadow-sm">
-        <NotificationBanner />
         <div className="flex justify-between items-center px-6 md:px-12 lg:px-16 py-4 max-w-6xl mx-auto">
           {/* Logo / Site Name */}
           <a href="/" className="flex items-center gap-1.5 text-lg md:text-xl font-bold tracking-tighter text-on-surface font-headline hover:opacity-80 transition-opacity">
