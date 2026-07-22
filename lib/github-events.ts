@@ -109,6 +109,15 @@ function formatDate(dateStr: string): string {
     return `${year}/${month}/${day}`;
   }
   
+  // 处理 YYYY/M/D 格式（范围日期会使用开始日期）
+  const yearFirstSlashDateMatch = dateStr.match(/(\d{4})\/(\d{1,2})\/(\d{1,2})/);
+  if (yearFirstSlashDateMatch) {
+    const year = yearFirstSlashDateMatch[1];
+    const month = yearFirstSlashDateMatch[2].padStart(2, '0');
+    const day = yearFirstSlashDateMatch[3].padStart(2, '0');
+    return `${year}/${month}/${day}`;
+  }
+
   // 处理 MM/DD/YYYY 格式
   const slashDateMatch = dateStr.match(/(\d{1,2})\/(\d{1,2})\/(\d{4})/);
   if (slashDateMatch) {
@@ -165,7 +174,7 @@ function parseEventFromMarkdown(content: string, filePath: string): GitHubEventD
     // 改进的日期提取 - 支持多种格式
     let date = '';
     const datePatterns = [
-      /\*\*日期\*\*[：:]\s*(.+)/i,
+      /(?:\*\*)?日期(?:\*\*)?[：:]\s*(.+)/i,
       /Date[：:]\s*(.+)/i,
       /(\d{4}\s*年\s*\d{1,2}\s*月\s*\d{1,2}\s*日)/,
       /(\d{4}-\d{1,2}-\d{1,2})/,
@@ -465,23 +474,22 @@ export async function fetchAllEvents(signal?: AbortSignal): Promise<GitHubEventD
 
     // 按日期从近到远排序
     events.sort((a, b) => {
-      const convertChineseDate = (dateStr: string) => {
-        if (!dateStr) return null;
-        const normalized = dateStr.trim();
-        const converted = normalized.replace(/(\d{4})\s*年\s*(\d{1,2})\s*月\s*(\d{1,2})\s*日/, '$1-$2-$3');
-        const date = new Date(converted);
-        return isNaN(date.getTime()) ? null : date;
+      const parseEventDate = (dateStr: string) => {
+        const match = dateStr.match(/^(\d{4})\/(\d{2})\/(\d{2})$/);
+        if (!match) return null;
+
+        return Date.UTC(Number(match[1]), Number(match[2]) - 1, Number(match[3]));
       };
 
-      const dateA = convertChineseDate(a.date);
-      const dateB = convertChineseDate(b.date);
+      const dateA = parseEventDate(a.date);
+      const dateB = parseEventDate(b.date);
 
-      if (dateA && dateB) {
-        return dateB.getTime() - dateA.getTime();
+      if (dateA !== null && dateB !== null) {
+        return dateB - dateA;
       }
 
-      if (dateA && !dateB) return -1;
-      if (!dateA && dateB) return 1;
+      if (dateA !== null) return -1;
+      if (dateB !== null) return 1;
 
       return a.title.localeCompare(b.title);
     });
