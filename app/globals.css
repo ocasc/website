@@ -167,6 +167,31 @@
   -webkit-backdrop-filter: blur(12px);
 }
 
+.site-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  flex: none;
+  color: var(--foreground);
+  font-family: var(--font-manrope), system-ui, sans-serif;
+  font-size: 1.0625rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 1.25;
+  white-space: nowrap;
+}
+
+.site-brand__mark {
+  flex: none;
+  object-fit: contain;
+}
+
+@media (min-width: 768px) {
+  .site-brand {
+    font-size: 1.1875rem;
+  }
+}
+
 /* Hero gradient */
 .hero-gradient {
   background: linear-gradient(135deg, #004ac6 0%, #2563eb 100%);

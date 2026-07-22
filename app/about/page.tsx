@@ -91,13 +91,13 @@ export default function AboutPage() {
       <nav className="fixed top-0 w-full z-50 glass-nav shadow-sm">
         <div className="flex justify-between items-center px-6 md:px-12 lg:px-16 py-4 max-w-6xl mx-auto">
           {/* Logo / Site Name */}
-          <a href="/" className="flex items-center gap-1.5 text-lg md:text-xl font-bold tracking-tighter text-on-surface font-headline hover:opacity-80 transition-opacity">
-            <img src="/logo.png" alt={t.nav.siteName} className="h-6 w-6 object-contain" />
+          <a href="/" className="site-brand hover:opacity-80 transition-opacity">
+            <img src="/logo.png" alt={t.nav.siteName} className="site-brand__mark h-7 w-7" />
             {t.nav.siteName}
           </a>
 
           {/* Nav Links (desktop) */}
-          <div className="hidden md:flex gap-8 items-center font-headline tracking-tight font-semibold">
+          <div className="hidden md:flex gap-8 items-center font-headline font-semibold text-[0.95rem]">
             <a href="/#events" className="text-on-surface-variant hover:text-primary transition-colors">
               {t.nav.events}
             </a>
@@ -128,12 +128,6 @@ export default function AboutPage() {
 
         {/* ===== Hero Section ===== */}
         <section className="max-w-6xl mx-auto px-6 md:px-12 lg:px-16 py-16 lg:py-24">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-tertiary/10 text-tertiary text-sm font-semibold mb-6">
-            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" />
-            </svg>
-            {ap.hero.badge}
-          </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-extrabold text-on-surface leading-tight tracking-tight mb-6">
             {ap.hero.title}
           </h1>
@@ -195,10 +189,10 @@ export default function AboutPage() {
                 >
                   {/* Content card */}
                   <div className={`w-full md:w-5/12 ${i % 2 === 0 ? 'md:pr-10 md:text-right' : 'md:pl-10'}`}>
-                    <div className={`rounded-2xl p-6 shadow-sm border transition-shadow hover:shadow-md ${
+                    <div className={`border-l-2 p-5 md:p-6 transition-colors ${
                       item.comingSoon
-                        ? 'bg-surface-container-lowest border-dashed border-outline/30 opacity-75'
-                        : 'bg-surface-container-lowest border-outline/10'
+                        ? 'border-dashed border-outline/40 bg-surface-container-low opacity-80'
+                        : 'border-primary/70 bg-surface-container-low hover:bg-surface-container'
                     }`}>
                       <div className={`flex items-center gap-2 mb-3 ${i % 2 === 0 ? 'md:justify-end' : ''}`}>
                         <span className="inline-block text-xs font-semibold text-primary bg-primary/10 px-2.5 py-1 rounded-full">
