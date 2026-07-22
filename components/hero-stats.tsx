@@ -48,9 +48,9 @@ interface StatsDisplayProps {
 }
 
 const rings = [
-  { size: 92, speed: 45, reverse: false, num: 10000, suffix: '+', key: 'reach' as const, numSize: 'text-base md:text-lg', color: 'text-primary', labelColor: 'text-primary/70' },
-  { size: 66, speed: 30, reverse: true, num: 200, suffix: '+', key: 'community' as const, numSize: 'text-sm md:text-base', color: 'text-primary', labelColor: 'text-primary/70' },
-  { size: 40, speed: 20, reverse: false, num: 20, suffix: '+', key: 'coreTeam' as const, numSize: 'text-xs md:text-sm', color: 'text-tertiary', labelColor: 'text-tertiary/70' },
+  { size: 92, speed: 45, reverse: false, key: 'reach' as const, numSize: 'text-base md:text-lg', color: 'text-primary', labelColor: 'text-primary/70' },
+  { size: 66, speed: 30, reverse: true, key: 'community' as const, numSize: 'text-sm md:text-base', color: 'text-primary', labelColor: 'text-primary/70' },
+  { size: 40, speed: 20, reverse: false, key: 'coreTeam' as const, numSize: 'text-xs md:text-sm', color: 'text-tertiary', labelColor: 'text-tertiary/70' },
 ];
 
 export function HeroStats({ stats }: StatsDisplayProps) {
@@ -61,6 +61,9 @@ export function HeroStats({ stats }: StatsDisplayProps) {
       <div className="absolute inset-0 flex items-center justify-center">
         {rings.map((ring, i) => {
           const paused = hoveredRing === i;
+          const value = stats[ring.key].value;
+          const end = Number(value.replace(/[^\d]/g, ''));
+          const suffix = value.replace(/[\d,]/g, '');
 
           return (
             <div key={i} className="absolute" style={{ width: `${ring.size}%`, height: `${ring.size}%` }}>
@@ -96,7 +99,7 @@ export function HeroStats({ stats }: StatsDisplayProps) {
                       <span
                         className={`${ring.numSize} ${ring.color} font-extrabold font-headline leading-none tracking-tight`}
                       >
-                        <AnimatedCounter end={ring.num} suffix={ring.suffix} />
+                        <AnimatedCounter end={end} suffix={suffix} />
                       </span>
                       {/* Label */}
                       <span

@@ -191,12 +191,12 @@ export const translations: Record<Language, Translations> = {
     },
     stats: {
       coreTeam: { value: '20+', label: '核心共创' },
-      community: { value: '200+', label: '社区成员' },
+      community: { value: '400+', label: '社区成员' },
       reach: { value: '10,000+', label: '泛社区覆盖' },
     },
     events: {
       title: '活动',
-      description: '关注最新的研讨会、技术讲座和共学课程',
+      description: '关注最新的研讨会、技术讲座和课程',
       allTypes: '全部',
       upcomingEvents: '即将举行的活动',
       pastEvents: '往期活动',
@@ -210,7 +210,7 @@ export const translations: Record<Language, Translations> = {
           description: '前沿或科普的主题讲座',
         },
         course: {
-          title: '共学课程',
+          title: '课程',
           description: '与其它成员共同学习一门课程',
         },
       },
@@ -323,21 +323,21 @@ export const translations: Record<Language, Translations> = {
         paragraphs: [
           'AI安全开放社区（Open Community for AI Safety China，OCASC）起初是一个小型学习小组，由一群对AI安全充满热情的研究者和爱好者共同创立。我们不定期阅读和讨论国际前沿AI安全研究，随着越来越多志同道合的朋友加入，社区逐渐壮大，成为中文互联网最大的AI安全开放社区。',
           '我们的使命是通过改善前沿AI安全研究的获取渠道、促进技术交流与讨论、建立与国际AI安全网络的连接，在中国构建一个开放、高质量的AI安全生态系统。',
-          '目前，社区以微信群为核心，并在Bilibili、知乎、LinkedIn、GitHub等多个平台同步运营，累计覆盖超过10,000名关注者，核心共创成员超过20人，社区成员超过300人。',
+          '目前，社区以微信群为核心，并在Bilibili、知乎、LinkedIn、GitHub等多个平台同步运营，累计覆盖超过10,000名关注者，核心共创成员超过20人，社区成员超过400人。',
         ],
       },
       milestones: {
         title: '里程碑',
         items: [
           {
-            period: '2025年4月',
-            title: '从学习小组起步',
-            description: '一群关注AI安全的学者与研究者相聚，创立AI安全学习小组，开始不定期组织前沿研究的阅读与讨论活动。',
+            period: '2026年7月',
+            title: '成为IASEAI Affiliate',
+            description: '社区成为国际安全与伦理人工智能协会（IASEAI）Affiliate，进一步加强与国际AI安全与伦理网络的连接。',
           },
           {
-            period: '2026年3月',
-            title: '举办AI Control黑客马拉松',
-            description: '与国际AI安全研究组织Apart Research合作，在上海举办国内首届AI Control黑客马拉松，约10支参赛团队占全球参赛比例6.5%，赛题围绕Build、Break、Improve三大方向展开。',
+            period: '2026年7月',
+            title: '中国版BlueDot课程',
+            description: '将国际AI安全社区最受认可的BlueDot课程引入中国，并由资深AI安全专家担任讲师。',
           },
           {
             period: '2026年4月',
@@ -345,10 +345,14 @@ export const translations: Record<Language, Translations> = {
             description: '社区正式更名为「AI安全开放社区」，建立双周研讨会机制，邀请国内外学者开展主题分享，在Bilibili、知乎等平台同步扩大影响力，成员突破200人。',
           },
           {
-            period: '即将到来',
-            title: '中国版BlueDot课程',
-            description: '将国际AI安全社区最受认可的BlueDot课程引入中国，并由资深AI安全专家担任讲师。',
-            comingSoon: true,
+            period: '2026年3月',
+            title: '举办AI Control黑客马拉松',
+            description: '与国际AI安全研究组织Apart Research合作，在上海举办国内首届AI Control黑客马拉松，约10支参赛团队占全球参赛比例6.5%，赛题围绕Build、Break、Improve三大方向展开。',
+          },
+          {
+            period: '2025年4月',
+            title: '从学习小组起步',
+            description: '一群关注AI安全的学者与研究者相聚，创立AI安全学习小组，开始不定期组织前沿研究的阅读与讨论活动。',
           },
         ],
       },
@@ -390,7 +394,7 @@ export const translations: Record<Language, Translations> = {
     },
     stats: {
       coreTeam: { value: '20+', label: 'Core Team' },
-      community: { value: '200+', label: 'Community' },
+      community: { value: '400+', label: 'Community' },
       reach: { value: '10,000+', label: 'Extended Reach' },
     },
     events: {
@@ -535,21 +539,21 @@ export const translations: Record<Language, Translations> = {
         paragraphs: [
           'Open Community for AI Safety China (OCASC) began as a small study group, founded by a group of researchers and enthusiasts passionate about AI safety. We started by periodically reading and discussing frontier international AI safety research. As more like-minded people joined, the community grew to become the largest AI safety open community in the Chinese-speaking internet.',
           'Our mission is to support an open, high-quality AI safety ecosystem in China by improving access to frontier AI safety research, fostering technical discussion, and building connections with the global AI safety network.',
-          'Today, the community is centered around WeChat groups and active across multiple platforms including Bilibili, Zhihu, LinkedIn, and GitHub, reaching over 10,000 followers, with 300+ community members and 20+ core contributors.',
+          'Today, the community is centered around WeChat groups and active across multiple platforms including Bilibili, Zhihu, LinkedIn, and GitHub, reaching over 10,000 followers, with 400+ community members and 20+ core contributors.',
         ],
       },
       milestones: {
         title: 'Milestones',
         items: [
           {
-            period: 'April 2025',
-            title: 'Starting as a Study Group',
-            description: 'A group of scholars and researchers interested in AI safety came together to found the AI Safety Study Group, beginning periodic reading sessions and discussions on frontier research.',
+            period: 'July 2026',
+            title: 'Became an IASEAI Affiliate',
+            description: 'The community became an affiliate of the International Association for Safe & Ethical AI (IASEAI), strengthening its connection to the global AI safety and ethics network.',
           },
           {
-            period: 'March 2026',
-            title: 'AI Control Hackathon',
-            description: "In collaboration with Apart Research, the community hosted China's first AI Control Hackathon in Shanghai. About 10 teams participated — 6.5% of global submissions — competing across Build, Break, and Improve tracks.",
+            period: 'July 2026',
+            title: 'BlueDot Course — China Edition',
+            description: "Bringing the internationally recognized BlueDot AI safety curriculum to China, with lectures delivered by senior AI safety experts.",
           },
           {
             period: 'April 2026',
@@ -557,10 +561,14 @@ export const translations: Record<Language, Translations> = {
             description: 'The community was officially renamed to Open Community for AI Safety China. Bi-weekly seminars were established with invited scholars, while presence expanded across Bilibili, Zhihu and other platforms, surpassing 200 members.',
           },
           {
-            period: 'Coming Soon',
-            title: 'BlueDot Course — China Edition',
-            description: "Bringing the internationally recognized BlueDot AI safety curriculum to China, with lectures delivered by senior AI safety experts.",
-            comingSoon: true,
+            period: 'March 2026',
+            title: 'AI Control Hackathon',
+            description: "In collaboration with Apart Research, the community hosted China's first AI Control Hackathon in Shanghai. About 10 teams participated — 6.5% of global submissions — competing across Build, Break, and Improve tracks.",
+          },
+          {
+            period: 'April 2025',
+            title: 'Starting as a Study Group',
+            description: 'A group of scholars and researchers interested in AI safety came together to found the AI Safety Study Group, beginning periodic reading sessions and discussions on frontier research.',
           },
         ],
       },

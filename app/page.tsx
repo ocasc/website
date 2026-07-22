@@ -103,9 +103,34 @@ export default function HomePage() {
         <section className="max-w-6xl mx-auto px-6 md:px-12 lg:px-16 py-16 lg:py-24 grid lg:grid-cols-12 gap-12 items-center">
           {/* Left: Text */}
           <div className="lg:col-span-7">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-tertiary/10 text-tertiary text-sm font-semibold mb-6">
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" /></svg>
-              {t.hero.badge}
+            <div className="flex flex-wrap items-center gap-2 mb-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-tertiary/10 text-tertiary text-sm font-semibold">
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" /></svg>
+                {t.hero.badge}
+              </div>
+              <a
+                href="https://www.iaseai.org/affiliates"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="IASEAI Affiliate"
+                className="inline-flex items-center gap-1.5 rounded-full bg-[#b76727]/10 px-3 py-1 text-sm font-semibold text-[#9c541f] ring-1 ring-inset ring-[#b76727]/25 transition-colors hover:bg-[#b76727]/20"
+              >
+                <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <circle cx="12" cy="12" r="2.75" fill="currentColor" />
+                  <g stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                    <path d="M12 1.5v4" />
+                    <path d="M12 18.5v4" />
+                    <path d="M1.5 12h4" />
+                    <path d="M18.5 12h4" />
+                    <path d="m4.58 4.58 2.83 2.83" />
+                    <path d="m16.59 16.59 2.83 2.83" />
+                    <path d="m19.42 4.58-2.83 2.83" />
+                    <path d="m7.41 16.59-2.83 2.83" />
+                  </g>
+                </svg>
+                <span>IASEAI Affiliate</span>
+                <ExternalLink className="h-3 w-3" aria-hidden="true" />
+              </a>
             </div>
             <h1 className="text-3xl md:text-4xl lg:text-[3.5rem] font-headline font-extrabold text-on-surface leading-[1.15] tracking-tight mb-8">
               {t.hero.titlePrefix}
@@ -152,8 +177,8 @@ export default function HomePage() {
                   [
                     { key: 'all', label: t.events.allTypes },
                     { key: 'lecture', label: t.events.eventTypes.lecture.title },
-                    { key: 'seminar', label: t.events.eventTypes.seminar.title },
                     { key: 'course', label: t.events.eventTypes.course.title },
+                    { key: 'seminar', label: t.events.eventTypes.seminar.title },
                   ] as const
                 ).map(({ key, label }) => (
                   <button
