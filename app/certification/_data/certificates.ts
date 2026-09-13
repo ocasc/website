@@ -23,10 +23,10 @@ const ISSUED_AT = '2026-09-07'
 
 /** 说明段开头（两个方向共用），后接各方向的 descZh / descEn */
 export const INTRO_ZH =
-  '本课程由AI安全开放社区（OCASC）制作。学员于2026年7月6日至8月23日完成为期六周、约30小时的研读与苏格拉底式小组研讨。'
+  '本课程由AI安全开放社区（OCASC）发行。学员于2026年7月6日至8月23日完成为期六周、约30小时的研读与苏格拉底式小组研讨。'
 
 export const INTRO_EN =
-  'This course is developed by the Open Community for AI Safety China (OCASC). From July 6 to August 23, 2026, the earner completed six weeks of study and Socratic group discussions totaling approximately 30 hours.'
+  'This course is published by the Open Community for AI Safety China (OCASC). From July 6 to August 23, 2026, the earner completed six weeks of study and Socratic group discussions totaling approximately 30 hours.'
 
 export const TRACK_INFO: Record<
   Track,
@@ -36,9 +36,9 @@ export const TRACK_INFO: Record<
     zh: 'AI安全技术方向',
     en: 'Technical AI Safety Track',
     descZh:
-      '学员系统研习了AI安全领域的核心技术挑战与研究路线图，涵盖安全模型训练（数据过滤、RLHF 与可扩展监督）、危险能力评估、模型可解释性、AI控制等议题，并完成个人技术方向的规划，与研究导师和国际AI安全社区建立联系。',
+      '学员系统研习了AI安全领域的核心技术挑战与研究路线图，涵盖安全模型训练（数据过滤、RLHF 与可扩展监督）、危险能力评估、模型可解释性、AI控制等议题，并完成个人技术方向的规划，与导师和国内外AI安全社区建立联系。',
     descEn:
-      'The earner has systematically studied the core technical challenges and research roadmaps of AI safety, including safe model training (data filtering, RLHF and scalable oversight), dangerous-capability evaluations, interpretability, and AI Control, and has charted a personal direction connecting with research mentors and the global AI Safety communities.',
+      'The earner has systematically studied the core technical challenges and research roadmaps of AI safety, including safe model training (data filtering, RLHF and scalable oversight), dangerous-capability evaluations, interpretability, and AI Control, and has charted a personal technical direction, building connections with mentors and AI safety communities in China and around the world.',
   },
   governance: {
     zh: '前沿AI治理方向',

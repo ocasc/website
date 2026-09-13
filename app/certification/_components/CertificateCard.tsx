@@ -90,7 +90,13 @@ export default function CertificateCard({ record }: CertificateCardProps) {
             <div className="w-24 h-px bg-[#b8934a]/60 mx-auto mb-7" />
             <p className="text-sm text-[#6b5a3a] mb-1.5">兹证明</p>
             <p className="font-serif-en italic text-xs text-[#6b5a3a]/80 mb-5">This is to certify that</p>
-            <p className="font-serif-sc text-[54px] leading-tight font-bold tracking-[0.15em] text-[#1f1a10]">
+            <p
+              className={
+                /[\u4e00-\u9fff]/.test(record.nameZh)
+                  ? 'font-serif-sc text-[54px] leading-tight font-bold tracking-[0.15em] text-[#1f1a10]'
+                  : 'font-serif-en text-[56px] leading-tight font-semibold tracking-[0.02em] text-[#1f1a10]'
+              }
+            >
               {record.nameZh}
             </p>
             {record.nameEn && (
