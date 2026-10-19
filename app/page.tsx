@@ -8,7 +8,7 @@ import { EventCard } from '@/components/event-card';
 import { HeroStats } from '@/components/hero-stats';
 import { useEvents } from '@/lib/use-events';
 
-const JOIN_FORM_URL = 'https://docs.qq.com/form/page/DTXNGUmNiTmNnV016';
+const JOIN_FORM_URL = 'https://wj.qq.com/s2/28113604/kyqo/';
 
 const WechatIcon = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor">

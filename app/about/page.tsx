@@ -29,7 +29,7 @@ const WechatIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-const JOIN_FORM_URL = 'https://docs.qq.com/form/page/DTXNGUmNiTmNnV016';
+const JOIN_FORM_URL = 'https://wj.qq.com/s2/28113604/kyqo/';
 
 const CORE_MEMBERS = [
   {
