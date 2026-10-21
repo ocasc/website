@@ -268,23 +268,36 @@
 
 
 /* ---------- about page ---------- */
-.statRow {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px 64px;
-  padding: 20px 0;
-  border-top: 2px solid var(--home-ink);
-  border-bottom: 1px solid var(--home-line-strong);
+/* hero 右侧放数据栏（与首页 pyramid 同构），不再单独占一条通栏 */
+.heroAbout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 72px;
+  align-items: start;
 }
-.statCell { display: flex; flex-direction: column; gap: 4px; }
-.statCell b {
-  font-size: clamp(28px, 3.2vw, 40px);
+.heroAboutText { min-width: 0; }
+.statRail {
+  display: flex;
+  flex-direction: column;
+  margin-top: 6px;
+  border-top: 2px solid var(--home-ink);
+}
+.statRailRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 15px 0 14px;
+  border-bottom: 1px solid var(--home-line);
+}
+.statRailRow b {
+  font-size: 32px;
   font-weight: 790;
   letter-spacing: -1.2px;
   font-variant-numeric: tabular-nums;
   line-height: 1;
 }
-.statCell span { font-size: 11.5px; color: var(--home-muted3); }
+.statRailRow span { font-size: 12px; color: var(--home-muted3); text-align: right; }
 .storyGrid { display: block; }
 .storyList {
   columns: 1;
@@ -298,6 +311,7 @@
   break-inside: avoid;
 }
 .storyList p:last-child { margin-bottom: 0; }
+.msList { border-top: 2px solid var(--home-ink); }
 .msRow {
   display: grid;
   grid-template-columns: 120px 1fr 1.6fr;
@@ -319,18 +333,23 @@
 }
 .msTitle { font-size: 16px; font-weight: 700; letter-spacing: -0.2px; }
 .msDesc { font-size: 13px; line-height: 1.65; color: var(--home-muted2); }
-.footerSlim { border-top: 2px solid var(--home-ink); margin-top: 48px; }
+.footerSlim { border-top: 2px solid var(--home-ink); }
 .footerSlimIn {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
   justify-content: space-between;
   gap: 16px 32px;
-  padding: 20px 0 62px;
+  /* 自带内边距，不靠 .wrap：.wrap 在窄屏用 padding 简写，会把这行清零 */
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 20px 40px 62px;
 }
 
 /* ---------- resources page ---------- */
 .heroPage { padding: 64px 0 30px; }
+/* 必须写在 .heroPage 之后：同权重，靠顺序覆盖它的 padding-bottom */
+.heroAbout { padding: 64px 0 0; }
 .criteriaWrap {
   border-top: 1px solid var(--home-line-strong);
   padding-top: 18px;
@@ -605,6 +624,7 @@
   .tierCore { width: 66%; }
   .tierMembers { width: 86%; }
   .tier b { font-size: 20px; }
+  .heroAbout { grid-template-columns: minmax(0, 1fr) 260px; gap: 48px; }
 }
 
 @media (max-width: 768px) {
@@ -631,7 +651,23 @@
   .listHead { display: none; }
   .msRow { grid-template-columns: 1fr; gap: 6px; padding: 14px 0; }
   .msRow:hover { padding-left: 0; }
-  .statRow { gap: 18px 40px; }
+  .heroAbout { grid-template-columns: minmax(0, 1fr); gap: 30px; padding-bottom: 0; }
+  .statRail {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0 18px;
+    margin-top: 0;
+  }
+  .statRailRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+    padding: 12px 0 0;
+    border-bottom: 0;
+  }
+  .statRailRow b { font-size: 26px; }
+  .statRailRow span { font-size: 11.5px; text-align: left; }
+  .footerSlimIn { padding: 16px 22px 36px; gap: 12px 20px; }
   .storyList { columns: 1; }
   .rRow { grid-template-columns: 1fr; gap: 6px; padding: 14px 0; }
   .rRow:hover { padding-left: 0; }

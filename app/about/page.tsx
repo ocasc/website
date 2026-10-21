@@ -46,27 +46,18 @@ export default function AboutPage() {
 
       <main>
         <div className={styles.wrap}>
-          <section className={styles.heroPage}>
-            <div>
+          <section className={`${styles.heroPage} ${styles.heroAbout}`}>
+            <div className={styles.heroAboutText}>
               <h1 className={styles.h1}>{ap.hero.title}</h1>
               <p className={styles.lede}>{ap.hero.description}</p>
             </div>
-          </section>
-
-          <section className={styles.section}>
-            <div className={styles.statRow}>
-              <div className={styles.statCell}>
-                <b>{stats.coreTeam.value}</b>
-                <span>{stats.coreTeam.label}</span>
-              </div>
-              <div className={styles.statCell}>
-                <b>{stats.community.value}</b>
-                <span>{stats.community.label}</span>
-              </div>
-              <div className={styles.statCell}>
-                <b>{stats.reach.value}</b>
-                <span>{stats.reach.label}</span>
-              </div>
+            <div className={styles.statRail}>
+              {[stats.coreTeam, stats.community, stats.reach].map((s) => (
+                <div key={s.label} className={styles.statRailRow}>
+                  <b>{s.value}</b>
+                  <span>{s.label}</span>
+                </div>
+              ))}
             </div>
           </section>
 
@@ -104,7 +95,7 @@ export default function AboutPage() {
         </div>
 
         <footer className={styles.footerSlim}>
-          <div className={`${styles.wrap} ${styles.footerSlimIn}`}>
+          <div className={styles.footerSlimIn}>
             <div className={styles.fSite}>{t.home.footer.site}</div>
             <div className={styles.fLinks}>
               <a href="https://space.bilibili.com/1770030225" target="_blank" rel="noopener noreferrer">
