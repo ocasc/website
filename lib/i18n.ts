@@ -390,6 +390,13 @@ export const translations: Record<Language, Translations> = {
           commit: 'full',
         },
         {
+          name: 'Cambridge ERA:AI Fellowship',
+          kind: '研究 fellowship',
+          note: '10 周，剑桥现场，含 £10,000 津贴与差旅；已支持 200+ 位研究者。',
+          url: 'https://erafellowship.org/fellowship',
+          commit: 'full',
+        },
+        {
           name: 'LASR Labs',
           kind: '研究实验室',
           note: '13 周，全职在伦敦现场，从选题到投稿走完一个理论对齐项目。',
@@ -404,6 +411,13 @@ export const translations: Record<Language, Translations> = {
           commit: 'full',
         },
         {
+          name: 'Singapore AI Safety Fellowship',
+          kind: '驻留 fellowship',
+          note: '3 个月，新加坡驻地，每月 SGD 5,000 另含住宿；首期已截止，下期 2027 春夏。',
+          url: 'https://aisafety.sg/programs/singapore-ai-safety-fellowship',
+          commit: 'full',
+        },
+        {
           name: 'SPAR',
           kind: '远程研究项目',
           note: '兼职、远程，导师监督下的对齐研究，适合有技术背景想转进研究的人。',
@@ -413,7 +427,7 @@ export const translations: Record<Language, Translations> = {
         {
           name: 'AI Safety Camp',
           kind: '协作研究',
-          note: '约 3 个月，远程团队协作做一个具体研究项目，入门到中级。',
+          note: '约 3 个月，远程团队做一个具体研究项目；偏入门，产出以论文与项目报告为主。',
           url: 'https://aisafety.camp/',
           commit: 'part',
         },
@@ -756,6 +770,13 @@ export const translations: Record<Language, Translations> = {
           commit: 'full',
         },
         {
+          name: 'Cambridge ERA:AI Fellowship',
+          kind: 'Research fellowship',
+          note: '10 weeks in Cambridge with a £10,000 stipend and travel covered; 200+ researchers supported so far.',
+          url: 'https://erafellowship.org/fellowship',
+          commit: 'full',
+        },
+        {
           name: 'LASR Labs',
           kind: 'Research lab',
           note: '13 weeks full-time in London, taking a theoretical alignment project from proposal to publication.',
@@ -770,6 +791,13 @@ export const translations: Record<Language, Translations> = {
           commit: 'full',
         },
         {
+          name: 'Singapore AI Safety Fellowship',
+          kind: 'Residential fellowship',
+          note: '3 months in Singapore with SGD 5,000 a month plus housing; first cohort closed, next in spring/summer 2027.',
+          url: 'https://aisafety.sg/programs/singapore-ai-safety-fellowship',
+          commit: 'full',
+        },
+        {
           name: 'SPAR',
           kind: 'Remote research program',
           note: 'Part-time and remote; supervised alignment research for technical people moving into research.',
@@ -779,7 +807,7 @@ export const translations: Record<Language, Translations> = {
         {
           name: 'AI Safety Camp',
           kind: 'Collaborative research',
-          note: 'About 3 months, remote teams working on one concrete research project, entry to intermediate.',
+          note: 'About 3 months, remote teams on one concrete project; entry-level, output is papers and project reports.',
           url: 'https://aisafety.camp/',
           commit: 'part',
         },
