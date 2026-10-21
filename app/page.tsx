@@ -11,9 +11,9 @@ const PROPOSE_TALK_URL =
   "https://docs.google.com/forms/d/1-LlnyTAXhM8c8YvQZDddWkfrE-Qp0SwxwYJZbPB-yXo/viewform";
 
 const PARTNERS = [
-  { name: "According.Work", logo: "/accordingwork-logo.png", url: "https://according.work/" },
-  { name: "清华大学出版社", logo: "/tup-logo.png", url: "https://www.tup.tsinghua.edu.cn/" },
-  { name: "Fungimind", logo: "/fungimind-logo.jpg", url: "https://www.thefungimind.com/" },
+  { name: "According.Work", logo: "/accordingwork-logo.png", url: "https://according.work/", tall: false },
+  { name: "清华大学出版社", logo: "/tup-logo.png", url: "https://www.tup.tsinghua.edu.cn/", tall: false },
+  { name: "Fungimind", logo: "/fungimind-logo.jpg", url: "https://www.thefungimind.com/", tall: true },
 ];
 
 function BrandMark() {
@@ -109,7 +109,9 @@ export default function HomePage() {
         <div className={styles.wrap}>
           <section className={styles.hero}>
             <div>
-              <p className={styles.eyebrow}>{home.hero.eyebrow}</p>
+              {home.hero.eyebrow ? (
+                <p className={styles.eyebrow}>{home.hero.eyebrow}</p>
+              ) : null}
               <h1 className={styles.h1}>
                 {home.hero.titleLine1}
                 {home.hero.titleLine2 ? (
@@ -124,11 +126,9 @@ export default function HomePage() {
               </h1>
               <p className={styles.lede}>{home.hero.lede}</p>
               <p className={styles.meta}>
-                <b>{home.hero.metaAffiliate}</b>
-                {"　·　"}
-                {home.hero.metaMid}
-                {"　·　"}
-                {home.hero.metaLang}
+                <b className={styles.metaItem}>{home.hero.metaAffiliate}</b>
+                <span className={styles.metaItem}>{home.hero.metaMid}</span>
+                <span className={styles.metaItem}>{home.hero.metaLang}</span>
               </p>
               <div className={styles.heroCta}>
                 <a
@@ -296,7 +296,7 @@ export default function HomePage() {
                 className={styles.partner}
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={p.logo} alt={p.name} />
+                <img src={p.logo} alt={p.name} className={p.tall ? styles.partnerTall : undefined} />
               </a>
             ))}
           </div>
