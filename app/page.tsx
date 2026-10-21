@@ -137,8 +137,6 @@ export default function HomePage() {
               <p className={styles.lede}>{home.hero.lede}</p>
               <p className={styles.meta}>
                 <b className={styles.metaItem}>{home.hero.metaAffiliate}</b>
-                <span className={styles.metaItem}>{home.hero.metaMid}</span>
-                <span className={styles.metaItem}>{home.hero.metaLang}</span>
               </p>
               <div className={styles.heroCta}>
                 <a

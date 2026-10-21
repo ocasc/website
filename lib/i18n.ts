@@ -270,7 +270,7 @@ export const translations: Record<Language, Translations> = {
         titleAccent: '安全',
         titleTail: '开放社区',
         lede: '一个面向中文读者的专业网络：定期举办讲座与论文研读，开设共学课程，也组织线下聚会。成员来自研究、工程、产业与政策。',
-        metaAffiliate: 'IASEAI 附属机构（国际安全与伦理人工智能协会）',
+        metaAffiliate: 'IASEAI 关联机构（国际安全与伦理人工智能协会）',
         metaMid: '线上为主',
         metaLang: '中文 / 英文',
         joinCta: '加入社群',
