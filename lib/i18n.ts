@@ -37,6 +37,56 @@ export interface Translations {
   // Community Stats
   stats: StatsData;
 
+  // Homepage (print-poster layout)
+  home: {
+    hero: {
+      eyebrow: string;
+      titleLine1: string;
+      titleLine2: string;
+      titleAccent: string;
+      lede: string;
+      metaAffiliate: string;
+      metaMid: string;
+      metaLang: string;
+      joinCta: string;
+    };
+    statsLabel: string;
+    statsNote: string;
+    tracks: {
+      eyebrow: string;
+      title: string;
+      items: Array<{ no: string; title: string; body: string; link: string; url: string }>;
+    };
+    events: {
+      eyebrow: string;
+      title: string;
+      headDate: string;
+      headType: string;
+      headTitle: string;
+      headForm: string;
+      showAll: string;
+      collapse: string;
+      loading: string;
+      error: string;
+      empty: string;
+    };
+    propose: {
+      eyebrow: string;
+      titleLine1: string;
+      titleLine2: string;
+      body: string;
+      cta: string;
+      specs: Array<{ k: string; v: string }>;
+    };
+    footer: {
+      partners: string;
+      wechat: string;
+      email: string;
+      site: string;
+      copyright: string;
+    };
+  };
+
   // Events Section
   events: {
     title: string;
@@ -179,7 +229,7 @@ export const translations: Record<Language, Translations> = {
       events: '活动',
       resources: '资源',
       about: '关于我们',
-      joinAction: '加入社区',
+      joinAction: '加入社群',
       proposeTalk: '申请分享',
     },
     hero: {
@@ -193,9 +243,85 @@ export const translations: Record<Language, Translations> = {
       secondaryButton: '关于我们',
     },
     stats: {
-      coreTeam: { value: '20+', label: '核心共创' },
-      community: { value: '400+', label: '社区成员' },
+      coreTeam: { value: '20+', label: '核心共创成员' },
+      community: { value: '600+', label: '社群成员' },
       reach: { value: '10,000+', label: '泛社区覆盖' },
+    },
+
+    home: {
+      hero: {
+        eyebrow: 'AI Safety in China · Est. 2025',
+        titleLine1: '开放的',
+        titleLine2: 'AI 安全',
+        titleAccent: '研究社区',
+        lede: '面向中文读者，我们定期举办讲座与论文研读，开设共学课程，也承接研究项目。',
+        metaAffiliate: 'IASEAI Affiliate',
+        metaMid: '线上为主',
+        metaLang: '中文 / English',
+        joinCta: '加入社群',
+      },
+      statsLabel: '社区数据',
+      statsNote: '截至 2026 年 10 月 · 社群成员为微信群成员',
+      tracks: {
+        eyebrow: 'Resources',
+        title: '我们提供什么',
+        items: [
+          {
+            no: 'TRACK 01',
+            title: '前沿 AI 安全课程',
+            body: 'BlueDot Impact 课程的中文版，覆盖 AGI 战略、技术安全与前沿治理，六周研讨式共学。',
+            link: '课程介绍',
+            url: 'https://mp.weixin.qq.com/s/Eca3ROQZ4_1ub1x4Nzl_vA',
+          },
+          {
+            no: 'TRACK 02',
+            title: '研究项目',
+            body: '社群成员参与的研究项目，兼职与全职，申请制。方向覆盖评测、治理与安全工程。',
+            link: '了解共创',
+            url: '/about',
+          },
+          {
+            no: 'TRACK 03',
+            title: '学术研讨会',
+            body: '定期组织的论文研读与专题研讨，与国内外 AI 安全研究机构和读书会保持联动。',
+            link: '近期议题',
+            url: '#events',
+          },
+        ],
+      },
+      events: {
+        eyebrow: 'Events',
+        title: '近期活动',
+        headDate: '日期',
+        headType: '类型',
+        headTitle: '活动',
+        headForm: '形式',
+        showAll: '全部活动 →',
+        collapse: '收起',
+        loading: '加载活动…',
+        error: '活动加载失败，请稍后再试',
+        empty: '暂无活动',
+      },
+      propose: {
+        eyebrow: 'Propose a Talk',
+        titleLine1: '把你的分享',
+        titleLine2: '提上日程',
+        body: '我们每个月安排一到两场线上分享，欢迎研究者、工程师、政策与法律背景的朋友来讲你正在做的事。中文或英文都可以。',
+        cta: '申请分享',
+        specs: [
+          { k: '时间', v: '周五或周六晚' },
+          { k: '时长', v: '40 分钟 + 问答' },
+          { k: '形式', v: '线上' },
+          { k: '语言', v: '中文 / 英文' },
+        ],
+      },
+      footer: {
+        partners: '合作伙伴',
+        wechat: '公众号',
+        email: '联系邮箱',
+        site: 'aisafety-cn.com',
+        copyright: '© 2026 AI安全开放社区（OCASC）',
+      },
     },
     events: {
       title: '活动',
@@ -327,7 +453,7 @@ export const translations: Record<Language, Translations> = {
         paragraphs: [
           'AI安全开放社区（Open Community for AI Safety China，OCASC）起初是一个小型学习小组，由一群对AI安全充满热情的研究者和爱好者共同创立。我们不定期阅读和讨论国际前沿AI安全研究，随着越来越多志同道合的朋友加入，社区逐渐壮大，成为中文互联网最大的AI安全开放社区。',
           '我们的使命是通过改善前沿AI安全研究的获取渠道、促进技术交流与讨论、建立与国际AI安全网络的连接，在中国构建一个开放、高质量的AI安全生态系统。',
-          '目前，社区以微信群为核心，并在Bilibili、知乎、LinkedIn、GitHub等多个平台同步运营，累计覆盖超过10,000名关注者，核心共创成员超过20人，社区成员超过400人。',
+          '目前，社区以微信群为核心，并在Bilibili、知乎、LinkedIn、GitHub等多个平台同步运营，累计覆盖超过10,000名关注者，核心共创成员超过20人，社群成员超过600人。',
         ],
       },
       milestones: {
@@ -399,8 +525,84 @@ export const translations: Record<Language, Translations> = {
     },
     stats: {
       coreTeam: { value: '20+', label: 'Core Team' },
-      community: { value: '400+', label: 'Community' },
+      community: { value: '600+', label: 'Members' },
       reach: { value: '10,000+', label: 'Extended Reach' },
+    },
+
+    home: {
+      hero: {
+        eyebrow: 'AI Safety in China · Est. 2025',
+        titleLine1: 'An open',
+        titleLine2: 'AI safety',
+        titleAccent: 'research community',
+        lede: 'For Chinese-language readers we run regular talks and paper readings, a six-week co-learning course, and research projects.',
+        metaAffiliate: 'IASEAI Affiliate',
+        metaMid: 'Mostly online',
+        metaLang: 'Chinese / English',
+        joinCta: 'Join community',
+      },
+      statsLabel: 'Community figures',
+      statsNote: 'As of October 2026 · members counted as WeChat group members',
+      tracks: {
+        eyebrow: 'Resources',
+        title: 'What we offer',
+        items: [
+          {
+            no: 'TRACK 01',
+            title: 'Frontier AI safety course',
+            body: 'The Chinese edition of BlueDot Impact’s course: AGI strategy, technical safety and frontier governance, in six weeks of seminars.',
+            link: 'About the course',
+            url: 'https://mp.weixin.qq.com/s/Eca3ROQZ4_1ub1x4Nzl_vA',
+          },
+          {
+            no: 'TRACK 02',
+            title: 'Research projects',
+            body: 'Project work with community members, part-time or full-time, by application. Topics span evaluations, governance and safety engineering.',
+            link: 'Co-creation',
+            url: '/about',
+          },
+          {
+            no: 'TRACK 03',
+            title: 'Seminars',
+            body: 'Regular paper readings and topical sessions, in touch with AI safety groups and reading circles at home and abroad.',
+            link: 'Recent topics',
+            url: '#events',
+          },
+        ],
+      },
+      events: {
+        eyebrow: 'Events',
+        title: 'Recent events',
+        headDate: 'Date',
+        headType: 'Type',
+        headTitle: 'Event',
+        headForm: 'Format',
+        showAll: 'All events →',
+        collapse: 'Collapse',
+        loading: 'Loading events…',
+        error: 'Could not load events. Please try again later.',
+        empty: 'No events yet',
+      },
+      propose: {
+        eyebrow: 'Propose a Talk',
+        titleLine1: 'Put your talk',
+        titleLine2: 'on the schedule',
+        body: 'We host one or two online talks a month. Researchers, engineers, and people from policy or legal backgrounds are welcome to present their work — in Chinese or English.',
+        cta: 'Propose a talk',
+        specs: [
+          { k: 'When', v: 'Friday or Saturday evening' },
+          { k: 'Length', v: '40 min + Q&A' },
+          { k: 'Format', v: 'Online' },
+          { k: 'Language', v: 'Chinese / English' },
+        ],
+      },
+      footer: {
+        partners: 'Partners',
+        wechat: 'WeChat',
+        email: 'Email',
+        site: 'aisafety-cn.com',
+        copyright: '© 2026 Open Community for AI Safety China',
+      },
     },
     events: {
       title: 'Events',
@@ -545,7 +747,7 @@ export const translations: Record<Language, Translations> = {
         paragraphs: [
           'Open Community for AI Safety China (OCASC) began as a small study group, founded by a group of researchers and enthusiasts passionate about AI safety. We started by periodically reading and discussing frontier international AI safety research. As more like-minded people joined, the community grew to become the largest AI safety open community in the Chinese-speaking internet.',
           'Our mission is to support an open, high-quality AI safety ecosystem in China by improving access to frontier AI safety research, fostering technical discussion, and building connections with the global AI safety network.',
-          'Today, the community is centered around WeChat groups and active across multiple platforms including Bilibili, Zhihu, LinkedIn, and GitHub, reaching over 10,000 followers, with 400+ community members and 20+ core contributors.',
+          'Today, the community is centered around WeChat groups and active across multiple platforms including Bilibili, Zhihu, LinkedIn, and GitHub, reaching over 10,000 followers, with 600+ community members and 20+ core contributors.',
         ],
       },
       milestones: {

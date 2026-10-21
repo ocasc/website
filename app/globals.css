@@ -218,3 +218,15 @@
     text-autospace: ideograph-alpha ideograph-numeric;
   }
 }
+
+/* ===== Homepage 2026 redesign tokens (print-poster language) ===== */
+:root {
+  --home-ink: #171719;
+  --home-bg: #f3f0ef;
+  --home-crimson: #a51c30;
+  --home-line: #e4dfde;
+  --home-line-strong: #ded8d7;
+  --home-muted: #56565a;
+  --home-muted2: #4c4c50;
+  --home-muted3: #6b6b70;
+}
