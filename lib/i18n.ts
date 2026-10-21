@@ -240,7 +240,7 @@ export const translations: Record<Language, Translations> = {
     nav: {
       siteName: 'AI安全开放社区',
       events: '活动',
-      resources: '入行',
+      resources: '资源',
       about: '关于我们',
       joinAction: '加入社群',
       proposeTalk: '申请分享',
@@ -613,7 +613,7 @@ export const translations: Record<Language, Translations> = {
     nav: {
       siteName: 'Open Community for AI Safety China',
       events: 'Events',
-      resources: 'Start here',
+      resources: 'Resources',
       about: 'About',
       joinAction: 'Join Us',
       proposeTalk: 'Propose a Talk',
