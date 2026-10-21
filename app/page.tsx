@@ -5,6 +5,7 @@ import styles from "./page.module.css";
 import { useLanguage } from "@/lib/language-context";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { BrandMark } from "@/components/brand-mark";
+import { localePath } from "@/lib/locale";
 import { useEvents } from "@/lib/use-events";
 
 const JOIN_FORM_URL = "https://wj.qq.com/s2/28113604/kyqo/";
@@ -50,9 +51,9 @@ export default function HomePage() {
     <div className={styles.page}>
       <header className={styles.header}>
         <div className={`${styles.wrap} ${styles.nav}`}>
-          <a href="/" className={styles.brand}>
+          <a href={localePath(language, "/")} className={styles.brand}>
             <BrandMark className={styles.brandMark} />
-            <span className={styles.brandText}>
+            <span className={`${styles.brandText} ${language === "en" ? styles.brandTextEn : ""}`}>
               {t.nav.siteName}
               {home.brandSub && home.brandSub !== t.nav.siteName ? <span>{home.brandSub}</span> : null}
             </span>
@@ -60,8 +61,8 @@ export default function HomePage() {
 
           <nav className={styles.navLinks}>
             <a href="#events">{t.nav.events}</a>
-            <a href="/resources">{t.nav.resources}</a>
-            <a href="/about">{t.nav.about}</a>
+            <a href={localePath(language, "/resources")}>{t.nav.resources}</a>
+            <a href={localePath(language, "/about")}>{t.nav.about}</a>
           </nav>
 
           <div className={styles.langSlot}>
@@ -79,8 +80,8 @@ export default function HomePage() {
         </div>
         <div className={`${styles.wrap} ${styles.mobileNav}`}>
           <a href="#events">{t.nav.events}</a>
-          <a href="/resources">{t.nav.resources}</a>
-          <a href="/about">{t.nav.about}</a>
+          <a href={localePath(language, "/resources")}>{t.nav.resources}</a>
+          <a href={localePath(language, "/about")}>{t.nav.about}</a>
         </div>
       </header>
 

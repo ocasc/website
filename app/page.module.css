@@ -50,6 +50,7 @@
 }
 .brandMark { width: 34px; height: 34px; flex: none; display: block; }
 .brandText { font-size: 15px; font-weight: 790; line-height: 1.2; letter-spacing: 0; white-space: nowrap; }
+/* 英文社名 35 字符在手机档放不下（mark + 语言键 + JOIN 会挤出屏幕）：窄屏只留标记 */
 .brandText span {
   display: block;
   font-size: 10px;
@@ -606,6 +607,7 @@
   .mobileNav a:active { color: var(--home-crimson); }
   .section { padding: 36px 0; }
   .brandText span { display: none; }
+  .brandTextEn { display: none; }
   .nav { gap: 14px; }
   .langSlot { margin-left: auto; }
   .hero { grid-template-columns: 1fr; gap: 36px; padding: 44px 0; }

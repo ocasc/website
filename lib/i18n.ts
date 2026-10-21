@@ -657,7 +657,7 @@ export const translations: Record<Language, Translations> = {
       statsNote: '',
       tracks: {
         eyebrow: 'Resources',
-        title: 'Ways to take part',
+        title: 'Ways to participate',
         items: [
           {
             no: '01',

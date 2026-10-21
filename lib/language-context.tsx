@@ -1,6 +1,7 @@
 "use client";
 
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useEffect, useCallback } from 'react';
+import { usePathname, useRouter } from 'next/navigation';
 import { Language, translations } from './i18n';
 
 interface LanguageContextType {
@@ -11,35 +12,33 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
+/** /en 开头即英文，其余一律中文（中文是默认站点，不带前缀） */
+function languageFromPath(pathname: string): Language {
+  return pathname === '/en' || pathname.startsWith('/en/') ? 'en' : 'zh';
+}
+
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguage] = useState<Language>('zh');
+  const pathname = usePathname() || '/';
+  const router = useRouter();
+  const language = languageFromPath(pathname);
 
-  // Load language preference from localStorage on mount, or detect from browser
+  // html lang 跟路由走：读屏和搜索引擎按语言处理
   useEffect(() => {
-    const savedLanguage = localStorage.getItem('language') as Language;
-    if (savedLanguage && (savedLanguage === 'zh' || savedLanguage === 'en')) {
-      setLanguage(savedLanguage);
-    } else {
-      const browserLang = navigator.language;
-      const detected: Language = browserLang.startsWith('zh') ? 'zh' : 'en';
-      setLanguage(detected);
-      localStorage.setItem('language', detected);
-    }
-  }, []);
-
-  // Save language preference to localStorage when it changes
-  useEffect(() => {
-    localStorage.setItem('language', language);
+    document.documentElement.lang = language === 'zh' ? 'zh-CN' : 'en';
   }, [language]);
 
-  const value = {
-    language,
-    setLanguage,
-    t: translations[language],
-  };
+  const setLanguage = useCallback(
+    (next: Language) => {
+      if (next === language) return;
+      const bare = pathname.replace(/^\/en(?=\/|$)/, '') || '/';
+      const target = next === 'en' ? (bare === '/' ? '/en' : `/en${bare}`) : bare;
+      router.push(target);
+    },
+    [language, pathname, router]
+  );
 
   return (
-    <LanguageContext.Provider value={value}>
+    <LanguageContext.Provider value={{ language, setLanguage, t: translations[language] }}>
       {children}
     </LanguageContext.Provider>
   );
