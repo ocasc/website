@@ -183,14 +183,13 @@
   border-bottom: 1px solid var(--home-line-strong);
 }
 .quoteText {
-  font-size: 17px;
-  line-height: 1.7;
+  font-size: 19px;
+  font-weight: 650;
+  line-height: 1.6;
   color: var(--home-ink);
   letter-spacing: 0.01em;
-  max-width: 40em;
+  max-width: 34em;
 }
-.quoteText::before { content: "「"; color: var(--home-crimson); }
-.quoteText::after { content: "」"; color: var(--home-crimson); }
 .quoteSource {
   margin-top: 10px;
   font-size: 10.5px;

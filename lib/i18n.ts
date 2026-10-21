@@ -53,7 +53,7 @@ export interface Translations {
     };
     quote: {
       text: string;
-      source: string;
+      source?: string;
     };
     statsLabel: string;
     statsNote: string;
@@ -268,7 +268,6 @@ export const translations: Record<Language, Translations> = {
       },
       quote: {
         text: '确保人工智能始终处于人类控制之下。',
-        source: '习近平 · 2026 世界人工智能大会主旨讲话',
       },
       statsLabel: '社区数据',
       statsNote: '截至 2026 年 10 月 · 社群成员为微信群成员',
@@ -553,8 +552,7 @@ export const translations: Record<Language, Translations> = {
         joinCta: 'Join community',
       },
       quote: {
-        text: 'Ensuring that AI always remains under human control.',
-        source: 'Xi Jinping · World AI Conference 2026 keynote (translation)',
+        text: 'AI should always remain under human control.',
       },
       statsLabel: 'Community figures',
       statsNote: 'As of October 2026 · members counted as WeChat group members',
