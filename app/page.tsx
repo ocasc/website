@@ -103,7 +103,6 @@ export default function HomePage() {
                 {home.hero.titleAccent ? <em>{home.hero.titleAccent}</em> : null}
                 {home.hero.titleTail}
               </h1>
-              <p className={styles.lede}>{home.hero.lede}</p>
               <p className={styles.missionRow}>
                 <span className={styles.missionRowLabel}>{home.mission.label}</span>
                 <span className={styles.missionRowText}>
@@ -119,6 +118,7 @@ export default function HomePage() {
                   )}
                 </span>
               </p>
+              <p className={styles.lede}>{home.hero.lede}</p>
               <p className={styles.meta}>
                 <b className={styles.metaItem}>{home.hero.metaAffiliate}</b>
               </p>
