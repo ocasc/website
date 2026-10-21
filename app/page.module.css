@@ -275,6 +275,21 @@
 }
 
 /* ---------- resources page lists ---------- */
+.resGroup + .resGroup { margin-top: 40px; }
+.resGroup + .resGroup .listHead { border-top-width: 1px; }
+.groupHead {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding-bottom: 12px;
+}
+.groupLabel {
+  font-size: 13px;
+  font-weight: 790;
+  letter-spacing: 0.02em;
+  color: var(--home-crimson);
+}
+.groupNote { font-size: 11.5px; color: var(--home-muted3); }
 .secAside {
   font-size: 11.5px;
   color: var(--home-muted3);

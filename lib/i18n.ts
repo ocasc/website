@@ -101,12 +101,16 @@ export interface Translations {
     criteria: string;
     programHead: string;
     programNote: string;
+    programHeadFull: string;
+    programNoteFull: string;
+    programHeadPart: string;
+    programNotePart: string;
     courseHead: string;
     courseNote: string;
     colName: string;
     colKind: string;
     colNote: string;
-    programs: Array<{ name: string; kind: string; note: string; url: string }>;
+    programs: Array<{ name: string; kind: string; note: string; url: string; commit: "full" | "part" }>;
     courses: Array<{ name: string; kind: string; note: string; url: string }>;
   };
 
@@ -361,6 +365,10 @@ export const translations: Record<Language, Translations> = {
       criteria: '收录标准：技术向（对齐研究、可解释性、安全工程、评测）；有公开申请入口；不收纯治理、纯政策与无法验证的项目。',
       programHead: 'Fellowship 与研究项目',
       programNote: '按项目性质排列，不按知名度。',
+      programHeadFull: '全职',
+      programNoteFull: '需要每周 40 小时左右，多数要求到项目所在地。',
+      programHeadPart: '兼职与远程',
+      programNotePart: '每周投入更少，可以远程参与。',
       courseHead: '课程与技术训练',
       courseNote: '偏技术，带作业或项目，不是概论。',
       colName: '名称',
@@ -370,38 +378,44 @@ export const translations: Record<Language, Translations> = {
         {
           name: 'MATS Research',
           kind: '研究奖学金',
-          note: '导师制的研究训练，覆盖可解释性、对齐理论、安全工程等方向。',
+          note: '12 周，每周 40 小时，在伯克利或伦敦现场做研究，配导师。',
           url: 'https://matsprogram.org/',
+          commit: 'full',
         },
         {
           name: 'LASR Labs',
           kind: '研究实验室',
-          note: '伦敦，理论对齐方向，按 cohort 招募。',
+          note: '13 周，全职在伦敦现场，从选题到投稿走完一个理论对齐项目。',
           url: 'https://www.lasrlabs.org/',
+          commit: 'full',
         },
         {
           name: 'Astra Fellowship',
-          kind: '研究 fellowship',
-          note: 'Constellation 旗下，项目制并配对导师。',
+          kind: '资助型 fellowship',
+          note: '3–6 个月，面向全职做 AI 安全研究的人，含资金与同行网络。',
           url: 'https://constellation.org/programs/astra',
+          commit: 'full',
         },
         {
           name: 'Anthropic Fellows Program',
           kind: '带薪 fellowship',
-          note: '在 Anthropic 内部做安全研究，按 cohort 招募。',
+          note: '4 个月，在 Anthropic 内部做实证安全研究，按 cohort 招募。',
           url: 'https://alignment.anthropic.com/2025/anthropic-fellows-program-2026/',
+          commit: 'full',
         },
         {
           name: 'SPAR',
           kind: '远程研究项目',
-          note: '导师监督下的对齐研究，适合有技术背景、想转进研究的成员。',
+          note: '兼职、远程，导师监督下的对齐研究，适合有技术背景想转进研究的人。',
           url: 'https://sparai.org/',
+          commit: 'part',
         },
         {
           name: 'AI Safety Camp',
           kind: '协作研究',
-          note: '远程协作的项目制研究，入门到中级。',
+          note: '约 3 个月，远程团队协作做一个具体研究项目，入门到中级。',
           url: 'https://aisafety.camp/',
+          commit: 'part',
         },
       ],
       courses: [
@@ -717,6 +731,10 @@ export const translations: Record<Language, Translations> = {
       criteria: 'Inclusion: technical (alignment research, interpretability, safety engineering, evaluations); a public application route; no pure governance or policy items, and nothing we cannot verify.',
       programHead: 'Fellowships and research programs',
       programNote: 'Ordered by what they are, not by reputation.',
+      programHeadFull: 'Full-time',
+      programNoteFull: 'Around 40 hours a week; most require being on site.',
+      programHeadPart: 'Part-time and remote',
+      programNotePart: 'Lighter weekly load, remote-friendly.',
       courseHead: 'Courses and technical training',
       courseNote: 'Technical, with exercises or projects rather than survey material.',
       colName: 'Program',
@@ -726,38 +744,44 @@ export const translations: Record<Language, Translations> = {
         {
           name: 'MATS Research',
           kind: 'Research fellowship',
-          note: 'Mentored research training across interpretability, alignment theory and safety engineering.',
+          note: '12 weeks at 40 hours a week, on site in Berkeley or London, with a mentor.',
           url: 'https://matsprogram.org/',
+          commit: 'full',
         },
         {
           name: 'LASR Labs',
           kind: 'Research lab',
-          note: 'London, theoretical alignment, recruited in cohorts.',
+          note: '13 weeks full-time in London, taking a theoretical alignment project from proposal to publication.',
           url: 'https://www.lasrlabs.org/',
+          commit: 'full',
         },
         {
           name: 'Astra Fellowship',
-          kind: 'Research fellowship',
-          note: 'Run by Constellation; project-based, with a matched mentor.',
+          kind: 'Funded fellowship',
+          note: '3–6 months for people researching AI safety full-time, with funding and a peer network.',
           url: 'https://constellation.org/programs/astra',
+          commit: 'full',
         },
         {
           name: 'Anthropic Fellows Program',
           kind: 'Paid fellowship',
-          note: 'Safety research inside Anthropic, recruited in cohorts.',
+          note: '4 months of empirical safety research inside Anthropic, recruited in cohorts.',
           url: 'https://alignment.anthropic.com/2025/anthropic-fellows-program-2026/',
+          commit: 'full',
         },
         {
           name: 'SPAR',
           kind: 'Remote research program',
-          note: 'Supervised alignment research for people with a technical background moving into research.',
+          note: 'Part-time and remote; supervised alignment research for technical people moving into research.',
           url: 'https://sparai.org/',
+          commit: 'part',
         },
         {
           name: 'AI Safety Camp',
           kind: 'Collaborative research',
-          note: 'Remote, project-based research from entry to intermediate level.',
+          note: 'About 3 months, remote teams working on one concrete research project, entry to intermediate.',
           url: 'https://aisafety.camp/',
+          commit: 'part',
         },
       ],
       courses: [

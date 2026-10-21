@@ -11,25 +11,13 @@ export default function ResourcesPage() {
   const { t } = useLanguage();
   const r = t.resourcesPage;
 
-  const renderList = (
-    head: string,
-    note: string,
-    rows: Array<{ name: string; kind: string; note: string; url: string }>,
-  ) => (
-    <section className={styles.section}>
-      <div className={styles.secHead}>
-        <div>
-          <h2 className={styles.hSec}>{head}</h2>
-        </div>
-        <span className={styles.secAside}>{note}</span>
-      </div>
-
+  const rowsOf = (rows: Array<{ name: string; kind: string; note: string; url: string }>) => (
+    <>
       <div className={styles.listHead} aria-hidden="true">
         <span>{r.colName}</span>
         <span>{r.colKind}</span>
         <span>{r.colNote}</span>
       </div>
-
       {rows.map((row) => (
         <div key={row.url} className={styles.rRow}>
           <a
@@ -45,7 +33,7 @@ export default function ResourcesPage() {
           <span className={styles.rNote}>{row.note}</span>
         </div>
       ))}
-    </section>
+    </>
   );
 
   return (
@@ -92,8 +80,40 @@ export default function ResourcesPage() {
             </div>
           </section>
 
-          {renderList(r.programHead, r.programNote, r.programs)}
-          {renderList(r.courseHead, r.courseNote, r.courses)}
+          <section className={styles.section}>
+            <div className={styles.secHead}>
+              <div>
+                <h2 className={styles.hSec}>{r.programHead}</h2>
+              </div>
+              <span className={styles.secAside}>{r.programNote}</span>
+            </div>
+
+            <div className={styles.resGroup}>
+              <div className={styles.groupHead}>
+                <span className={styles.groupLabel}>{r.programHeadFull}</span>
+                <span className={styles.groupNote}>{r.programNoteFull}</span>
+              </div>
+              {rowsOf(r.programs.filter((p) => p.commit === "full"))}
+            </div>
+
+            <div className={styles.resGroup}>
+              <div className={styles.groupHead}>
+                <span className={styles.groupLabel}>{r.programHeadPart}</span>
+                <span className={styles.groupNote}>{r.programNotePart}</span>
+              </div>
+              {rowsOf(r.programs.filter((p) => p.commit === "part"))}
+            </div>
+          </section>
+
+          <section className={styles.section}>
+            <div className={styles.secHead}>
+              <div>
+                <h2 className={styles.hSec}>{r.courseHead}</h2>
+              </div>
+              <span className={styles.secAside}>{r.courseNote}</span>
+            </div>
+            {rowsOf(r.courses)}
+          </section>
 
           <section className={styles.section}>
             <div className={styles.criteriaWrap}>
