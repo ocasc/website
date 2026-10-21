@@ -80,40 +80,18 @@ export default function ResourcesPage() {
             </div>
           </section>
 
-          <section className={styles.section}>
-            <div className={styles.secHead}>
-              <div>
-                <h2 className={styles.hSec}>{r.programHead}</h2>
+          {r.stages.map((stage) => (
+            <section key={stage.no} className={styles.section}>
+              <div className={styles.secHead}>
+                <div className={styles.stageTitle}>
+                  <span className={styles.stageNo}>{stage.no}</span>
+                  <h2 className={styles.hSec}>{stage.title}</h2>
+                </div>
+                <span className={styles.secAside}>{stage.note}</span>
               </div>
-              <span className={styles.secAside}>{r.programNote}</span>
-            </div>
-
-            <div className={styles.resGroup}>
-              <div className={styles.groupHead}>
-                <span className={styles.groupLabel}>{r.programHeadFull}</span>
-                <span className={styles.groupNote}>{r.programNoteFull}</span>
-              </div>
-              {rowsOf(r.programs.filter((p) => p.commit === "full"))}
-            </div>
-
-            <div className={styles.resGroup}>
-              <div className={styles.groupHead}>
-                <span className={styles.groupLabel}>{r.programHeadPart}</span>
-                <span className={styles.groupNote}>{r.programNotePart}</span>
-              </div>
-              {rowsOf(r.programs.filter((p) => p.commit === "part"))}
-            </div>
-          </section>
-
-          <section className={styles.section}>
-            <div className={styles.secHead}>
-              <div>
-                <h2 className={styles.hSec}>{r.courseHead}</h2>
-              </div>
-              <span className={styles.secAside}>{r.courseNote}</span>
-            </div>
-            {rowsOf(r.courses)}
-          </section>
+              {rowsOf(stage.rows)}
+            </section>
+          ))}
 
           <section className={styles.section}>
             <div className={styles.criteriaWrap}>

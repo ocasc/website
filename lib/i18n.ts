@@ -99,19 +99,15 @@ export interface Translations {
     title: string;
     lede: string;
     criteria: string;
-    programHead: string;
-    programNote: string;
-    programHeadFull: string;
-    programNoteFull: string;
-    programHeadPart: string;
-    programNotePart: string;
-    courseHead: string;
-    courseNote: string;
     colName: string;
     colKind: string;
     colNote: string;
-    programs: Array<{ name: string; kind: string; note: string; url: string; commit: "full" | "part" }>;
-    courses: Array<{ name: string; kind: string; note: string; url: string }>;
+    stages: Array<{
+      no: string;
+      title: string;
+      note: string;
+      rows: Array<{ name: string; kind: string; note: string; url: string }>;
+    }>;
   };
 
   events: {
@@ -348,88 +344,98 @@ export const translations: Record<Language, Translations> = {
     },
     resourcesPage: {
       title: '资源',
-      lede: '一份 AI 安全的入口清单：做 AI 安全的人可以在哪里训练、申请 fellowship、补技术底子，也能找到治理方向的研究资源。只收高质量的项目。',
+      lede: '一条按顺序走的路：先上课程打底子，再做兼职项目，最后进全职 fellowship。每一步都只收高质量的项目。',
       criteria: '收录标准：技术向（对齐研究、可解释性、安全工程、评测）与治理向（研究、标准、国际协作），且质量足够高；不收无法验证的项目。',
-      programHead: 'Fellowship 与研究项目',
-      programNote: '按知名度从高到低排列。',
-      programHeadFull: '全职',
-      programNoteFull: '需要每周 40 小时左右，多数要求到项目所在地。',
-      programHeadPart: '兼职与远程',
-      programNotePart: '每周投入更少，可以远程参与。',
-      courseHead: '课程与技术训练',
-      courseNote: '带作业或讨论，不是概论。',
       colName: '名称',
       colKind: '性质',
       colNote: '说明',
-      programs: [
+      stages: [
         {
-          name: 'Anthropic Fellows Program',
-          kind: '带薪 fellowship',
-          note: '4 个月，在 Anthropic 内部做实证安全研究，按 cohort 招募。',
-          url: 'https://alignment.anthropic.com/2025/anthropic-fellows-program-2026/',
-          commit: 'full',
+          no: '01',
+          title: '课程与技术训练',
+          note: '先打底子：带作业或讨论，不是概论。',
+          rows: [
+            {
+              name: '前沿 AI 安全课程（中文）',
+              kind: '本社课程',
+              note: 'BlueDot Impact 课程的中文版，六周研讨式共学，覆盖 AGI 战略、技术安全与前沿治理。',
+              url: 'https://mp.weixin.qq.com/s/Eca3ROQZ4_1ub1x4Nzl_vA',
+            },
+            {
+              name: 'BlueDot Impact · Technical AI Safety',
+              kind: '多周课程',
+              note: '技术向主线课程；同一平台另有 AGI Strategy 与治理方向。',
+              url: 'https://bluedot.org/courses',
+            },
+            {
+              name: 'BlueDot Impact · Frontier AI Governance',
+              kind: '治理课程',
+              note: '免费；6 天集训或 6 周兼职班，练习证据评估与制度判断，最后落到一份自己的参与计划。',
+              url: 'https://bluedot.org/courses/ai-governance',
+            },
+            {
+              name: 'ARENA Curriculum',
+              kind: '技术训练',
+              note: 'Transformer 可解释性、强化学习、LLM 基础，配习题与项目。',
+              url: 'https://arena.education/curriculum',
+            },
+          ],
         },
         {
-          name: 'MATS Research',
-          kind: '研究奖学金',
-          note: '12 周，每周 40 小时，在伯克利或伦敦现场做研究，配导师。',
-          url: 'https://matsprogram.org/',
-          commit: 'full',
+          no: '02',
+          title: '兼职与远程',
+          note: '再做一个小项目：每周投入更少，可以远程参与。',
+          rows: [
+            {
+              name: 'SPAR',
+              kind: '远程研究项目',
+              note: '兼职、远程，导师监督下的对齐研究，适合有技术背景想转进研究的人。',
+              url: 'https://sparai.org/',
+            },
+          ],
         },
         {
-          name: 'Cambridge ERA:AI Fellowship',
-          kind: '研究 fellowship',
-          note: '10 周，剑桥现场，含 £10,000 津贴与差旅；已支持 200+ 位研究者。',
-          url: 'https://erafellowship.org/fellowship',
-          commit: 'full',
-        },
-        {
-          name: 'Astra Fellowship',
-          kind: '资助型 fellowship',
-          note: '3–6 个月，面向全职做 AI 安全研究的人，含资金与同行网络。',
-          url: 'https://constellation.org/programs/astra',
-          commit: 'full',
-        },
-        {
-          name: 'Singapore AI Safety Fellowship',
-          kind: '驻留 fellowship',
-          note: '3 个月，新加坡驻地，每月 SGD 5,000 另含住宿；首期已截止，下期 2027 春夏。',
-          url: 'https://aisafety.sg/programs/singapore-ai-safety-fellowship',
-          commit: 'full',
-        },
-        {
-          name: 'GovAI · Centre for the Governance of AI',
-          kind: '治理 fellowship',
-          note: '3 个月，伦敦现场，研究与应用两条线；一年两期，2027 冬季期 1 月 18 日－4 月 9 日。',
-          url: 'https://www.governance.ai/opportunities',
-          commit: 'full',
-        },
-        {
-          name: 'SPAR',
-          kind: '远程研究项目',
-          note: '兼职、远程，导师监督下的对齐研究，适合有技术背景想转进研究的人。',
-          url: 'https://sparai.org/',
-          commit: 'part',
-        },
-      ],
-      courses: [
-        {
-          name: 'BlueDot Impact · Technical AI Safety',
-          kind: '多周课程',
-          note: '技术向主线课程；同一平台另有 AGI Strategy 与治理方向。',
-          url: 'https://bluedot.org/courses',
-        },
-        {
-          name: 'BlueDot Impact · Frontier AI Governance',
-          kind: '治理课程',
-          note: '免费；6 天集训或 6 周兼职班，练习证据评估与制度判断，最后落到一份自己的参与计划。',
-          url: 'https://bluedot.org/courses/ai-governance',
-        },
-        {
-          name: 'ARENA Curriculum',
-          kind: '技术训练',
-          note: 'Transformer 可解释性、强化学习、LLM 基础，配习题与项目。',
-          url: 'https://arena.education/curriculum',
+          no: '03',
+          title: '全职 fellowship',
+          note: '最后把研究做成职业：每周 40 小时左右，多数要求到项目所在地。',
+          rows: [
+            {
+              name: 'Anthropic Fellows Program',
+              kind: '带薪 fellowship',
+              note: '4 个月，在 Anthropic 内部做实证安全研究，按 cohort 招募。',
+              url: 'https://alignment.anthropic.com/2025/anthropic-fellows-program-2026/',
+            },
+            {
+              name: 'MATS Research',
+              kind: '研究奖学金',
+              note: '12 周，每周 40 小时，在伯克利或伦敦现场做研究，配导师。',
+              url: 'https://matsprogram.org/',
+            },
+            {
+              name: 'Cambridge ERA:AI Fellowship',
+              kind: '研究 fellowship',
+              note: '10 周，剑桥现场，含 £10,000 津贴与差旅；已支持 200+ 位研究者。',
+              url: 'https://erafellowship.org/fellowship',
+            },
+            {
+              name: 'Astra Fellowship',
+              kind: '资助型 fellowship',
+              note: '3–6 个月，面向全职做 AI 安全研究的人，含资金与同行网络。',
+              url: 'https://constellation.org/programs/astra',
+            },
+            {
+              name: 'Singapore AI Safety Fellowship',
+              kind: '驻留 fellowship',
+              note: '3 个月，新加坡驻地，每月 SGD 5,000 另含住宿；首期已截止，下期 2027 春夏。',
+              url: 'https://aisafety.sg/programs/singapore-ai-safety-fellowship',
+            },
+            {
+              name: 'GovAI · Centre for the Governance of AI',
+              kind: '治理 fellowship',
+              note: '3 个月，伦敦现场，研究与应用两条线；一年两期，2027 冬季期 1 月 18 日－4 月 9 日。',
+              url: 'https://www.governance.ai/opportunities',
+            },
+          ],
         },
       ],
     },
@@ -712,88 +718,98 @@ export const translations: Record<Language, Translations> = {
     },
     resourcesPage: {
       title: 'Resources',
-      lede: 'A shortlist for people working on AI safety: where to train, apply to fellowships and build the technical base, plus governance-oriented research resources. Only high-quality programs.',
+      lede: 'A path to walk in order: take a course first, then a part-time project, then a full-time fellowship. Every step lists only high-quality programs.',
       criteria: 'Inclusion: technical (alignment research, interpretability, safety engineering, evaluations) or governance (research, standards, international cooperation), and demonstrably high quality; nothing we cannot verify.',
-      programHead: 'Fellowships and research programs',
-      programNote: 'Ordered by recognition, highest first.',
-      programHeadFull: 'Full-time',
-      programNoteFull: 'Around 40 hours a week; most require being on site.',
-      programHeadPart: 'Part-time and remote',
-      programNotePart: 'Lighter weekly load, remote-friendly.',
-      courseHead: 'Courses and technical training',
-      courseNote: 'Exercises or discussion rather than survey material.',
       colName: 'Program',
       colKind: 'Type',
       colNote: 'Notes',
-      programs: [
+      stages: [
         {
-          name: 'Anthropic Fellows Program',
-          kind: 'Paid fellowship',
-          note: '4 months of empirical safety research inside Anthropic, recruited in cohorts.',
-          url: 'https://alignment.anthropic.com/2025/anthropic-fellows-program-2026/',
-          commit: 'full',
+          no: '01',
+          title: 'Courses and technical training',
+          note: 'Start here: exercises or discussion rather than survey material.',
+          rows: [
+            {
+              name: 'Frontier AI Safety Course (Chinese)',
+              kind: 'Our own course',
+              note: 'The Chinese edition of the BlueDot Impact curriculum: six weeks of seminar-style co-learning across AGI strategy, technical safety and frontier governance.',
+              url: 'https://mp.weixin.qq.com/s/Eca3ROQZ4_1ub1x4Nzl_vA',
+            },
+            {
+              name: 'BlueDot Impact · Technical AI Safety',
+              kind: 'Multi-week course',
+              note: 'The technical track; the same platform runs AGI Strategy and governance courses.',
+              url: 'https://bluedot.org/courses',
+            },
+            {
+              name: 'BlueDot Impact · Frontier AI Governance',
+              kind: 'Governance course',
+              note: 'Free; a six-day intensive or a six-week part-time cohort, ending in a concrete plan for your own contribution.',
+              url: 'https://bluedot.org/courses/ai-governance',
+            },
+            {
+              name: 'ARENA Curriculum',
+              kind: 'Technical training',
+              note: 'Transformer interpretability, reinforcement learning and LLM fundamentals with exercises.',
+              url: 'https://arena.education/curriculum',
+            },
+          ],
         },
         {
-          name: 'MATS Research',
-          kind: 'Research fellowship',
-          note: '12 weeks at 40 hours a week, on site in Berkeley or London, with a mentor.',
-          url: 'https://matsprogram.org/',
-          commit: 'full',
+          no: '02',
+          title: 'Part-time and remote',
+          note: 'Then a small project: lighter weekly load, remote-friendly.',
+          rows: [
+            {
+              name: 'SPAR',
+              kind: 'Remote research program',
+              note: 'Part-time and remote; supervised alignment research for technical people moving into research.',
+              url: 'https://sparai.org/',
+            },
+          ],
         },
         {
-          name: 'Cambridge ERA:AI Fellowship',
-          kind: 'Research fellowship',
-          note: '10 weeks in Cambridge with a £10,000 stipend and travel covered; 200+ researchers supported so far.',
-          url: 'https://erafellowship.org/fellowship',
-          commit: 'full',
-        },
-        {
-          name: 'Astra Fellowship',
-          kind: 'Funded fellowship',
-          note: '3–6 months for people researching AI safety full-time, with funding and a peer network.',
-          url: 'https://constellation.org/programs/astra',
-          commit: 'full',
-        },
-        {
-          name: 'Singapore AI Safety Fellowship',
-          kind: 'Residential fellowship',
-          note: '3 months in Singapore with SGD 5,000 a month plus housing; first cohort closed, next in spring/summer 2027.',
-          url: 'https://aisafety.sg/programs/singapore-ai-safety-fellowship',
-          commit: 'full',
-        },
-        {
-          name: 'GovAI · Centre for the Governance of AI',
-          kind: 'Governance fellowship',
-          note: '3 months on site in London, research and applied tracks; two cohorts a year, the 2027 winter cohort runs 18 January – 9 April.',
-          url: 'https://www.governance.ai/opportunities',
-          commit: 'full',
-        },
-        {
-          name: 'SPAR',
-          kind: 'Remote research program',
-          note: 'Part-time and remote; supervised alignment research for technical people moving into research.',
-          url: 'https://sparai.org/',
-          commit: 'part',
-        },
-      ],
-      courses: [
-        {
-          name: 'BlueDot Impact · Technical AI Safety',
-          kind: 'Multi-week course',
-          note: 'The technical track; the same platform runs AGI Strategy and governance courses.',
-          url: 'https://bluedot.org/courses',
-        },
-        {
-          name: 'BlueDot Impact · Frontier AI Governance',
-          kind: 'Governance course',
-          note: 'Free; a six-day intensive or a six-week part-time cohort, ending in a concrete plan for your own contribution.',
-          url: 'https://bluedot.org/courses/ai-governance',
-        },
-        {
-          name: 'ARENA Curriculum',
-          kind: 'Technical training',
-          note: 'Transformer interpretability, reinforcement learning and LLM fundamentals with exercises.',
-          url: 'https://arena.education/curriculum',
+          no: '03',
+          title: 'Full-time fellowships',
+          note: 'Then make it a career: around 40 hours a week, most require being on site.',
+          rows: [
+            {
+              name: 'Anthropic Fellows Program',
+              kind: 'Paid fellowship',
+              note: '4 months of empirical safety research inside Anthropic, recruited in cohorts.',
+              url: 'https://alignment.anthropic.com/2025/anthropic-fellows-program-2026/',
+            },
+            {
+              name: 'MATS Research',
+              kind: 'Research fellowship',
+              note: '12 weeks at 40 hours a week, on site in Berkeley or London, with a mentor.',
+              url: 'https://matsprogram.org/',
+            },
+            {
+              name: 'Cambridge ERA:AI Fellowship',
+              kind: 'Research fellowship',
+              note: '10 weeks in Cambridge with a £10,000 stipend and travel covered; 200+ researchers supported so far.',
+              url: 'https://erafellowship.org/fellowship',
+            },
+            {
+              name: 'Astra Fellowship',
+              kind: 'Funded fellowship',
+              note: '3–6 months for people researching AI safety full-time, with funding and a peer network.',
+              url: 'https://constellation.org/programs/astra',
+            },
+            {
+              name: 'Singapore AI Safety Fellowship',
+              kind: 'Residential fellowship',
+              note: '3 months in Singapore with SGD 5,000 a month plus housing; first cohort closed, next in spring/summer 2027.',
+              url: 'https://aisafety.sg/programs/singapore-ai-safety-fellowship',
+            },
+            {
+              name: 'GovAI · Centre for the Governance of AI',
+              kind: 'Governance fellowship',
+              note: '3 months on site in London, research and applied tracks; two cohorts a year, the 2027 winter cohort runs 18 January – 9 April.',
+              url: 'https://www.governance.ai/opportunities',
+            },
+          ],
         },
       ],
     },

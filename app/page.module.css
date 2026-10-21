@@ -439,6 +439,17 @@
   margin-bottom: 26px;
 }
 
+/* resources roadmap — 01 / 02 / 03 是这条路上唯一的编号轴 */
+.stageTitle { display: flex; align-items: baseline; gap: 16px; }
+.stageNo {
+  font-size: 40px;
+  font-weight: 790;
+  letter-spacing: -1.4px;
+  line-height: 1;
+  color: var(--home-crimson);
+  font-variant-numeric: tabular-nums;
+}
+
 /* tracks */
 .tracks { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 .track {
@@ -651,6 +662,8 @@
   .proposeGrid { grid-template-columns: 1fr; gap: 32px; padding: 36px 0 36px; }
   .fIn { grid-template-columns: 1fr; gap: 14px; }
   .secHead { flex-direction: column; gap: 10px; }
+  .stageTitle { gap: 10px; }
+  .stageNo { font-size: 26px; letter-spacing: -0.8px; }
 }
 /* ---------- nav extras ---------- */
 .langSlot { display: flex; align-items: center; margin-left: 22px; flex: none; white-space: nowrap; }
