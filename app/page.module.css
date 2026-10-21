@@ -268,36 +268,7 @@
 
 
 /* ---------- about page ---------- */
-/* hero 右侧放数据栏（与首页 pyramid 同构），不再单独占一条通栏 */
-.heroAbout {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 320px;
-  gap: 72px;
-  align-items: start;
-}
-.heroAboutText { min-width: 0; }
-.statRail {
-  display: flex;
-  flex-direction: column;
-  margin-top: 6px;
-  border-top: 2px solid var(--home-ink);
-}
-.statRailRow {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 15px 0 14px;
-  border-bottom: 1px solid var(--home-line);
-}
-.statRailRow b {
-  font-size: 32px;
-  font-weight: 790;
-  letter-spacing: -1.2px;
-  font-variant-numeric: tabular-nums;
-  line-height: 1;
-}
-.statRailRow span { font-size: 12px; color: var(--home-muted3); text-align: right; }
+/* hero 的 padding 覆盖在 .heroPage 之后另写，见下方 resources 段 */
 .storyGrid { display: block; }
 .storyList {
   columns: 1;
@@ -624,7 +595,6 @@
   .tierCore { width: 66%; }
   .tierMembers { width: 86%; }
   .tier b { font-size: 20px; }
-  .heroAbout { grid-template-columns: minmax(0, 1fr) 260px; gap: 48px; }
 }
 
 @media (max-width: 768px) {
@@ -651,22 +621,7 @@
   .listHead { display: none; }
   .msRow { grid-template-columns: 1fr; gap: 6px; padding: 14px 0; }
   .msRow:hover { padding-left: 0; }
-  .heroAbout { grid-template-columns: minmax(0, 1fr); gap: 30px; padding-bottom: 0; }
-  .statRail {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 0 18px;
-    margin-top: 0;
-  }
-  .statRailRow {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 3px;
-    padding: 12px 0 0;
-    border-bottom: 0;
-  }
-  .statRailRow b { font-size: 26px; }
-  .statRailRow span { font-size: 11.5px; text-align: left; }
+  .heroAbout { padding-bottom: 0; }
   .footerSlimIn { padding: 16px 22px 36px; gap: 12px 20px; }
   .storyList { columns: 1; }
   .rRow { grid-template-columns: 1fr; gap: 6px; padding: 14px 0; }

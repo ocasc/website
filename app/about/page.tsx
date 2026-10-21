@@ -10,7 +10,6 @@ const JOIN_FORM_URL = "https://wj.qq.com/s2/28113604/kyqo/";
 export default function AboutPage() {
   const { t } = useLanguage();
   const ap = t.aboutPage;
-  const stats = t.stats;
 
   return (
     <div className={styles.page}>
@@ -47,18 +46,8 @@ export default function AboutPage() {
       <main>
         <div className={styles.wrap}>
           <section className={`${styles.heroPage} ${styles.heroAbout}`}>
-            <div className={styles.heroAboutText}>
-              <h1 className={styles.h1}>{ap.hero.title}</h1>
-              <p className={styles.lede}>{ap.hero.description}</p>
-            </div>
-            <div className={styles.statRail}>
-              {[stats.coreTeam, stats.community, stats.reach].map((s) => (
-                <div key={s.label} className={styles.statRailRow}>
-                  <b>{s.value}</b>
-                  <span>{s.label}</span>
-                </div>
-              ))}
-            </div>
+            <h1 className={styles.h1}>{ap.hero.title}</h1>
+            <p className={styles.lede}>{ap.hero.description}</p>
           </section>
 
           <section className={styles.section}>
