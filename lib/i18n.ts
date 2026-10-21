@@ -87,6 +87,7 @@ export interface Translations {
     };
     footer: {
       partners: string;
+      affiliate: string;
       wechat: string;
       email: string;
       site: string;
@@ -340,6 +341,7 @@ export const translations: Record<Language, Translations> = {
       },
       footer: {
         partners: '合作伙伴',
+        affiliate: '所属网络',
         wechat: '公众号',
         email: '联系邮箱',
         site: 'aisafety-cn.com',
@@ -718,6 +720,7 @@ export const translations: Record<Language, Translations> = {
       },
       footer: {
         partners: 'Partners',
+        affiliate: 'Affiliated with',
         wechat: 'WeChat',
         email: 'Email',
         site: 'aisafety-cn.com',

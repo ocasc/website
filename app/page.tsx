@@ -280,6 +280,13 @@ export default function HomePage() {
 
       <footer className={styles.footer}>
         <div className={styles.wrap}>
+          <div className={styles.affiliate}>
+            <span className={styles.affiliateLabel}>{home.footer.affiliate}</span>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/iaseai-logo.png" alt="IASEAI" className={styles.affiliateLogo} />
+            <span className={styles.affiliateText}>{home.hero.metaAffiliate}</span>
+          </div>
+
           <div className={styles.partners}>
             <span className={styles.partnersLabel}>{home.footer.partners}</span>
             {PARTNERS.map((p) => (
@@ -297,10 +304,7 @@ export default function HomePage() {
           </div>
 
           <div className={styles.fIn}>
-            <div>
-              <div className={styles.fSite}>{home.footer.site}</div>
-              <div className={styles.fAffil}>{home.hero.metaAffiliate}</div>
-            </div>
+            <div className={styles.fSite}>{home.footer.site}</div>
             <div className={styles.fLinks}>
               <a href="https://space.bilibili.com/1770030225" target="_blank" rel="noopener noreferrer">
                 {t.about.contact.bilibili}

@@ -579,7 +579,6 @@
   padding-top: 20px;
 }
 .fSite { font-size: 15px; font-weight: 790; letter-spacing: -0.2px; }
-.fAffil { margin-top: 4px; font-size: 11.5px; letter-spacing: 0.02em; color: var(--home-muted3); }
 .fLinks { display: flex; gap: 20px; font-size: 12.5px; }
 .fLinks a { color: var(--home-muted); text-decoration: none; }
 .fLinks a:hover { color: var(--home-crimson); }
@@ -653,13 +652,31 @@
 .langSlot { display: flex; align-items: center; margin-left: 22px; flex: none; white-space: nowrap; }
 .langSlot * { white-space: nowrap; }
 
-/* ---------- particles / partners ---------- */
+/* ---------- 所属网络 / partners ---------- */
+.affiliate {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  padding: 16px 0;
+  border-top: 2px solid var(--home-ink);
+}
+.affiliateLabel {
+  font-size: 10.5px;
+  font-weight: 750;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #5f5f64;
+}
+.affiliateLogo { height: 22px; width: auto; display: block; }
+.affiliateText { font-size: 12px; color: var(--home-muted); }
+
 .partners {
   display: flex;
   align-items: center;
   gap: 18px;
-  padding: 20px 0;
-  border-top: 2px solid var(--home-ink);
+  padding: 16px 0;
+  border-top: 1px solid var(--home-line-strong);
   flex-wrap: wrap;
 }
 .partnersLabel {
@@ -737,6 +754,9 @@
 
 @media (max-width: 768px) {
   .langSlot { margin-left: auto; }
+  .affiliate { gap: 8px 12px; padding: 14px 0 12px; }
+  .affiliateLogo { height: 20px; }
+  .affiliateText { font-size: 11.5px; }
   .partners { gap: 14px; }
   .partner img { height: 18px; }
   .fLinks { flex-wrap: wrap; gap: 14px; }
