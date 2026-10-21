@@ -44,6 +44,7 @@ export interface Translations {
       titleLine1: string;
       titleLine2: string;
       titleAccent: string;
+      titleTail: string;
       lede: string;
       metaAffiliate: string;
       metaMid: string;
@@ -251,9 +252,10 @@ export const translations: Record<Language, Translations> = {
     home: {
       hero: {
         eyebrow: 'AI Safety in China · Est. 2025',
-        titleLine1: '开放的',
-        titleLine2: 'AI 安全',
-        titleAccent: '社区',
+        titleLine1: '让 AI 的能力边界',
+        titleLine2: '始终跟在',
+        titleAccent: '安全边界',
+        titleTail: '之内',
         lede: '面向中文读者，我们定期举办讲座与论文研读，开设共学课程，也承接研究项目。社区里有研究者、工程师、产业与政策从业者。',
         metaAffiliate: 'IASEAI Affiliate',
         metaMid: '线上为主',
@@ -532,9 +534,10 @@ export const translations: Record<Language, Translations> = {
     home: {
       hero: {
         eyebrow: 'AI Safety in China · Est. 2025',
-        titleLine1: 'An open',
-        titleLine2: 'AI safety',
-        titleAccent: 'community',
+        titleLine1: 'Keeping AI capability',
+        titleLine2: 'inside the',
+        titleAccent: 'safety boundary',
+        titleTail: '',
         lede: 'For Chinese-language readers we run regular talks and paper readings, a six-week co-learning course, and research projects. Members include researchers, engineers, and people from industry, policy and law.',
         metaAffiliate: 'IASEAI Affiliate',
         metaMid: 'Mostly online',

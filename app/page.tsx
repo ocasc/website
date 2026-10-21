@@ -111,6 +111,7 @@ export default function HomePage() {
                 {home.hero.titleLine2}
                 {language === "en" ? " " : ""}
                 <em>{home.hero.titleAccent}</em>
+                {home.hero.titleTail}
               </h1>
               <p className={styles.lede}>{home.hero.lede}</p>
               <p className={styles.meta}>
