@@ -240,7 +240,7 @@ export const translations: Record<Language, Translations> = {
     nav: {
       siteName: 'AI安全开放社区',
       events: '活动',
-      resources: '资源',
+      resources: '入行',
       about: '关于我们',
       joinAction: '加入社群',
       proposeTalk: '申请分享',
@@ -343,8 +343,8 @@ export const translations: Record<Language, Translations> = {
       },
     },
     resourcesPage: {
-      title: '资源',
-      lede: '一条按顺序走的路：先上课程打底子，再做兼职项目，最后进全职 fellowship。每一步都只收高质量的项目。',
+      title: '如何进入 AI 安全',
+      lede: '没有唯一的入口，但有一条常见的顺序：先上课程打底子，再做兼职项目，最后进全职 fellowship。每一步都只收高质量的项目。',
       criteria: '收录标准：技术向（对齐研究、可解释性、安全工程、评测）与治理向（研究、标准、国际协作），且质量足够高；不收无法验证的项目。',
       colName: '名称',
       colKind: '性质',
@@ -613,7 +613,7 @@ export const translations: Record<Language, Translations> = {
     nav: {
       siteName: 'Open Community for AI Safety China',
       events: 'Events',
-      resources: 'Resources',
+      resources: 'Start here',
       about: 'About',
       joinAction: 'Join Us',
       proposeTalk: 'Propose a Talk',
@@ -717,8 +717,8 @@ export const translations: Record<Language, Translations> = {
       },
     },
     resourcesPage: {
-      title: 'Resources',
-      lede: 'A path to walk in order: take a course first, then a part-time project, then a full-time fellowship. Every step lists only high-quality programs.',
+      title: 'How to get into AI safety',
+      lede: 'There is no single entry point, but there is a common order: take a course first, then a part-time project, then a full-time fellowship. Every step lists only high-quality programs.',
       criteria: 'Inclusion: technical (alignment research, interpretability, safety engineering, evaluations) or governance (research, standards, international cooperation), and demonstrably high quality; nothing we cannot verify.',
       colName: 'Program',
       colKind: 'Type',
