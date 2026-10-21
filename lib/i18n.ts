@@ -262,7 +262,7 @@ export const translations: Record<Language, Translations> = {
     home: {
       brandSub: '',
       hero: {
-        eyebrow: '人工智能安全 · 中国 · 2025 年创立',
+        eyebrow: '人工智能安全 · 2025 年创立',
         titleLine1: 'AI',
         titleLine2: '',
         titleAccent: '安全',
