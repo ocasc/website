@@ -3,7 +3,7 @@
 
 export interface GitHubEventData {
   id: string;
-  type: 'seminar' | 'lecture' | 'course' | 'hackathon';
+  type: 'seminar' | 'lecture' | 'course' | 'hackathon' | 'meetup';
   title: string;
   description: string;
   date: string;
@@ -310,8 +310,9 @@ function parseEventFromMarkdown(rawContent: string, filePath: string): GitHubEve
     }
 
     // 根据文件路径确定事件类型
-    let type: 'seminar' | 'lecture' | 'course' | 'hackathon' = 'lecture'; // 默认为讲座
+    let type: 'seminar' | 'lecture' | 'course' | 'hackathon' | 'meetup' = 'lecture'; // 默认为讲座
     if (filePath.includes('hackathon') || filePath.includes('黑客松')) type = 'hackathon';
+    else if (filePath.includes('meetup') || filePath.includes('见面会')) type = 'meetup';
     else if (filePath.includes('seminar') || filePath.includes('讨论')) type = 'seminar';
     else if (filePath.includes('course') || filePath.includes('课程')) type = 'course';
     else if (filePath.includes('talk') || filePath.includes('讲座')) type = 'lecture';
@@ -343,7 +344,13 @@ function parseEventFromMarkdown(rawContent: string, filePath: string): GitHubEve
 
     // 如果没有找到合适的描述，使用标题作为描述
     if (!description) {
-      description = `${type === 'seminar' ? '研讨会' : type === 'course' ? '课程' : '讲座'}：${title}`;
+      const typeLabel =
+        type === 'seminar' ? '研讨会'
+        : type === 'course' ? '课程'
+        : type === 'hackathon' ? '黑客松'
+        : type === 'meetup' ? '见面会'
+        : '讲座';
+      description = `${typeLabel}：${title}`;
     }
 
     // 限制描述长度
@@ -441,6 +448,7 @@ async function discoverEventFiles(signal?: AbortSignal): Promise<string[]> {
         (file.name.startsWith('talk-') ||
           file.name.startsWith('course-') ||
           file.name.startsWith('hackathon-') ||
+          file.name.startsWith('meetup-') ||
           file.name.startsWith('seminar-'))
       )
       .map((file: any) => file.name);

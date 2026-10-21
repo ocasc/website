@@ -134,6 +134,10 @@ export interface Translations {
         title: string;
         description: string;
       };
+      meetup: {
+        title: string;
+        description: string;
+      };
     };
     viewAll: string;
     viewMore: string;
@@ -463,6 +467,10 @@ export const translations: Record<Language, Translations> = {
         hackathon: {
           title: '黑客松',
           description: '限时解决真实安全议题的协作冲刺',
+        },
+        meetup: {
+          title: '见面会',
+          description: '线下见面、交流与彼此引荐',
         },
       },
       viewAll: '查看全部',
@@ -824,7 +832,7 @@ export const translations: Record<Language, Translations> = {
       pastEvents: 'Past Events',
       eventTypes: {
         seminar: {
-          title: 'Seminars',
+          title: 'Seminar',
           description:
             'Participate in in-depth seminars and share your perspectives',
         },
@@ -839,6 +847,10 @@ export const translations: Record<Language, Translations> = {
         hackathon: {
           title: 'Hackathon',
           description: 'Time-boxed sprints on real safety problems',
+        },
+        meetup: {
+          title: 'Meetup',
+          description: 'In-person gatherings to meet, talk and make introductions',
         },
       },
       viewAll: 'View All',
