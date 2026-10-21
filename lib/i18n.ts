@@ -41,6 +41,7 @@ export interface Translations {
     title: string;
     description: string;
     allTypes: string;
+    proposeTalk: string;
     upcomingEvents: string;
     pastEvents: string;
     eventTypes: {
@@ -198,6 +199,7 @@ export const translations: Record<Language, Translations> = {
       title: '活动',
       description: '关注最新的研讨会、技术讲座和课程',
       allTypes: '全部',
+      proposeTalk: '申请分享',
       upcomingEvents: '即将举行的活动',
       pastEvents: '往期活动',
       eventTypes: {
@@ -402,6 +404,7 @@ export const translations: Record<Language, Translations> = {
       description:
         'Stay updated with the latest lectures, technical seminars, and co-learning courses',
       allTypes: 'All',
+      proposeTalk: 'Propose a Talk',
       upcomingEvents: 'Upcoming Events',
       pastEvents: 'Past Events',
       eventTypes: {

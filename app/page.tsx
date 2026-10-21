@@ -9,6 +9,7 @@ import { HeroStats } from '@/components/hero-stats';
 import { useEvents } from '@/lib/use-events';
 
 const JOIN_FORM_URL = 'https://wj.qq.com/s2/28113604/kyqo/';
+const PROPOSE_TALK_URL = 'https://docs.google.com/forms/d/1-LlnyTAXhM8c8YvQZDddWkfrE-Qp0SwxwYJZbPB-yXo/viewform';
 
 const WechatIcon = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor">
@@ -171,6 +172,15 @@ export default function HomePage() {
                   {t.events.title}
                 </h2>
                 <p className="text-on-surface-variant">{t.events.description}</p>
+                <a
+                  href={PROPOSE_TALK_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 mt-5 text-sm font-semibold text-primary hover:underline"
+                >
+                  {t.events.proposeTalk}
+                  <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
+                </a>
               </div>
               <div className="flex gap-2 p-1.5 bg-surface-container-highest rounded-xl">
                 {(
