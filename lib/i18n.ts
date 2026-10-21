@@ -115,6 +115,10 @@ export interface Translations {
         title: string;
         description: string;
       };
+      hackathon: {
+        title: string;
+        description: string;
+      };
     };
     viewAll: string;
     viewMore: string;
@@ -355,6 +359,10 @@ export const translations: Record<Language, Translations> = {
         course: {
           title: '课程',
           description: '与其它成员共同学习一门课程',
+        },
+        hackathon: {
+          title: '黑客松',
+          description: '限时解决真实安全议题的协作冲刺',
         },
       },
       viewAll: '查看全部',
@@ -644,6 +652,10 @@ export const translations: Record<Language, Translations> = {
         course: {
           title: 'Courses',
           description: 'Learn courses together with other members',
+        },
+        hackathon: {
+          title: 'Hackathon',
+          description: 'Time-boxed sprints on real safety problems',
         },
       },
       viewAll: 'View All',

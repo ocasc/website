@@ -3,7 +3,7 @@
 
 export interface GitHubEventData {
   id: string;
-  type: 'seminar' | 'lecture' | 'course';
+  type: 'seminar' | 'lecture' | 'course' | 'hackathon';
   title: string;
   description: string;
   date: string;
@@ -299,8 +299,9 @@ function parseEventFromMarkdown(content: string, filePath: string): GitHubEventD
     }
 
     // 根据文件路径确定事件类型
-    let type: 'seminar' | 'lecture' | 'course' = 'lecture'; // 默认为讲座
-    if (filePath.includes('seminar') || filePath.includes('讨论')) type = 'seminar';
+    let type: 'seminar' | 'lecture' | 'course' | 'hackathon' = 'lecture'; // 默认为讲座
+    if (filePath.includes('hackathon') || filePath.includes('黑客松')) type = 'hackathon';
+    else if (filePath.includes('seminar') || filePath.includes('讨论')) type = 'seminar';
     else if (filePath.includes('course') || filePath.includes('课程')) type = 'course';
     else if (filePath.includes('talk') || filePath.includes('讲座')) type = 'lecture';
 
@@ -426,6 +427,7 @@ async function discoverEventFiles(signal?: AbortSignal): Promise<string[]> {
         file.name.endsWith('.md') &&
         (file.name.startsWith('talk-') ||
           file.name.startsWith('course-') ||
+          file.name.startsWith('hackathon-') ||
           file.name.startsWith('seminar-'))
       )
       .map((file: any) => file.name);
