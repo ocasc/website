@@ -133,20 +133,20 @@ export default function HomePage() {
               </div>
             </div>
 
-            <aside className={styles.stats} aria-label={home.statsLabel}>
-              <div className={styles.stat}>
+            <aside className={styles.pyramid} aria-label={home.statsLabel}>
+              <div className={`${styles.tier} ${styles.tierCore}`}>
                 <b>{t.stats.coreTeam.value}</b>
                 <span>{t.stats.coreTeam.label}</span>
               </div>
-              <div className={styles.stat}>
+              <div className={`${styles.tier} ${styles.tierMembers}`}>
                 <b>{t.stats.community.value}</b>
                 <span>{t.stats.community.label}</span>
               </div>
-              <div className={styles.stat}>
+              <div className={`${styles.tier} ${styles.tierReach}`}>
                 <b>{t.stats.reach.value}</b>
                 <span>{t.stats.reach.label}</span>
               </div>
-              <p className={styles.statNote}>{home.statsNote}</p>
+              <p className={styles.pyramidNote}>{home.statsNote}</p>
             </aside>
           </section>
 
