@@ -37,7 +37,9 @@
   align-items: center;
   justify-content: space-between;
   gap: 32px;
-  padding: 18px 0;
+  /* 只给上下留白：写 padding 简写会把 .wrap 的左右内边距清零，logo 和 JOIN 会顶出正文网格 */
+  padding-top: 18px;
+  padding-bottom: 18px;
 }
 .brand {
   display: flex;
@@ -47,7 +49,7 @@
   color: inherit;
 }
 .brandMark { width: 34px; height: 34px; flex: none; display: block; }
-.brandText { font-size: 13px; font-weight: 750; line-height: 1.28; letter-spacing: 0.02em; }
+.brandText { font-size: 15px; font-weight: 790; line-height: 1.2; letter-spacing: 0; white-space: nowrap; }
 .brandText span {
   display: block;
   font-size: 10px;
@@ -744,6 +746,11 @@
   .tierCore { width: 66%; }
   .tierMembers { width: 86%; }
   .tier b { font-size: 20px; }
+  /* 英文社名 35 字符在平板档放不下 15px：收到 13px + 收紧导航间距 + 收小语言切换左间距，
+     否则 JOIN 按钮会挤到内容边外。必须写在 .langSlot 基础规则之后，否则被它的 22px 覆盖。 */
+  .nav { gap: 16px; }
+  .langSlot { margin-left: 8px; }
+  .brandText { font-size: 13px; }
 }
 
 @media (max-width: 768px) {

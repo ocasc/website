@@ -54,7 +54,7 @@ export default function HomePage() {
             <BrandMark className={styles.brandMark} />
             <span className={styles.brandText}>
               {t.nav.siteName}
-              {home.brandSub ? <span>{home.brandSub}</span> : null}
+              {home.brandSub && home.brandSub !== t.nav.siteName ? <span>{home.brandSub}</span> : null}
             </span>
           </a>
 
