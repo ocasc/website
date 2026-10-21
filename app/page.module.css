@@ -339,6 +339,13 @@
   color: #fff;
   padding-left: 12px;
 }
+/* 未来活动：整行反白（墨底纸字），过去活动保持纸白 */
+.evFuture { background: var(--home-ink); color: #fff; padding-left: 12px; }
+.evFuture .evDate { color: #fff; }
+.evFuture .evType { color: #ffb9c4; }
+.evFuture .evForm,
+.evFuture .evMetaMobile { color: #d6d6db; }
+.evFuture:hover { background: #26262a; }
 .ev:hover .evDate { color: #fff; }
 .ev:hover .evType { color: #ffb9c4; }
 .ev:hover .evForm,

@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import styles from "./page.module.css";
 import { useLanguage } from "@/lib/language-context";
 import { LanguageSwitcher } from "@/components/language-switcher";
@@ -52,6 +52,16 @@ function BrandMark() {
 export default function HomePage() {
   const { t, language } = useLanguage();
   const { events, loading, error } = useEvents();
+  // 判定「未来/过去」只在客户端算，避免服务端 UTC 与本地时区不一致导致 hydration 不匹配
+  const [todayKey, setTodayKey] = useState<string | null>(null);
+  useEffect(() => {
+    const n = new Date();
+    setTodayKey(
+      `${n.getFullYear()}/${String(n.getMonth() + 1).padStart(2, "0")}/${String(
+        n.getDate(),
+      ).padStart(2, "0")}`,
+    );
+  }, []);
   const [expanded, setExpanded] = useState(false);
   const [showWechatQR, setShowWechatQR] = useState(false);
   const home = t.home;
@@ -222,10 +232,15 @@ export default function HomePage() {
             ) : (
               visible.map((ev) => {
                 const href = ev.documentLink || ev.videoLink;
+                const dayKey = ev.date.replace(/-/g, "/").replace(
+                  /^(\d{4})\/(\d)\//,
+                  "$1/0$2/",
+                );
+                const isFuture = todayKey !== null && dayKey > todayKey;
                 return (
                   <a
                     key={ev.id}
-                    className={styles.ev}
+                    className={`${styles.ev} ${isFuture ? styles.evFuture : ""}`}
                     href={href || "#events"}
                     {...(href ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                   >
