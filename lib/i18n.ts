@@ -278,7 +278,7 @@ export const translations: Record<Language, Translations> = {
         text: '确保人工智能始终处在人类的控制之下。',
       },
       statsLabel: '社区数据',
-      statsNote: '截至 2026 年 10 月 · 社群成员为微信群成员',
+      statsNote: '',
       tracks: {
         eyebrow: '',
         title: '我们提供什么',
@@ -321,8 +321,8 @@ export const translations: Record<Language, Translations> = {
       },
       propose: {
         eyebrow: '',
-        titleLine1: '把你的分享',
-        titleLine2: '提上日程',
+        titleLine1: '把你的工作',
+        titleLine2: '讲给社区',
         body: '我们每个月安排一到两场线上分享，欢迎研究者、工程师、产业从业者，以及政策与法律背景的朋友来讲你正在做的事。中文或英文都可以。',
         cta: '申请分享',
         specs: [
@@ -569,7 +569,7 @@ export const translations: Record<Language, Translations> = {
         text: 'To ensure that artificial intelligence always remains under human control.',
       },
       statsLabel: 'Community figures',
-      statsNote: 'As of October 2026 · members counted as WeChat group members',
+      statsNote: '',
       tracks: {
         eyebrow: 'Resources',
         title: 'What we offer',
@@ -612,8 +612,8 @@ export const translations: Record<Language, Translations> = {
       },
       propose: {
         eyebrow: 'Propose a Talk',
-        titleLine1: 'Put your talk',
-        titleLine2: 'on the schedule',
+        titleLine1: 'Give a talk',
+        titleLine2: 'to the community',
         body: 'We host one or two online talks a month. Researchers, engineers, industry practitioners, and people from policy or legal backgrounds are welcome to present their work — in Chinese or English.',
         cta: 'Propose a talk',
         specs: [

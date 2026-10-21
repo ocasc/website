@@ -163,16 +163,15 @@ export default function HomePage() {
                 <b>{t.stats.reach.value}</b>
                 <span>{t.stats.reach.label}</span>
               </div>
-              <p className={styles.pyramidNote}>{home.statsNote}</p>
+              {home.statsNote ? (
+                <p className={styles.pyramidNote}>{home.statsNote}</p>
+              ) : null}
             </aside>
           </section>
 
           <figure className={styles.mission}>
             <figcaption className={styles.missionLabel}>{home.mission.label}</figcaption>
-            <p className={styles.missionText}>
-              {home.mission.text.replace(/[。.]$/, "")}
-              <span className={styles.missionStop}>。</span>
-            </p>
+            <p className={styles.missionText}>{home.mission.text}</p>
           </figure>
 
           <section id="resources" className={styles.section}>
