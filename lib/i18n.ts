@@ -110,10 +110,7 @@ export interface Translations {
     colName: string;
     colKind: string;
     colNote: string;
-    govHead: string;
-    govNote: string;
     programs: Array<{ name: string; kind: string; note: string; url: string; commit: "full" | "part" }>;
-    govs: Array<{ name: string; kind: string; note: string; url: string }>;
     courses: Array<{ name: string; kind: string; note: string; url: string }>;
   };
 
@@ -361,8 +358,6 @@ export const translations: Record<Language, Translations> = {
       programNotePart: '每周投入更少，可以远程参与。',
       courseHead: '课程与技术训练',
       courseNote: '带作业或讨论，不是概论。',
-      govHead: '治理与政策',
-      govNote: '偏研究与跨国协作，适合从技术往制度方向延伸的人。',
       colName: '名称',
       colKind: '性质',
       colNote: '说明',
@@ -403,25 +398,18 @@ export const translations: Record<Language, Translations> = {
           commit: 'full',
         },
         {
+          name: 'GovAI · Centre for the Governance of AI',
+          kind: '治理 fellowship',
+          note: '3 个月，伦敦现场，研究与应用两条线；一年两期，2027 冬季期 1 月 18 日－4 月 9 日。',
+          url: 'https://www.governance.ai/opportunities',
+          commit: 'full',
+        },
+        {
           name: 'SPAR',
           kind: '远程研究项目',
           note: '兼职、远程，导师监督下的对齐研究，适合有技术背景想转进研究的人。',
           url: 'https://sparai.org/',
           commit: 'part',
-        },
-      ],
-      govs: [
-        {
-          name: 'GovAI · Centre for the Governance of AI',
-          kind: '研究机构',
-          note: '英国牛津的 AI 治理研究机构，发布制度设计、算力治理与政策工具方向的报告与分析。',
-          url: 'https://www.governance.ai/',
-        },
-        {
-          name: 'Concordia AI · 安远AI',
-          kind: '中文研究',
-          note: '面向中文读者的 AI 安全与治理研究，发布政策分析、简报与科普材料。',
-          url: 'https://www.concordia-ai.com/',
         },
       ],
       courses: [
@@ -734,8 +722,6 @@ export const translations: Record<Language, Translations> = {
       programNotePart: 'Lighter weekly load, remote-friendly.',
       courseHead: 'Courses and technical training',
       courseNote: 'Exercises or discussion rather than survey material.',
-      govHead: 'Governance and policy',
-      govNote: 'Research and transnational cooperation, for people extending from technical work into institutions.',
       colName: 'Program',
       colKind: 'Type',
       colNote: 'Notes',
@@ -776,25 +762,18 @@ export const translations: Record<Language, Translations> = {
           commit: 'full',
         },
         {
+          name: 'GovAI · Centre for the Governance of AI',
+          kind: 'Governance fellowship',
+          note: '3 months on site in London, research and applied tracks; two cohorts a year, the 2027 winter cohort runs 18 January – 9 April.',
+          url: 'https://www.governance.ai/opportunities',
+          commit: 'full',
+        },
+        {
           name: 'SPAR',
           kind: 'Remote research program',
           note: 'Part-time and remote; supervised alignment research for technical people moving into research.',
           url: 'https://sparai.org/',
           commit: 'part',
-        },
-      ],
-      govs: [
-        {
-          name: 'GovAI · Centre for the Governance of AI',
-          kind: 'Research institute',
-          note: 'An AI governance research institute in Oxford, publishing on institutional design, compute governance and policy tools.',
-          url: 'https://www.governance.ai/',
-        },
-        {
-          name: 'Concordia AI',
-          kind: 'Chinese-language research',
-          note: 'AI safety and governance research for Chinese-language readers: policy analysis, briefings and explainers.',
-          url: 'https://www.concordia-ai.com/',
         },
       ],
       courses: [
