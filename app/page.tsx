@@ -122,7 +122,7 @@ export default function HomePage() {
               {home.hero.eyebrow ? (
                 <p className={styles.eyebrow}>{home.hero.eyebrow}</p>
               ) : null}
-              <h1 className={styles.h1}>
+              <h1 className={`${styles.h1} ${language === "en" ? styles.h1En : ""}`}>
                 {home.hero.titleLine1}
                 {home.hero.titleLine2 ? (
                   <>

@@ -554,8 +554,8 @@ export const translations: Record<Language, Translations> = {
       brandSub: 'Open Community for AI Safety China',
       hero: {
         eyebrow: '',
-        titleLine1: 'Open Community for',
-        titleLine2: 'AI Safety China',
+        titleLine1: 'Open Community',
+        titleLine2: 'for AI Safety China',
         titleAccent: '',
         titleTail: '',
         lede: 'A professional network for Chinese-language readers: regular talks and paper readings, a six-week co-learning course, and in-person meetups. Members come from research, engineering, industry, policy and law.',
