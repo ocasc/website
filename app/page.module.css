@@ -217,22 +217,10 @@
 }
 
 /* ---------- mission（并进 hero，不再单独成带） ---------- */
+/* 使命句整句一个颜色、一个字号：「我们的使命是……」不拆成标签 + 正文 */
 .missionRow {
   margin: 0 0 20px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px 14px;
-  align-items: baseline;
   max-width: 36em;
-}
-.missionRowLabel {
-  font-size: 12px;
-  font-weight: 780;
-  letter-spacing: 0.18em;
-  color: var(--home-crimson);
-  white-space: nowrap;
-}
-.missionRowText {
   font-size: 17px;
   font-weight: 650;
   line-height: 1.7;

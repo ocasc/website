@@ -276,7 +276,7 @@ export const translations: Record<Language, Translations> = {
         joinCta: '加入社群',
       },
       mission: {
-        label: '我们的使命',
+        label: '我们的使命是',
         text: '确保人工智能始终处在人类的控制之下。',
       },
       statsLabel: '社区数据',
@@ -650,8 +650,8 @@ export const translations: Record<Language, Translations> = {
         joinCta: 'Join community',
       },
       mission: {
-        label: 'Our mission',
-        text: 'To ensure that artificial intelligence always remains under human control.',
+        label: 'Our mission is',
+        text: 'to ensure that artificial intelligence always remains under human control.',
       },
       statsLabel: 'Community figures',
       statsNote: '',

@@ -104,19 +104,18 @@ export default function HomePage() {
                 {home.hero.titleTail}
               </h1>
               <p className={styles.missionRow}>
-                <span className={styles.missionRowLabel}>{home.mission.label}</span>
-                <span className={styles.missionRowText}>
-                  {language === "zh" ? (
-                    <>
-                      {home.mission.text.split("始终")[0]}
-                      <span className={styles.missionTail}>
-                        始终{home.mission.text.split("始终")[1]}
-                      </span>
-                    </>
-                  ) : (
-                    home.mission.text
-                  )}
-                </span>
+                {home.mission.label}
+                {language === "en" ? " " : ""}
+                {language === "zh" ? (
+                  <>
+                    {home.mission.text.split("始终")[0]}
+                    <span className={styles.missionTail}>
+                      始终{home.mission.text.split("始终")[1]}
+                    </span>
+                  </>
+                ) : (
+                  home.mission.text
+                )}
               </p>
               <p className={styles.lede}>{home.hero.lede}</p>
               <div className={styles.heroCta}>
