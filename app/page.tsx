@@ -75,7 +75,7 @@ export default function HomePage() {
             <BrandMark />
             <span className={styles.brandText}>
               {t.nav.siteName}
-              <span>Open Community for AI Safety China</span>
+              {home.brandSub ? <span>{home.brandSub}</span> : null}
             </span>
           </a>
 
@@ -167,7 +167,9 @@ export default function HomePage() {
           <section id="resources" className={styles.section}>
             <div className={styles.secHead}>
               <div>
-                <p className={styles.eyebrow}>{home.tracks.eyebrow}</p>
+                {home.tracks.eyebrow ? (
+                  <p className={styles.eyebrow}>{home.tracks.eyebrow}</p>
+                ) : null}
                 <h2 className={styles.hSec}>{home.tracks.title}</h2>
               </div>
             </div>
@@ -194,7 +196,9 @@ export default function HomePage() {
           <section id="events" className={styles.section}>
             <div className={styles.secHead}>
               <div>
-                <p className={styles.eyebrow}>{home.events.eyebrow}</p>
+                {home.events.eyebrow ? (
+                  <p className={styles.eyebrow}>{home.events.eyebrow}</p>
+                ) : null}
                 <h2 className={styles.hSec}>{home.events.title}</h2>
               </div>
             </div>
@@ -246,7 +250,9 @@ export default function HomePage() {
           <section className={styles.propose}>
             <div className={styles.proposeGrid}>
               <div>
-                <p className={styles.eyebrow}>{home.propose.eyebrow}</p>
+                {home.propose.eyebrow ? (
+                  <p className={styles.eyebrow}>{home.propose.eyebrow}</p>
+                ) : null}
                 <h2>
                   {home.propose.titleLine1}
                   <br />

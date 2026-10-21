@@ -39,6 +39,7 @@ export interface Translations {
 
   // Homepage (print-poster layout)
   home: {
+    brandSub?: string;
     hero: {
       eyebrow: string;
       titleLine1: string;
@@ -255,16 +256,17 @@ export const translations: Record<Language, Translations> = {
     },
 
     home: {
+      brandSub: '',
       hero: {
-        eyebrow: 'AI Safety in China · Est. 2025',
-        titleLine1: 'AI安全',
+        eyebrow: '人工智能安全 · 中国 · 2025 年创立',
+        titleLine1: 'AI',
         titleLine2: '',
-        titleAccent: '开放',
-        titleTail: '社区',
+        titleAccent: '安全',
+        titleTail: '开放社区',
         lede: '一个面向中文读者的专业网络：定期举办讲座与论文研读，开设共学课程，也承接研究项目。成员来自研究、工程、产业与政策。',
-        metaAffiliate: 'IASEAI Affiliate',
+        metaAffiliate: 'IASEAI 附属机构',
         metaMid: '线上为主',
-        metaLang: '中文 / English',
+        metaLang: '中文 / 英文',
         joinCta: '加入社群',
       },
       mission: {
@@ -274,25 +276,25 @@ export const translations: Record<Language, Translations> = {
       statsLabel: '社区数据',
       statsNote: '截至 2026 年 10 月 · 社群成员为微信群成员',
       tracks: {
-        eyebrow: 'Resources',
+        eyebrow: '',
         title: '我们提供什么',
         items: [
           {
-            no: 'TRACK 01',
+            no: '01',
             title: '前沿 AI 安全课程',
             body: 'BlueDot Impact 课程的中文版，覆盖 AGI 战略、技术安全与前沿治理，六周研讨式共学。',
             link: '课程介绍',
             url: 'https://mp.weixin.qq.com/s/Eca3ROQZ4_1ub1x4Nzl_vA',
           },
           {
-            no: 'TRACK 02',
+            no: '02',
             title: '研究项目',
             body: '社群成员参与的研究项目，兼职与全职，申请制。方向覆盖评测、治理与安全工程。',
             link: '了解共创',
             url: '/about',
           },
           {
-            no: 'TRACK 03',
+            no: '03',
             title: '学术研讨会',
             body: '定期组织的论文研读与专题研讨，与国内外 AI 安全研究机构和读书会保持联动。',
             link: '近期议题',
@@ -301,7 +303,7 @@ export const translations: Record<Language, Translations> = {
         ],
       },
       events: {
-        eyebrow: 'Events',
+        eyebrow: '',
         title: '近期活动',
         headDate: '日期',
         headType: '类型',
@@ -314,7 +316,7 @@ export const translations: Record<Language, Translations> = {
         empty: '暂无活动',
       },
       propose: {
-        eyebrow: 'Propose a Talk',
+        eyebrow: '',
         titleLine1: '把你的分享',
         titleLine2: '提上日程',
         body: '我们每个月安排一到两场线上分享，欢迎研究者、工程师、产业从业者，以及政策与法律背景的朋友来讲你正在做的事。中文或英文都可以。',
@@ -541,6 +543,7 @@ export const translations: Record<Language, Translations> = {
     },
 
     home: {
+      brandSub: 'Open Community for AI Safety China',
       hero: {
         eyebrow: 'AI Safety in China · Est. 2025',
         titleLine1: 'Open Community for',
