@@ -175,6 +175,30 @@
   letter-spacing: 0.03em;
 }
 
+/* ---------- pull quote ---------- */
+.quote {
+  margin: 0;
+  padding: 22px 0 24px;
+  border-top: 1px solid var(--home-line-strong);
+  border-bottom: 1px solid var(--home-line-strong);
+}
+.quoteText {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--home-ink);
+  letter-spacing: 0.01em;
+  max-width: 40em;
+}
+.quoteText::before { content: "「"; color: var(--home-crimson); }
+.quoteText::after { content: "」"; color: var(--home-crimson); }
+.quoteSource {
+  margin-top: 10px;
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--home-muted3);
+}
+
 /* ---------- sections ---------- */
 .section { padding: 56px 0; }
 .secHead {

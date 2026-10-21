@@ -51,6 +51,10 @@ export interface Translations {
       metaLang: string;
       joinCta: string;
     };
+    quote: {
+      text: string;
+      source: string;
+    };
     statsLabel: string;
     statsNote: string;
     tracks: {
@@ -252,15 +256,19 @@ export const translations: Record<Language, Translations> = {
     home: {
       hero: {
         eyebrow: 'AI Safety in China · Est. 2025',
-        titleLine1: '让 AI 的能力边界',
-        titleLine2: '始终跟在',
-        titleAccent: '安全边界',
-        titleTail: '之内',
-        lede: '面向中文读者，我们定期举办讲座与论文研读，开设共学课程，也承接研究项目。社区里有研究者、工程师、产业与政策从业者。',
+        titleLine1: 'AI 要跑得快，',
+        titleLine2: '也要',
+        titleAccent: '跑得稳',
+        titleTail: '',
+        lede: '一个面向中文读者的专业网络：定期举办讲座与论文研读，开设共学课程，也承接研究项目。成员来自研究、工程、产业与政策。',
         metaAffiliate: 'IASEAI Affiliate',
         metaMid: '线上为主',
         metaLang: '中文 / English',
         joinCta: '加入社群',
+      },
+      quote: {
+        text: '让人工智能这匹千里马既跑得快又跑得稳。',
+        source: '习近平 · 2026 世界人工智能大会主旨讲话',
       },
       statsLabel: '社区数据',
       statsNote: '截至 2026 年 10 月 · 社群成员为微信群成员',
@@ -534,15 +542,19 @@ export const translations: Record<Language, Translations> = {
     home: {
       hero: {
         eyebrow: 'AI Safety in China · Est. 2025',
-        titleLine1: 'Keeping AI capability',
-        titleLine2: 'inside the',
-        titleAccent: 'safety boundary',
+        titleLine1: 'AI should run fast',
+        titleLine2: 'and',
+        titleAccent: 'steady',
         titleTail: '',
-        lede: 'For Chinese-language readers we run regular talks and paper readings, a six-week co-learning course, and research projects. Members include researchers, engineers, and people from industry, policy and law.',
+        lede: 'A professional network for Chinese-language readers: regular talks and paper readings, a six-week co-learning course, and research projects. Members come from research, engineering, industry, policy and law.',
         metaAffiliate: 'IASEAI Affiliate',
         metaMid: 'Mostly online',
         metaLang: 'Chinese / English',
         joinCta: 'Join community',
+      },
+      quote: {
+        text: 'AI, this thoroughbred, should run both fast and steady.',
+        source: 'Xi Jinping · World AI Conference 2026 keynote (translation)',
       },
       statsLabel: 'Community figures',
       statsNote: 'As of October 2026 · members counted as WeChat group members',

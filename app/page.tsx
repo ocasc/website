@@ -150,6 +150,11 @@ export default function HomePage() {
             </aside>
           </section>
 
+          <figure className={styles.quote}>
+            <blockquote className={styles.quoteText}>{home.quote.text}</blockquote>
+            <figcaption className={styles.quoteSource}>{home.quote.source}</figcaption>
+          </figure>
+
           <section id="resources" className={styles.section}>
             <div className={styles.secHead}>
               <div>
