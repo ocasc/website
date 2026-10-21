@@ -285,13 +285,18 @@
   line-height: 1;
 }
 .statCell span { font-size: 11.5px; color: var(--home-muted3); }
-.storyGrid { display: grid; grid-template-columns: 1fr; gap: 32px; }
+.storyGrid { display: block; }
+.storyList {
+  columns: 2;
+  column-gap: 64px;
+  max-width: 100%;
+}
 .storyList p {
-  margin: 0 0 18px;
-  max-width: 38em;
-  font-size: 14.5px;
-  line-height: 1.85;
+  margin: 0 0 20px;
+  font-size: 16.5px;
+  line-height: 1.9;
   color: var(--home-muted2);
+  break-inside: avoid;
 }
 .storyList p:last-child { margin-bottom: 0; }
 .msRow {
@@ -628,6 +633,7 @@
   .msRow { grid-template-columns: 1fr; gap: 6px; padding: 14px 0; }
   .msRow:hover { padding-left: 0; }
   .statRow { gap: 18px 40px; }
+  .storyList { columns: 1; }
   .rRow { grid-template-columns: 1fr; gap: 6px; padding: 14px 0; }
   .rRow:hover { padding-left: 0; }
   .resList { flex-direction: column; gap: 16px; }
