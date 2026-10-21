@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import styles from "./page.module.css";
 import { useLanguage } from "@/lib/language-context";
 import { LanguageSwitcher } from "@/components/language-switcher";
+import { BrandMark } from "@/components/brand-mark";
 import { useEvents } from "@/lib/use-events";
 
 const JOIN_FORM_URL = "https://wj.qq.com/s2/28113604/kyqo/";
@@ -16,38 +17,6 @@ const PARTNERS = [
   { name: "Fungimind", logo: "/fungimind-logo.jpg", url: "https://www.thefungimind.com/", tall: true },
 ];
 
-function BrandMark() {
-  return (
-    <svg viewBox="0 0 400 400" className={styles.brandMark} aria-hidden="true">
-      <defs>
-        <mask id="ocasc-cross-cut">
-          <rect width="400" height="400" fill="#fff" />
-          <rect x="175" y="0" width="50" height="400" fill="#000" />
-          <rect x="0" y="175" width="400" height="50" fill="#000" />
-        </mask>
-      </defs>
-      <circle
-        cx="200"
-        cy="200"
-        r="130"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="30"
-        mask="url(#ocasc-cross-cut)"
-      />
-      <g stroke="currentColor" strokeWidth="5">
-        <line x1="195" y1="35" x2="195" y2="65" />
-        <line x1="205" y1="25" x2="205" y2="75" />
-        <line x1="195" y1="325" x2="195" y2="375" />
-        <line x1="205" y1="335" x2="205" y2="365" />
-        <line x1="25" y1="195" x2="75" y2="195" />
-        <line x1="35" y1="205" x2="65" y2="205" />
-        <line x1="335" y1="195" x2="365" y2="195" />
-        <line x1="325" y1="205" x2="375" y2="205" />
-      </g>
-    </svg>
-  );
-}
 
 export default function HomePage() {
   const { t, language } = useLanguage();
@@ -82,7 +51,7 @@ export default function HomePage() {
       <header className={styles.header}>
         <div className={`${styles.wrap} ${styles.nav}`}>
           <a href="/" className={styles.brand}>
-            <BrandMark />
+            <BrandMark className={styles.brandMark} />
             <span className={styles.brandText}>
               {t.nav.siteName}
               {home.brandSub ? <span>{home.brandSub}</span> : null}
@@ -91,7 +60,7 @@ export default function HomePage() {
 
           <nav className={styles.navLinks}>
             <a href="#events">{t.nav.events}</a>
-            <a href="#resources">{t.nav.resources}</a>
+            <a href="/resources">{t.nav.resources}</a>
             <a href="/about">{t.nav.about}</a>
           </nav>
 
@@ -110,7 +79,7 @@ export default function HomePage() {
         </div>
         <div className={`${styles.wrap} ${styles.mobileNav}`}>
           <a href="#events">{t.nav.events}</a>
-          <a href="#resources">{t.nav.resources}</a>
+          <a href="/resources">{t.nav.resources}</a>
           <a href="/about">{t.nav.about}</a>
         </div>
       </header>
@@ -174,7 +143,7 @@ export default function HomePage() {
             <p className={styles.missionText}>{home.mission.text}</p>
           </figure>
 
-          <section id="resources" className={styles.section}>
+          <section id="offer" className={styles.section}>
             <div className={styles.secHead}>
               <div>
                 {home.tracks.eyebrow ? (
@@ -202,28 +171,6 @@ export default function HomePage() {
               ))}
             </div>
 
-            <div className={styles.res}>
-              <div className={styles.resHead}>
-                <span className={styles.resLabel}>{home.tracks.resourceLabel}</span>
-                <span className={styles.resNote}>{home.tracks.resourceNote}</span>
-              </div>
-              <ul className={styles.resList}>
-                {home.tracks.resourceItems.map((r) => (
-                  <li key={r.url}>
-                    <a
-                      className={styles.resName}
-                      href={r.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {r.name}
-                      <span aria-hidden="true"> ↗</span>
-                    </a>
-                    <p className={styles.resItemNote}>{r.note}</p>
-                  </li>
-                ))}
-              </ul>
-            </div>
           </section>
 
           <section id="events" className={styles.section}>

@@ -63,9 +63,6 @@ export interface Translations {
       eyebrow: string;
       title: string;
       items: Array<{ no: string; title: string; body: string; link: string; url: string }>;
-      resourceLabel: string;
-      resourceNote: string;
-      resourceItems: Array<{ name: string; note: string; url: string }>;
     };
     events: {
       eyebrow: string;
@@ -98,6 +95,21 @@ export interface Translations {
   };
 
   // Events Section
+  resourcesPage: {
+    title: string;
+    lede: string;
+    criteria: string;
+    programHead: string;
+    programNote: string;
+    courseHead: string;
+    courseNote: string;
+    colName: string;
+    colKind: string;
+    colNote: string;
+    programs: Array<{ name: string; kind: string; note: string; url: string }>;
+    courses: Array<{ name: string; kind: string; note: string; url: string }>;
+  };
+
   events: {
     title: string;
     description: string;
@@ -284,7 +296,7 @@ export const translations: Record<Language, Translations> = {
       statsNote: '',
       tracks: {
         eyebrow: '',
-        title: '我们提供什么',
+        title: '参与方式',
         items: [
           {
             no: '01',
@@ -306,20 +318,6 @@ export const translations: Record<Language, Translations> = {
             body: '定期组织的论文研读与专题研讨，与国内外 AI 安全研究机构和读书会保持联动。',
             link: '近期议题',
             url: '#events',
-          },
-        ],
-        resourceLabel: '外部资源',
-        resourceNote: '社区维护的入口，用来看清整个领域与申请机会。',
-        resourceItems: [
-          {
-            name: 'AI 安全地图',
-            note: '全球 AI 安全机构、团队与项目的地图。',
-            url: 'https://aisafety.com/map',
-          },
-          {
-            name: '训练与 Fellowship 项目',
-            note: 'MATS、LASR、Astra、ARENA 等项目的申请入口。',
-            url: 'https://aisafety.com/training',
           },
         ],
       },
@@ -357,6 +355,71 @@ export const translations: Record<Language, Translations> = {
         copyright: '© 2026 AI安全开放社区（OCASC）',
       },
     },
+    resourcesPage: {
+      title: '资源',
+      lede: '一份技术向的入口清单：做 AI 安全的人可以在哪里训练、申请 fellowship、补技术底子。只收我们了解过、且现在仍可申请的项目。',
+      criteria: '收录标准：技术向（对齐研究、可解释性、安全工程、评测）；有公开申请入口；不收纯治理、纯政策与无法验证的项目。',
+      programHead: 'Fellowship 与研究项目',
+      programNote: '按项目性质排列，不按知名度。',
+      courseHead: '课程与技术训练',
+      courseNote: '偏技术，带作业或项目，不是概论。',
+      colName: '名称',
+      colKind: '性质',
+      colNote: '说明',
+      programs: [
+        {
+          name: 'MATS Research',
+          kind: '研究奖学金',
+          note: '导师制的研究训练，覆盖可解释性、对齐理论、安全工程等方向。',
+          url: 'https://matsprogram.org/',
+        },
+        {
+          name: 'LASR Labs',
+          kind: '研究实验室',
+          note: '伦敦，理论对齐方向，按 cohort 招募。',
+          url: 'https://www.lasrlabs.org/',
+        },
+        {
+          name: 'Astra Fellowship',
+          kind: '研究 fellowship',
+          note: 'Constellation 旗下，项目制并配对导师。',
+          url: 'https://constellation.org/programs/astra',
+        },
+        {
+          name: 'Anthropic Fellows Program',
+          kind: '带薪 fellowship',
+          note: '在 Anthropic 内部做安全研究，按 cohort 招募。',
+          url: 'https://alignment.anthropic.com/2025/anthropic-fellows-program-2026/',
+        },
+        {
+          name: 'SPAR',
+          kind: '远程研究项目',
+          note: '导师监督下的对齐研究，适合有技术背景、想转进研究的成员。',
+          url: 'https://sparai.org/',
+        },
+        {
+          name: 'AI Safety Camp',
+          kind: '协作研究',
+          note: '远程协作的项目制研究，入门到中级。',
+          url: 'https://aisafety.camp/',
+        },
+      ],
+      courses: [
+        {
+          name: 'BlueDot Impact · Technical AI Safety',
+          kind: '多周课程',
+          note: '技术向主线课程；同一平台另有 AGI Strategy 与治理方向。',
+          url: 'https://bluedot.org/courses',
+        },
+        {
+          name: 'ARENA Curriculum',
+          kind: '技术训练',
+          note: 'Transformer 可解释性、强化学习、LLM 基础，配习题与项目。',
+          url: 'https://arena.education/curriculum',
+        },
+      ],
+    },
+
     events: {
       title: '活动',
       description: '关注最新的研讨会、技术讲座和课程',
@@ -589,7 +652,7 @@ export const translations: Record<Language, Translations> = {
       statsNote: '',
       tracks: {
         eyebrow: 'Resources',
-        title: 'What we offer',
+        title: 'Ways to take part',
         items: [
           {
             no: '01',
@@ -611,20 +674,6 @@ export const translations: Record<Language, Translations> = {
             body: 'Regular paper readings and topical sessions, in touch with AI safety groups and reading circles at home and abroad.',
             link: 'Recent topics',
             url: '#events',
-          },
-        ],
-        resourceLabel: 'External resources',
-        resourceNote: 'Entry points we keep an eye on, for seeing the wider field and where to apply.',
-        resourceItems: [
-          {
-            name: 'AI safety field map',
-            note: 'A map of AI safety organisations, teams and projects worldwide.',
-            url: 'https://aisafety.com/map',
-          },
-          {
-            name: 'Training and fellowship programs',
-            note: 'Application entry points for MATS, LASR, Astra, ARENA and similar programs.',
-            url: 'https://aisafety.com/training',
           },
         ],
       },
@@ -662,6 +711,71 @@ export const translations: Record<Language, Translations> = {
         copyright: '© 2026 Open Community for AI Safety China',
       },
     },
+    resourcesPage: {
+      title: 'Resources',
+      lede: 'A technical-leaning shortlist: where people working on AI safety can train, apply to fellowships, and build the technical base. Only programs we know and that still take applications.',
+      criteria: 'Inclusion: technical (alignment research, interpretability, safety engineering, evaluations); a public application route; no pure governance or policy items, and nothing we cannot verify.',
+      programHead: 'Fellowships and research programs',
+      programNote: 'Ordered by what they are, not by reputation.',
+      courseHead: 'Courses and technical training',
+      courseNote: 'Technical, with exercises or projects rather than survey material.',
+      colName: 'Program',
+      colKind: 'Type',
+      colNote: 'Notes',
+      programs: [
+        {
+          name: 'MATS Research',
+          kind: 'Research fellowship',
+          note: 'Mentored research training across interpretability, alignment theory and safety engineering.',
+          url: 'https://matsprogram.org/',
+        },
+        {
+          name: 'LASR Labs',
+          kind: 'Research lab',
+          note: 'London, theoretical alignment, recruited in cohorts.',
+          url: 'https://www.lasrlabs.org/',
+        },
+        {
+          name: 'Astra Fellowship',
+          kind: 'Research fellowship',
+          note: 'Run by Constellation; project-based, with a matched mentor.',
+          url: 'https://constellation.org/programs/astra',
+        },
+        {
+          name: 'Anthropic Fellows Program',
+          kind: 'Paid fellowship',
+          note: 'Safety research inside Anthropic, recruited in cohorts.',
+          url: 'https://alignment.anthropic.com/2025/anthropic-fellows-program-2026/',
+        },
+        {
+          name: 'SPAR',
+          kind: 'Remote research program',
+          note: 'Supervised alignment research for people with a technical background moving into research.',
+          url: 'https://sparai.org/',
+        },
+        {
+          name: 'AI Safety Camp',
+          kind: 'Collaborative research',
+          note: 'Remote, project-based research from entry to intermediate level.',
+          url: 'https://aisafety.camp/',
+        },
+      ],
+      courses: [
+        {
+          name: 'BlueDot Impact · Technical AI Safety',
+          kind: 'Multi-week course',
+          note: 'The technical track; the same platform runs AGI Strategy and governance courses.',
+          url: 'https://bluedot.org/courses',
+        },
+        {
+          name: 'ARENA Curriculum',
+          kind: 'Technical training',
+          note: 'Transformer interpretability, reinforcement learning and LLM fundamentals with exercises.',
+          url: 'https://arena.education/curriculum',
+        },
+      ],
+    },
+
     events: {
       title: 'Events',
       description:

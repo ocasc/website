@@ -267,6 +267,59 @@
 
 
 
+/* ---------- resources page ---------- */
+.heroPage { padding: 64px 0 30px; }
+.criteriaWrap {
+  border-top: 1px solid var(--home-line-strong);
+  padding-top: 18px;
+}
+
+/* ---------- resources page lists ---------- */
+.secAside {
+  font-size: 11.5px;
+  color: var(--home-muted3);
+}
+.listHead {
+  display: grid;
+  grid-template-columns: 1fr 132px 1.75fr;
+  gap: 24px;
+  padding: 10px 12px 10px 0;
+  border-top: 2px solid var(--home-ink);
+  border-bottom: 1px solid var(--home-line-strong);
+  font-size: 10.5px;
+  font-weight: 750;
+  letter-spacing: 0.14em;
+  color: #3a3a3e;
+}
+.rRow {
+  display: grid;
+  grid-template-columns: 1fr 132px 1.75fr;
+  gap: 24px;
+  padding: 16px 12px 16px 0;
+  border-bottom: 1px solid var(--home-line);
+  align-items: baseline;
+  transition: background .12s, padding .12s, color .12s;
+}
+.rRow:hover { background: var(--home-ink); color: #fff; padding-left: 12px; }
+.rRow:hover .rKind { color: #ffb9c4; }
+.rRow:hover .rNote { color: #d6d6db; }
+.rName {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  color: inherit;
+  text-decoration: none;
+}
+.rKind { font-size: 11.5px; font-weight: 780; letter-spacing: 0.05em; color: var(--home-crimson); }
+.rNote { font-size: 13px; line-height: 1.65; color: var(--home-muted2); }
+.criteria {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.7;
+  color: var(--home-muted3);
+  max-width: 46em;
+}
+
 /* ---------- external resources ---------- */
 .res {
   margin-top: 34px;
@@ -498,6 +551,9 @@
   .h1 { font-size: clamp(32px, 7vw, 44px); max-width: none; }
   .tracks { grid-template-columns: 1fr; }
   .res { grid-template-columns: 1fr; gap: 14px; }
+  .listHead { display: none; }
+  .rRow { grid-template-columns: 1fr; gap: 6px; padding: 14px 0; }
+  .rRow:hover { padding-left: 0; }
   .resList { flex-direction: column; gap: 16px; }
   .tHead { display: none; }
   .ev {
