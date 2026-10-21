@@ -108,6 +108,16 @@ export default function ResourcesPage() {
           <section className={styles.section}>
             <div className={styles.secHead}>
               <div>
+                <h2 className={styles.hSec}>{r.govHead}</h2>
+              </div>
+              <span className={styles.secAside}>{r.govNote}</span>
+            </div>
+            {rowsOf(r.govs)}
+          </section>
+
+          <section className={styles.section}>
+            <div className={styles.secHead}>
+              <div>
                 <h2 className={styles.hSec}>{r.courseHead}</h2>
               </div>
               <span className={styles.secAside}>{r.courseNote}</span>

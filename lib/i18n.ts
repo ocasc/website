@@ -110,7 +110,10 @@ export interface Translations {
     colName: string;
     colKind: string;
     colNote: string;
+    govHead: string;
+    govNote: string;
     programs: Array<{ name: string; kind: string; note: string; url: string; commit: "full" | "part" }>;
+    govs: Array<{ name: string; kind: string; note: string; url: string }>;
     courses: Array<{ name: string; kind: string; note: string; url: string }>;
   };
 
@@ -348,8 +351,8 @@ export const translations: Record<Language, Translations> = {
     },
     resourcesPage: {
       title: '资源',
-      lede: '一份技术向的入口清单：做 AI 安全的人可以在哪里训练、申请 fellowship、补技术底子。只收高质量的项目。',
-      criteria: '收录标准：技术向（对齐研究、可解释性、安全工程、评测），且质量足够高；不收纯治理、纯政策与无法验证的项目。',
+      lede: '一份 AI 安全的入口清单：做 AI 安全的人可以在哪里训练、申请 fellowship、补技术底子，也能找到治理方向的研究资源。只收高质量的项目。',
+      criteria: '收录标准：技术向（对齐研究、可解释性、安全工程、评测）与治理向（研究、标准、国际协作），且质量足够高；不收无法验证的项目。',
       programHead: 'Fellowship 与研究项目',
       programNote: '按知名度从高到低排列。',
       programHeadFull: '全职',
@@ -357,7 +360,9 @@ export const translations: Record<Language, Translations> = {
       programHeadPart: '兼职与远程',
       programNotePart: '每周投入更少，可以远程参与。',
       courseHead: '课程与技术训练',
-      courseNote: '偏技术，带作业或项目，不是概论。',
+      courseNote: '带作业或讨论，不是概论。',
+      govHead: '治理与政策',
+      govNote: '偏研究与跨国协作，适合从技术往制度方向延伸的人。',
       colName: '名称',
       colKind: '性质',
       colNote: '说明',
@@ -384,13 +389,6 @@ export const translations: Record<Language, Translations> = {
           commit: 'full',
         },
         {
-          name: 'LASR Labs',
-          kind: '研究实验室',
-          note: '13 周，全职在伦敦现场，从选题到投稿走完一个理论对齐项目。',
-          url: 'https://www.lasrlabs.org/',
-          commit: 'full',
-        },
-        {
           name: 'Astra Fellowship',
           kind: '资助型 fellowship',
           note: '3–6 个月，面向全职做 AI 安全研究的人，含资金与同行网络。',
@@ -411,12 +409,19 @@ export const translations: Record<Language, Translations> = {
           url: 'https://sparai.org/',
           commit: 'part',
         },
+      ],
+      govs: [
         {
-          name: 'AI Safety Camp',
-          kind: '协作研究',
-          note: '约 3 个月，远程团队做一个具体研究项目；偏入门，产出以论文与项目报告为主。',
-          url: 'https://aisafety.camp/',
-          commit: 'part',
+          name: 'GovAI · Centre for the Governance of AI',
+          kind: '研究机构',
+          note: '英国牛津的 AI 治理研究机构，发布制度设计、算力治理与政策工具方向的报告与分析。',
+          url: 'https://www.governance.ai/',
+        },
+        {
+          name: 'Concordia AI · 安远AI',
+          kind: '中文研究',
+          note: '面向中文读者的 AI 安全与治理研究，发布政策分析、简报与科普材料。',
+          url: 'https://www.concordia-ai.com/',
         },
       ],
       courses: [
@@ -425,6 +430,12 @@ export const translations: Record<Language, Translations> = {
           kind: '多周课程',
           note: '技术向主线课程；同一平台另有 AGI Strategy 与治理方向。',
           url: 'https://bluedot.org/courses',
+        },
+        {
+          name: 'BlueDot Impact · Frontier AI Governance',
+          kind: '治理课程',
+          note: '免费；6 天集训或 6 周兼职班，练习证据评估与制度判断，最后落到一份自己的参与计划。',
+          url: 'https://bluedot.org/courses/ai-governance',
         },
         {
           name: 'ARENA Curriculum',
@@ -713,8 +724,8 @@ export const translations: Record<Language, Translations> = {
     },
     resourcesPage: {
       title: 'Resources',
-      lede: 'A technical-leaning shortlist: where people working on AI safety can train, apply to fellowships, and build the technical base. Only high-quality programs.',
-      criteria: 'Inclusion: technical (alignment research, interpretability, safety engineering, evaluations) and demonstrably high quality; no pure governance or policy items, and nothing we cannot verify.',
+      lede: 'A shortlist for people working on AI safety: where to train, apply to fellowships and build the technical base, plus governance-oriented research resources. Only high-quality programs.',
+      criteria: 'Inclusion: technical (alignment research, interpretability, safety engineering, evaluations) or governance (research, standards, international cooperation), and demonstrably high quality; nothing we cannot verify.',
       programHead: 'Fellowships and research programs',
       programNote: 'Ordered by recognition, highest first.',
       programHeadFull: 'Full-time',
@@ -722,7 +733,9 @@ export const translations: Record<Language, Translations> = {
       programHeadPart: 'Part-time and remote',
       programNotePart: 'Lighter weekly load, remote-friendly.',
       courseHead: 'Courses and technical training',
-      courseNote: 'Technical, with exercises or projects rather than survey material.',
+      courseNote: 'Exercises or discussion rather than survey material.',
+      govHead: 'Governance and policy',
+      govNote: 'Research and transnational cooperation, for people extending from technical work into institutions.',
       colName: 'Program',
       colKind: 'Type',
       colNote: 'Notes',
@@ -749,13 +762,6 @@ export const translations: Record<Language, Translations> = {
           commit: 'full',
         },
         {
-          name: 'LASR Labs',
-          kind: 'Research lab',
-          note: '13 weeks full-time in London, taking a theoretical alignment project from proposal to publication.',
-          url: 'https://www.lasrlabs.org/',
-          commit: 'full',
-        },
-        {
           name: 'Astra Fellowship',
           kind: 'Funded fellowship',
           note: '3–6 months for people researching AI safety full-time, with funding and a peer network.',
@@ -776,12 +782,19 @@ export const translations: Record<Language, Translations> = {
           url: 'https://sparai.org/',
           commit: 'part',
         },
+      ],
+      govs: [
         {
-          name: 'AI Safety Camp',
-          kind: 'Collaborative research',
-          note: 'About 3 months, remote teams on one concrete project; entry-level, output is papers and project reports.',
-          url: 'https://aisafety.camp/',
-          commit: 'part',
+          name: 'GovAI · Centre for the Governance of AI',
+          kind: 'Research institute',
+          note: 'An AI governance research institute in Oxford, publishing on institutional design, compute governance and policy tools.',
+          url: 'https://www.governance.ai/',
+        },
+        {
+          name: 'Concordia AI',
+          kind: 'Chinese-language research',
+          note: 'AI safety and governance research for Chinese-language readers: policy analysis, briefings and explainers.',
+          url: 'https://www.concordia-ai.com/',
         },
       ],
       courses: [
@@ -790,6 +803,12 @@ export const translations: Record<Language, Translations> = {
           kind: 'Multi-week course',
           note: 'The technical track; the same platform runs AGI Strategy and governance courses.',
           url: 'https://bluedot.org/courses',
+        },
+        {
+          name: 'BlueDot Impact · Frontier AI Governance',
+          kind: 'Governance course',
+          note: 'Free; a six-day intensive or a six-week part-time cohort, ending in a concrete plan for your own contribution.',
+          url: 'https://bluedot.org/courses/ai-governance',
         },
         {
           name: 'ARENA Curriculum',
