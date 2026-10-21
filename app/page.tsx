@@ -98,6 +98,11 @@ export default function HomePage() {
             {home.hero.joinCta}
           </a>
         </div>
+        <div className={`${styles.wrap} ${styles.mobileNav}`}>
+          <a href="#events">{t.nav.events}</a>
+          <a href="#resources">{t.nav.resources}</a>
+          <a href="/about">{t.nav.about}</a>
+        </div>
       </header>
 
       <main>
@@ -114,7 +119,7 @@ export default function HomePage() {
                   </>
                 ) : null}
                 {language === "en" ? " " : ""}
-                <em>{home.hero.titleAccent}</em>
+                {home.hero.titleAccent ? <em>{home.hero.titleAccent}</em> : null}
                 {home.hero.titleTail}
               </h1>
               <p className={styles.lede}>{home.hero.lede}</p>
@@ -221,6 +226,9 @@ export default function HomePage() {
                     <span className={styles.evType}>{t.events.eventTypes[ev.type].title}</span>
                     <span className={styles.evTitle}>{ev.title}</span>
                     <span className={styles.evForm}>{ev.location}</span>
+                    <span className={styles.evMetaMobile}>
+                      {t.events.eventTypes[ev.type].title} · {ev.location}
+                    </span>
                   </a>
                 );
               })
