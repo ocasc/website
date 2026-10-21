@@ -216,7 +216,7 @@
 /* ---------- mission band ---------- */
 .mission {
   margin: 0;
-  padding: 40px 0 44px;
+  padding: 28px 0 30px;
   border-top: 2px solid var(--home-ink);
   border-bottom: 2px solid var(--home-ink);
   display: grid;
@@ -231,13 +231,14 @@
   line-height: 1.2;
   color: var(--home-crimson);
 }
+/* 使命句与「我们的使命」同字号：整条带是一条安静的陈述行，不抢 hero 的体量 */
 .missionText {
-  font-size: clamp(26px, 3.4vw, 46px);
-  font-weight: 780;
-  line-height: 1.4;
-  letter-spacing: -1.1px;
+  font-size: 18px;
+  font-weight: 650;
+  line-height: 1.7;
+  letter-spacing: 0;
   color: var(--home-ink);
-  max-width: 26em;
+  max-width: none;
 }
 @media (max-width: 1024px) {
   .tier { padding: 0 10px; }
@@ -247,9 +248,9 @@
 }
 
 @media (max-width: 768px) {
-  .mission { grid-template-columns: 1fr; gap: 10px; }
+  .mission { grid-template-columns: 1fr; gap: 6px; }
   .missionLabel { font-size: 16px; }
-  .missionText { font-size: 24px; }
+  .missionText { font-size: 16px; }
   .missionTail { white-space: nowrap; }
 }
 
@@ -610,7 +611,7 @@
   .mobileNav a { color: var(--home-muted2); text-decoration: none; }
   .mobileNav a:active { color: var(--home-crimson); }
   .section { padding: 36px 0; }
-  .mission { padding: 26px 0 28px; }
+  .mission { padding: 20px 0 22px; }
   .brandText span { display: none; }
   .nav { gap: 14px; }
   .langSlot { margin-left: auto; }
