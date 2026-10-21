@@ -236,19 +236,6 @@ export interface Translations {
         comingSoon?: boolean;
       }>;
     };
-    team: {
-      title: string;
-      coreTitle: string;
-      coCreatorsTitle: string;
-      coCreatorsNote: string;
-      linkedinLink: string;
-      placeholderName: string;
-      placeholderRole: string;
-      members: Array<{
-        name: string;
-        role: string;
-      }>;
-    };
   };
 }
 
@@ -613,21 +600,6 @@ export const translations: Record<Language, Translations> = {
             title: '从学习小组起步',
             description: '一群关注AI安全的学者与研究者相聚，创立AI安全学习小组，开始不定期组织前沿研究的阅读与讨论活动。',
           },
-        ],
-      },
-      team: {
-        title: '团队成员',
-        coreTitle: '联合创始人',
-        coCreatorsTitle: '共创成员',
-        coCreatorsNote: '感谢每一位为社区建设贡献力量的共创成员，期待更多伙伴加入。',
-        linkedinLink: 'LinkedIn',
-        placeholderName: '即将揭晓',
-        placeholderRole: '共创成员',
-        members: [
-          { name: '王金戈', role: '安远AI研究员，关注评估、可解释性、AI意识、大众科普等方向' },
-          { name: '孙圆圆', role: '牛津大学，AI安全与治理研究员，《国际AI安全报告》贡献者' },
-          { name: '王巍', role: '素问科技CEO，专注企业级AI应用与风险治理' },
-          { name: '柳菁', role: 'AI安全研究员，前亚马逊工程师' },
         ],
       },
     },
@@ -1006,21 +978,6 @@ export const translations: Record<Language, Translations> = {
             title: 'Starting as a Study Group',
             description: 'A group of scholars and researchers interested in AI safety came together to found the AI Safety Study Group, beginning periodic reading sessions and discussions on frontier research.',
           },
-        ],
-      },
-      team: {
-        title: 'Our Team',
-        coreTitle: 'Co-Founders',
-        coCreatorsTitle: 'Co-creators',
-        coCreatorsNote: 'Thank you to every co-creator who has contributed to building this community. We welcome more partners to join.',
-        linkedinLink: 'LinkedIn',
-        placeholderName: 'Coming Soon',
-        placeholderRole: 'Co-creator',
-        members: [
-          { name: 'Jinge Wang', role: 'Researcher at Anzhiyuan AI; focused on evaluation, interpretability, AI consciousness, and science communication' },
-          { name: 'Yuanyuan Sun', role: 'University of Oxford; AI safety & governance researcher; contributor to the International AI Safety Report' },
-          { name: 'Wei Wang', role: 'CEO of Suwen Technology; focused on enterprise AI applications and risk governance' },
-          { name: 'Jing Liu', role: 'AI safety researcher; former Amazon engineer' },
         ],
       },
     },

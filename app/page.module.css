@@ -267,6 +267,64 @@
 
 
 
+/* ---------- about page ---------- */
+.statRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 64px;
+  padding: 20px 0;
+  border-top: 2px solid var(--home-ink);
+  border-bottom: 1px solid var(--home-line-strong);
+}
+.statCell { display: flex; flex-direction: column; gap: 4px; }
+.statCell b {
+  font-size: clamp(28px, 3.2vw, 40px);
+  font-weight: 790;
+  letter-spacing: -1.2px;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+.statCell span { font-size: 11.5px; color: var(--home-muted3); }
+.storyGrid { display: grid; grid-template-columns: 1fr; gap: 32px; }
+.storyList p {
+  margin: 0 0 18px;
+  max-width: 38em;
+  font-size: 14.5px;
+  line-height: 1.85;
+  color: var(--home-muted2);
+}
+.storyList p:last-child { margin-bottom: 0; }
+.msRow {
+  display: grid;
+  grid-template-columns: 120px 1fr 1.6fr;
+  gap: 24px;
+  padding: 18px 12px 18px 0;
+  border-bottom: 1px solid var(--home-line);
+  align-items: baseline;
+  transition: background .12s, padding .12s, color .12s;
+}
+.msRow:hover { background: var(--home-ink); color: #fff; padding-left: 12px; }
+.msRow:hover .msDesc { color: #d6d6db; }
+.msRow:hover .msPeriod { color: #ffb9c4; }
+.msPeriod {
+  font-size: 12.5px;
+  font-weight: 790;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+  color: var(--home-crimson);
+}
+.msTitle { font-size: 16px; font-weight: 700; letter-spacing: -0.2px; }
+.msDesc { font-size: 13px; line-height: 1.65; color: var(--home-muted2); }
+.footerSlim { border-top: 2px solid var(--home-ink); margin-top: 48px; }
+.footerSlimIn {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px 32px;
+  padding: 20px 0 62px;
+}
+
 /* ---------- resources page ---------- */
 .heroPage { padding: 64px 0 30px; }
 .criteriaWrap {
@@ -567,6 +625,9 @@
   .tracks { grid-template-columns: 1fr; }
   .res { grid-template-columns: 1fr; gap: 14px; }
   .listHead { display: none; }
+  .msRow { grid-template-columns: 1fr; gap: 6px; padding: 14px 0; }
+  .msRow:hover { padding-left: 0; }
+  .statRow { gap: 18px 40px; }
   .rRow { grid-template-columns: 1fr; gap: 6px; padding: 14px 0; }
   .rRow:hover { padding-left: 0; }
   .resList { flex-direction: column; gap: 16px; }
