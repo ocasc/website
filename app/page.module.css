@@ -215,33 +215,29 @@
   .tierMembers { width: 82%; }
 }
 
-/* ---------- mission band ---------- */
-.mission {
-  margin: 0;
-  padding: 28px 0 30px;
-  border-top: 2px solid var(--home-ink);
-  border-bottom: 2px solid var(--home-ink);
-  display: grid;
-  grid-template-columns: 168px 1fr;
-  gap: 36px;
+/* ---------- mission（并进 hero，不再单独成带） ---------- */
+.missionRow {
+  margin: 22px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
   align-items: baseline;
+  max-width: 36em;
 }
-.missionLabel {
-  font-size: 18px;
+.missionRowLabel {
+  font-size: 12px;
   font-weight: 780;
-  letter-spacing: 0.04em;
-  line-height: 1.2;
+  letter-spacing: 0.18em;
   color: var(--home-crimson);
+  white-space: nowrap;
 }
-/* 使命句与「我们的使命」同字号：整条带是一条安静的陈述行，不抢 hero 的体量 */
-.missionText {
-  font-size: 18px;
+.missionRowText {
+  font-size: 17px;
   font-weight: 650;
   line-height: 1.7;
-  letter-spacing: 0;
   color: var(--home-ink);
-  max-width: none;
 }
+.missionTail { white-space: nowrap; }
 @media (max-width: 1024px) {
   .tier { padding: 0 10px; }
   .tierCore { width: 66%; }
@@ -249,12 +245,7 @@
   .tier b { font-size: 20px; }
 }
 
-@media (max-width: 768px) {
-  .mission { grid-template-columns: 1fr; gap: 6px; }
-  .missionLabel { font-size: 16px; }
-  .missionText { font-size: 16px; }
-  .missionTail { white-space: nowrap; }
-}
+
 
 
 /* section index numerals */
@@ -624,7 +615,6 @@
   .mobileNav a { color: var(--home-muted2); text-decoration: none; }
   .mobileNav a:active { color: var(--home-crimson); }
   .section { padding: 36px 0; }
-  .mission { padding: 20px 0 22px; }
   .brandText span { display: none; }
   .nav { gap: 14px; }
   .langSlot { margin-left: auto; }

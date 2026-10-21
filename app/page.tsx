@@ -104,6 +104,21 @@ export default function HomePage() {
                 {home.hero.titleTail}
               </h1>
               <p className={styles.lede}>{home.hero.lede}</p>
+              <p className={styles.missionRow}>
+                <span className={styles.missionRowLabel}>{home.mission.label}</span>
+                <span className={styles.missionRowText}>
+                  {language === "zh" ? (
+                    <>
+                      {home.mission.text.split("始终")[0]}
+                      <span className={styles.missionTail}>
+                        始终{home.mission.text.split("始终")[1]}
+                      </span>
+                    </>
+                  ) : (
+                    home.mission.text
+                  )}
+                </span>
+              </p>
               <p className={styles.meta}>
                 <b className={styles.metaItem}>{home.hero.metaAffiliate}</b>
               </p>
@@ -137,22 +152,6 @@ export default function HomePage() {
               ) : null}
             </aside>
           </section>
-
-          <figure className={styles.mission}>
-            <figcaption className={styles.missionLabel}>{home.mission.label}</figcaption>
-            <p className={styles.missionText}>
-              {language === "zh" ? (
-                <>
-                  {home.mission.text.split("始终")[0]}
-                  <span className={styles.missionTail}>
-                    始终{home.mission.text.split("始终")[1]}
-                  </span>
-                </>
-              ) : (
-                home.mission.text
-              )}
-            </p>
-          </figure>
 
           <section id="offer" className={styles.section}>
             <div className={styles.secHead}>
