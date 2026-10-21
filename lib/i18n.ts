@@ -256,9 +256,9 @@ export const translations: Record<Language, Translations> = {
     home: {
       hero: {
         eyebrow: 'AI Safety in China · Est. 2025',
-        titleLine1: 'AI 要跑得快，',
-        titleLine2: '也要',
-        titleAccent: '跑得稳',
+        titleLine1: '做 AI 安全的人',
+        titleLine2: '',
+        titleAccent: '在这里',
         titleTail: '',
         lede: '一个面向中文读者的专业网络：定期举办讲座与论文研读，开设共学课程，也承接研究项目。成员来自研究、工程、产业与政策。',
         metaAffiliate: 'IASEAI Affiliate',
@@ -267,7 +267,7 @@ export const translations: Record<Language, Translations> = {
         joinCta: '加入社群',
       },
       quote: {
-        text: '让人工智能这匹千里马既跑得快又跑得稳。',
+        text: '确保人工智能始终处于人类控制之下。',
         source: '习近平 · 2026 世界人工智能大会主旨讲话',
       },
       statsLabel: '社区数据',
@@ -542,9 +542,9 @@ export const translations: Record<Language, Translations> = {
     home: {
       hero: {
         eyebrow: 'AI Safety in China · Est. 2025',
-        titleLine1: 'AI should run fast',
-        titleLine2: 'and',
-        titleAccent: 'steady',
+        titleLine1: 'The people working',
+        titleLine2: 'on AI safety',
+        titleAccent: 'are here',
         titleTail: '',
         lede: 'A professional network for Chinese-language readers: regular talks and paper readings, a six-week co-learning course, and research projects. Members come from research, engineering, industry, policy and law.',
         metaAffiliate: 'IASEAI Affiliate',
@@ -553,7 +553,7 @@ export const translations: Record<Language, Translations> = {
         joinCta: 'Join community',
       },
       quote: {
-        text: 'AI, this thoroughbred, should run both fast and steady.',
+        text: 'Ensuring that AI always remains under human control.',
         source: 'Xi Jinping · World AI Conference 2026 keynote (translation)',
       },
       statsLabel: 'Community figures',
