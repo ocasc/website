@@ -216,12 +216,12 @@
 /* ---------- mission band ---------- */
 .mission {
   margin: 0;
-  padding: 32px 0 34px;
+  padding: 40px 0 44px;
   border-top: 2px solid var(--home-ink);
   border-bottom: 2px solid var(--home-ink);
   display: grid;
-  grid-template-columns: max-content 1fr;
-  gap: 32px;
+  grid-template-columns: 168px 1fr;
+  gap: 36px;
   align-items: baseline;
 }
 .missionLabel {
@@ -232,13 +232,12 @@
   color: var(--home-crimson);
 }
 .missionText {
-  font-size: clamp(24px, 2.7vw, 36px);
-  font-weight: 700;
-  line-height: 1.45;
-  letter-spacing: -0.6px;
+  font-size: clamp(26px, 3.4vw, 46px);
+  font-weight: 780;
+  line-height: 1.4;
+  letter-spacing: -1.1px;
   color: var(--home-ink);
-  letter-spacing: 0.01em;
-  max-width: 32em;
+  max-width: 26em;
 }
 @media (max-width: 1024px) {
   .tier { padding: 0 10px; }
@@ -250,7 +249,8 @@
 @media (max-width: 768px) {
   .mission { grid-template-columns: 1fr; gap: 10px; }
   .missionLabel { font-size: 16px; }
-  .missionText { font-size: 19px; }
+  .missionText { font-size: 24px; }
+  .missionTail { white-space: nowrap; }
 }
 
 
@@ -621,7 +621,7 @@
   .mobileNav a { color: var(--home-muted2); text-decoration: none; }
   .mobileNav a:active { color: var(--home-crimson); }
   .section { padding: 36px 0; }
-  .mission { padding: 22px 0 24px; }
+  .mission { padding: 26px 0 28px; }
   .brandText span { display: none; }
   .nav { gap: 14px; }
   .langSlot { margin-left: auto; }

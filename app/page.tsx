@@ -140,7 +140,18 @@ export default function HomePage() {
 
           <figure className={styles.mission}>
             <figcaption className={styles.missionLabel}>{home.mission.label}</figcaption>
-            <p className={styles.missionText}>{home.mission.text}</p>
+            <p className={styles.missionText}>
+              {language === "zh" ? (
+                <>
+                  {home.mission.text.split("始终")[0]}
+                  <span className={styles.missionTail}>
+                    始终{home.mission.text.split("始终")[1]}
+                  </span>
+                </>
+              ) : (
+                home.mission.text
+              )}
+            </p>
           </figure>
 
           <section id="offer" className={styles.section}>
