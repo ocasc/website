@@ -161,7 +161,10 @@ export default function HomePage() {
 
           <figure className={styles.mission}>
             <figcaption className={styles.missionLabel}>{home.mission.label}</figcaption>
-            <p className={styles.missionText}>{home.mission.text}</p>
+            <p className={styles.missionText}>
+              {home.mission.text.replace(/[。.]$/, "")}
+              <span className={styles.missionStop}>。</span>
+            </p>
           </figure>
 
           <section id="resources" className={styles.section}>
@@ -250,14 +253,13 @@ export default function HomePage() {
           <section className={styles.propose}>
             <div className={styles.proposeGrid}>
               <div>
-                {home.propose.eyebrow ? (
-                  <p className={styles.eyebrow}>{home.propose.eyebrow}</p>
-                ) : null}
-                <h2>
-                  {home.propose.titleLine1}
-                  <br />
-                  {home.propose.titleLine2}
-                </h2>
+                <div className={styles.secTitleRow}>
+                  <h2>
+                    {home.propose.titleLine1}
+                    <br />
+                    {home.propose.titleLine2}
+                  </h2>
+                </div>
                 <p>{home.propose.body}</p>
                 <div className={styles.heroCta}>
                   <a
