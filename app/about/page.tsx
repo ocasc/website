@@ -30,6 +30,7 @@ const WechatIcon = ({ className }: { className?: string }) => (
 );
 
 const JOIN_FORM_URL = 'https://wj.qq.com/s2/28113604/kyqo/';
+const PROPOSE_TALK_URL = 'https://docs.google.com/forms/d/1-LlnyTAXhM8c8YvQZDddWkfrE-Qp0SwxwYJZbPB-yXo/viewform';
 
 const CORE_MEMBERS = [
   {
@@ -112,6 +113,14 @@ export default function AboutPage() {
           {/* Right side: Language switcher + Join button */}
           <div className="flex items-center gap-3 md:gap-6">
             <LanguageSwitcher />
+            <a
+              href={PROPOSE_TALK_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary border border-primary/30 px-3 md:px-4 py-2.5 rounded-xl font-semibold text-sm hover:bg-primary/10 transition-colors cursor-pointer inline-block"
+            >
+              {t.nav.proposeTalk}
+            </a>
             <a
               href={JOIN_FORM_URL}
               target="_blank"

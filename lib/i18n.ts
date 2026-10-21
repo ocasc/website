@@ -19,6 +19,7 @@ export interface Translations {
     resources: string;
     about: string;
     joinAction: string;
+    proposeTalk: string;
   };
 
   // Hero Section
@@ -179,6 +180,7 @@ export const translations: Record<Language, Translations> = {
       resources: '资源',
       about: '关于我们',
       joinAction: '加入社区',
+      proposeTalk: '申请分享',
     },
     hero: {
       badge: '中文互联网最大的AI安全社区',
@@ -382,6 +384,7 @@ export const translations: Record<Language, Translations> = {
       resources: 'Resources',
       about: 'About',
       joinAction: 'Join Us',
+      proposeTalk: 'Propose a Talk',
     },
     hero: {
       badge: "China's Largest AI Safety Community",

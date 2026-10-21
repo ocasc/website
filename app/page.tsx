@@ -88,6 +88,14 @@ export default function HomePage() {
           <div className="flex items-center gap-3 md:gap-6">
             <LanguageSwitcher />
             <a
+              href={PROPOSE_TALK_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary border border-primary/30 px-3 md:px-4 py-2.5 rounded-xl font-semibold text-sm hover:bg-primary/10 transition-colors cursor-pointer inline-block"
+            >
+              {t.nav.proposeTalk}
+            </a>
+            <a
               href={JOIN_FORM_URL}
               target="_blank"
               rel="noopener noreferrer"
@@ -153,6 +161,11 @@ export default function HomePage() {
                   {t.hero.secondaryButton}
                 </button>
               </a>
+              <a href={PROPOSE_TALK_URL} target="_blank" rel="noopener noreferrer">
+                <button className="border border-primary/40 text-primary px-6 py-3 rounded-xl font-bold text-base hover:bg-primary/10 transition-colors cursor-pointer">
+                  {t.nav.proposeTalk}
+                </button>
+              </a>
             </div>
           </div>
 
@@ -176,7 +189,7 @@ export default function HomePage() {
                   href={PROPOSE_TALK_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 mt-5 text-sm font-semibold text-primary hover:underline"
+                  className="inline-flex items-center gap-1.5 mt-5 px-5 py-2.5 rounded-xl border border-primary/40 text-primary font-semibold text-sm hover:bg-primary/10 transition-colors"
                 >
                   {t.events.proposeTalk}
                   <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
