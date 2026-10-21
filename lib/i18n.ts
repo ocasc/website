@@ -55,8 +55,6 @@ export interface Translations {
     mission: {
       label: string;
       text: string;
-      beliefLabel: string;
-      belief: string;
       source?: string;
     };
     statsLabel: string;
@@ -277,9 +275,7 @@ export const translations: Record<Language, Translations> = {
       },
       mission: {
         label: '我们的使命',
-        text: '让中文语境里做 AI 安全的人，拿到前沿的研究、系统的训练，和可以协作的同行网络。',
-        beliefLabel: '我们相信',
-        belief: '人工智能应当始终处在人类的控制之下。',
+        text: '确保人工智能始终处在人类的控制之下。',
       },
       statsLabel: '社区数据',
       statsNote: '截至 2026 年 10 月 · 社群成员为微信群成员',
@@ -570,9 +566,7 @@ export const translations: Record<Language, Translations> = {
       },
       mission: {
         label: 'Our mission',
-        text: 'To give people working on AI safety in Chinese-speaking contexts access to frontier research, systematic training, and a peer network they can collaborate with.',
-        beliefLabel: 'We believe',
-        belief: 'Artificial intelligence should always remain under human control.',
+        text: 'To ensure that artificial intelligence always remains under human control.',
       },
       statsLabel: 'Community figures',
       statsNote: 'As of October 2026 · members counted as WeChat group members',

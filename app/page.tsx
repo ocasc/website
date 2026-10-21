@@ -169,16 +169,10 @@ export default function HomePage() {
 
           <figure className={styles.mission}>
             <figcaption className={styles.missionLabel}>{home.mission.label}</figcaption>
-            <div>
-              <p className={styles.missionText}>
-                {home.mission.text.replace(/[。.]$/, "")}
-                <span className={styles.missionStop}>。</span>
-              </p>
-              <p className={styles.missionBelief}>
-                <span className={styles.missionBeliefLabel}>{home.mission.beliefLabel}</span>
-                {home.mission.belief}
-              </p>
-            </div>
+            <p className={styles.missionText}>
+              {home.mission.text.replace(/[。.]$/, "")}
+              <span className={styles.missionStop}>。</span>
+            </p>
           </figure>
 
           <section id="resources" className={styles.section}>
