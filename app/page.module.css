@@ -16,7 +16,9 @@
   line-height: 1.6;
 }
 
-.page a { color: inherit; }
+.page a:focus-visible,
+.page a:not([class*="btn"]),
+.page button { color: inherit; }
 .page a:focus-visible,
 .page button:focus-visible {
   outline: 2px solid var(--home-crimson);
@@ -196,9 +198,10 @@
   padding: 26px 0 28px;
   border-top: 1px solid var(--home-line-strong);
   border-bottom: 1px solid var(--home-line-strong);
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 32px;
+  align-items: baseline;
 }
 .missionLabel {
   font-size: 18px;
@@ -216,7 +219,7 @@
   max-width: 32em;
 }
 @media (max-width: 900px) {
-  .mission { gap: 10px; }
+  .mission { grid-template-columns: 1fr; gap: 10px; }
   .missionLabel { font-size: 16px; }
   .missionText { font-size: 19px; }
 }
