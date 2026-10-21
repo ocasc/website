@@ -313,7 +313,7 @@
 .tHead,
 .ev {
   display: grid;
-  grid-template-columns: 112px 100px 1fr 160px;
+  grid-template-columns: 104px 88px 1fr 210px;
   gap: 0 20px;
   align-items: baseline;
 }

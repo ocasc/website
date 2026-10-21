@@ -590,7 +590,7 @@ export const translations: Record<Language, Translations> = {
           },
           {
             no: '03',
-            title: 'Seminars',
+            title: 'Seminar',
             body: 'Regular paper readings and topical sessions, in touch with AI safety groups and reading circles at home and abroad.',
             link: 'Recent topics',
             url: '#events',
@@ -646,11 +646,11 @@ export const translations: Record<Language, Translations> = {
             'Participate in in-depth seminars and share your perspectives',
         },
         lecture: {
-          title: 'Lectures',
+          title: 'Lecture',
           description: 'Cutting-edge or popular science lectures',
         },
         course: {
-          title: 'Courses',
+          title: 'Course',
           description: 'Learn courses together with other members',
         },
         hackathon: {

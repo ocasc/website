@@ -234,6 +234,10 @@ export default function HomePage() {
                   "$1/0$2/",
                 );
                 const isFuture = todayKey !== null && dayKey > todayKey;
+                const evTitle =
+                  language === "en" && ev.titleEn ? ev.titleEn : ev.title;
+                const evPlace =
+                  language === "en" && ev.locationEn ? ev.locationEn : ev.location;
                 return (
                   <a
                     key={ev.id}
@@ -243,10 +247,10 @@ export default function HomePage() {
                   >
                     <span className={styles.evDate}>{ev.date}</span>
                     <span className={styles.evType}>{t.events.eventTypes[ev.type].title}</span>
-                    <span className={styles.evTitle}>{ev.title}</span>
-                    <span className={styles.evForm}>{ev.location}</span>
+                    <span className={styles.evTitle}>{evTitle}</span>
+                    <span className={styles.evForm}>{evPlace}</span>
                     <span className={styles.evMetaMobile}>
-                      {t.events.eventTypes[ev.type].title} · {ev.location}
+                      {t.events.eventTypes[ev.type].title} · {evPlace}
                     </span>
                   </a>
                 );

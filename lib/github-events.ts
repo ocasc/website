@@ -9,6 +9,8 @@ export interface GitHubEventData {
   date: string;
   time: string;
   location: string;
+  titleEn?: string;
+  locationEn?: string;
   videoLink?: string;
   documentLink?: string;
   speaker?: string;
@@ -165,7 +167,16 @@ function formatTime(timeStr: string): string {
 }
 
 // 解析Markdown文件中的事件信息
-function parseEventFromMarkdown(content: string, filePath: string): GitHubEventData | null {
+function parseEventFromMarkdown(rawContent: string, filePath: string): GitHubEventData | null {
+  // 可选英文标题/地点：+ **English title**：… / + **English location**：…
+  // 先抽出来并把这两行从正文去掉，避免 "location：" 被中文地点提取的 /Location/ 回退规则误命中
+  const enTitleMatch = rawContent.match(/\+\s*\*\*English title\*\*[：:]\s*(.+)/i);
+  const enLocationMatch = rawContent.match(/\+\s*\*\*English location\*\*[：:]\s*(.+)/i);
+  const titleEn = enTitleMatch ? enTitleMatch[1].trim() : "";
+  const locationEn = enLocationMatch ? enLocationMatch[1].trim() : "";
+  const content = rawContent
+    .replace(/^\+\s*\*\*English title\*\*[：:].*$/gim, "")
+    .replace(/^\+\s*\*\*English location\*\*[：:].*$/gim, "");
   try {
     // 提取标题（第一个#标题）
     const titleMatch = content.match(/^#\s+(.+)$/m);
@@ -372,6 +383,8 @@ function parseEventFromMarkdown(content: string, filePath: string): GitHubEventD
       date,
       time,
       location,
+      titleEn,
+      locationEn,
       videoLink,
       documentLink: `https://github.com/${GITHUB_CONFIG.owner}/${GITHUB_CONFIG.repo}/blob/main/${filePath}`,
       speaker,
