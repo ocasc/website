@@ -201,6 +201,29 @@ export default function HomePage() {
                 </article>
               ))}
             </div>
+
+            <div className={styles.res}>
+              <div className={styles.resHead}>
+                <span className={styles.resLabel}>{home.tracks.resourceLabel}</span>
+                <span className={styles.resNote}>{home.tracks.resourceNote}</span>
+              </div>
+              <ul className={styles.resList}>
+                {home.tracks.resourceItems.map((r) => (
+                  <li key={r.url}>
+                    <a
+                      className={styles.resName}
+                      href={r.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {r.name}
+                      <span aria-hidden="true"> ↗</span>
+                    </a>
+                    <p className={styles.resItemNote}>{r.note}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </section>
 
           <section id="events" className={styles.section}>

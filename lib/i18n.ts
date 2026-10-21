@@ -63,6 +63,9 @@ export interface Translations {
       eyebrow: string;
       title: string;
       items: Array<{ no: string; title: string; body: string; link: string; url: string }>;
+      resourceLabel: string;
+      resourceNote: string;
+      resourceItems: Array<{ name: string; note: string; url: string }>;
     };
     events: {
       eyebrow: string;
@@ -267,7 +270,7 @@ export const translations: Record<Language, Translations> = {
         titleLine2: '',
         titleAccent: '安全',
         titleTail: '开放社区',
-        lede: '一个面向中文读者的专业网络：定期举办讲座与论文研读，开设共学课程，也组织线下聚会。成员来自研究、工程、产业与政策。',
+        lede: '一个面向中文读者的专业网络：定期举办讲座与论文研读，开设共学课程，也组织线下聚会。成员包括研究者、工程师、产业从业者，以及政策与法律背景的朋友。',
         metaAffiliate: '国际安全与伦理人工智能协会（IASEAI）成员机构',
         metaMid: '线上为主',
         metaLang: '中文 / 英文',
@@ -303,6 +306,20 @@ export const translations: Record<Language, Translations> = {
             body: '定期组织的论文研读与专题研讨，与国内外 AI 安全研究机构和读书会保持联动。',
             link: '近期议题',
             url: '#events',
+          },
+        ],
+        resourceLabel: '外部资源',
+        resourceNote: '社区维护的入口，用来看清整个领域与申请机会。',
+        resourceItems: [
+          {
+            name: 'AI 安全地图',
+            note: '全球 AI 安全机构、团队与项目的地图。',
+            url: 'https://aisafety.com/map',
+          },
+          {
+            name: '训练与 Fellowship 项目',
+            note: 'MATS、LASR、Astra、ARENA 等项目的申请入口。',
+            url: 'https://aisafety.com/training',
           },
         ],
       },
@@ -558,7 +575,7 @@ export const translations: Record<Language, Translations> = {
         titleLine2: 'for AI Safety China',
         titleAccent: '',
         titleTail: '',
-        lede: 'A professional network for Chinese-language readers: regular talks and paper readings, a six-week co-learning course, and in-person meetups. Members come from research, engineering, industry, policy and law.',
+        lede: 'A professional network for Chinese-language readers: regular talks and paper readings, a six-week co-learning course, and in-person meetups. Members include researchers, engineers, industry practitioners, and people with policy or legal backgrounds.',
         metaAffiliate: 'Member organization of the International Association for Safe and Ethical AI (IASEAI)',
         metaMid: 'Mostly online',
         metaLang: 'Chinese / English',
@@ -594,6 +611,20 @@ export const translations: Record<Language, Translations> = {
             body: 'Regular paper readings and topical sessions, in touch with AI safety groups and reading circles at home and abroad.',
             link: 'Recent topics',
             url: '#events',
+          },
+        ],
+        resourceLabel: 'External resources',
+        resourceNote: 'Entry points we keep an eye on, for seeing the wider field and where to apply.',
+        resourceItems: [
+          {
+            name: 'AI safety field map',
+            note: 'A map of AI safety organisations, teams and projects worldwide.',
+            url: 'https://aisafety.com/map',
+          },
+          {
+            name: 'Training and fellowship programs',
+            note: 'Application entry points for MATS, LASR, Astra, ARENA and similar programs.',
+            url: 'https://aisafety.com/training',
           },
         ],
       },
