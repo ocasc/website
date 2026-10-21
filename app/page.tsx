@@ -107,8 +107,12 @@ export default function HomePage() {
               <p className={styles.eyebrow}>{home.hero.eyebrow}</p>
               <h1 className={styles.h1}>
                 {home.hero.titleLine1}
-                <br />
-                {home.hero.titleLine2}
+                {home.hero.titleLine2 ? (
+                  <>
+                    <br />
+                    {home.hero.titleLine2}
+                  </>
+                ) : null}
                 {language === "en" ? " " : ""}
                 <em>{home.hero.titleAccent}</em>
                 {home.hero.titleTail}

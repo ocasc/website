@@ -187,31 +187,32 @@
 /* ---------- mission band ---------- */
 .mission {
   margin: 0;
-  padding: 22px 0 24px;
+  padding: 26px 0 28px;
   border-top: 1px solid var(--home-line-strong);
   border-bottom: 1px solid var(--home-line-strong);
-  display: grid;
-  grid-template-columns: 150px 1fr;
-  gap: 24px;
-  align-items: baseline;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 .missionLabel {
-  font-size: 10.5px;
-  font-weight: 750;
-  letter-spacing: 0.18em;
+  font-size: 18px;
+  font-weight: 780;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
   color: var(--home-crimson);
 }
 .missionText {
-  font-size: 19px;
-  font-weight: 650;
-  line-height: 1.6;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 1.5;
   color: var(--home-ink);
   letter-spacing: 0.01em;
   max-width: 32em;
 }
 @media (max-width: 900px) {
-  .mission { grid-template-columns: 1fr; gap: 10px; }
-  .missionText { font-size: 17px; }
+  .mission { gap: 10px; }
+  .missionLabel { font-size: 16px; }
+  .missionText { font-size: 19px; }
 }
 
 /* ---------- sections ---------- */

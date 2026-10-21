@@ -257,10 +257,10 @@ export const translations: Record<Language, Translations> = {
     home: {
       hero: {
         eyebrow: 'AI Safety in China · Est. 2025',
-        titleLine1: '做 AI 安全的人',
+        titleLine1: 'AI安全',
         titleLine2: '',
-        titleAccent: '在这里',
-        titleTail: '',
+        titleAccent: '开放',
+        titleTail: '社区',
         lede: '一个面向中文读者的专业网络：定期举办讲座与论文研读，开设共学课程，也承接研究项目。成员来自研究、工程、产业与政策。',
         metaAffiliate: 'IASEAI Affiliate',
         metaMid: '线上为主',
@@ -269,7 +269,7 @@ export const translations: Record<Language, Translations> = {
       },
       mission: {
         label: '我们的使命',
-        text: '我们相信，AI 应当始终处在人类的控制之下。',
+        text: '我们相信，人工智能应当始终处在人类的控制之下。',
       },
       statsLabel: '社区数据',
       statsNote: '截至 2026 年 10 月 · 社群成员为微信群成员',
@@ -543,10 +543,10 @@ export const translations: Record<Language, Translations> = {
     home: {
       hero: {
         eyebrow: 'AI Safety in China · Est. 2025',
-        titleLine1: 'The people working',
-        titleLine2: 'on AI safety',
-        titleAccent: 'are here',
-        titleTail: '',
+        titleLine1: 'Open Community',
+        titleLine2: '',
+        titleAccent: 'for AI Safety',
+        titleTail: ' China',
         lede: 'A professional network for Chinese-language readers: regular talks and paper readings, a six-week co-learning course, and research projects. Members come from research, engineering, industry, policy and law.',
         metaAffiliate: 'IASEAI Affiliate',
         metaMid: 'Mostly online',
@@ -555,7 +555,7 @@ export const translations: Record<Language, Translations> = {
       },
       mission: {
         label: 'Our mission',
-        text: 'We believe AI should always remain under human control.',
+        text: 'We believe artificial intelligence should always remain under human control.',
       },
       statsLabel: 'Community figures',
       statsNote: 'As of October 2026 · members counted as WeChat group members',
