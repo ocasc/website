@@ -361,10 +361,10 @@ export const translations: Record<Language, Translations> = {
     },
     resourcesPage: {
       title: '资源',
-      lede: '一份技术向的入口清单：做 AI 安全的人可以在哪里训练、申请 fellowship、补技术底子。只收我们了解过、且现在仍可申请的项目。',
-      criteria: '收录标准：技术向（对齐研究、可解释性、安全工程、评测）；有公开申请入口；不收纯治理、纯政策与无法验证的项目。',
+      lede: '一份技术向的入口清单：做 AI 安全的人可以在哪里训练、申请 fellowship、补技术底子。只收高质量的项目。',
+      criteria: '收录标准：技术向（对齐研究、可解释性、安全工程、评测），且质量足够高；不收纯治理、纯政策与无法验证的项目。',
       programHead: 'Fellowship 与研究项目',
-      programNote: '按项目性质排列，不按知名度。',
+      programNote: '按知名度从高到低排列。',
       programHeadFull: '全职',
       programNoteFull: '需要每周 40 小时左右，多数要求到项目所在地。',
       programHeadPart: '兼职与远程',
@@ -375,6 +375,13 @@ export const translations: Record<Language, Translations> = {
       colKind: '性质',
       colNote: '说明',
       programs: [
+        {
+          name: 'Anthropic Fellows Program',
+          kind: '带薪 fellowship',
+          note: '4 个月，在 Anthropic 内部做实证安全研究，按 cohort 招募。',
+          url: 'https://alignment.anthropic.com/2025/anthropic-fellows-program-2026/',
+          commit: 'full',
+        },
         {
           name: 'MATS Research',
           kind: '研究奖学金',
@@ -394,13 +401,6 @@ export const translations: Record<Language, Translations> = {
           kind: '资助型 fellowship',
           note: '3–6 个月，面向全职做 AI 安全研究的人，含资金与同行网络。',
           url: 'https://constellation.org/programs/astra',
-          commit: 'full',
-        },
-        {
-          name: 'Anthropic Fellows Program',
-          kind: '带薪 fellowship',
-          note: '4 个月，在 Anthropic 内部做实证安全研究，按 cohort 招募。',
-          url: 'https://alignment.anthropic.com/2025/anthropic-fellows-program-2026/',
           commit: 'full',
         },
         {
@@ -727,10 +727,10 @@ export const translations: Record<Language, Translations> = {
     },
     resourcesPage: {
       title: 'Resources',
-      lede: 'A technical-leaning shortlist: where people working on AI safety can train, apply to fellowships, and build the technical base. Only programs we know and that still take applications.',
-      criteria: 'Inclusion: technical (alignment research, interpretability, safety engineering, evaluations); a public application route; no pure governance or policy items, and nothing we cannot verify.',
+      lede: 'A technical-leaning shortlist: where people working on AI safety can train, apply to fellowships, and build the technical base. Only high-quality programs.',
+      criteria: 'Inclusion: technical (alignment research, interpretability, safety engineering, evaluations) and demonstrably high quality; no pure governance or policy items, and nothing we cannot verify.',
       programHead: 'Fellowships and research programs',
-      programNote: 'Ordered by what they are, not by reputation.',
+      programNote: 'Ordered by recognition, highest first.',
       programHeadFull: 'Full-time',
       programNoteFull: 'Around 40 hours a week; most require being on site.',
       programHeadPart: 'Part-time and remote',
@@ -741,6 +741,13 @@ export const translations: Record<Language, Translations> = {
       colKind: 'Type',
       colNote: 'Notes',
       programs: [
+        {
+          name: 'Anthropic Fellows Program',
+          kind: 'Paid fellowship',
+          note: '4 months of empirical safety research inside Anthropic, recruited in cohorts.',
+          url: 'https://alignment.anthropic.com/2025/anthropic-fellows-program-2026/',
+          commit: 'full',
+        },
         {
           name: 'MATS Research',
           kind: 'Research fellowship',
@@ -760,13 +767,6 @@ export const translations: Record<Language, Translations> = {
           kind: 'Funded fellowship',
           note: '3–6 months for people researching AI safety full-time, with funding and a peer network.',
           url: 'https://constellation.org/programs/astra',
-          commit: 'full',
-        },
-        {
-          name: 'Anthropic Fellows Program',
-          kind: 'Paid fellowship',
-          note: '4 months of empirical safety research inside Anthropic, recruited in cohorts.',
-          url: 'https://alignment.anthropic.com/2025/anthropic-fellows-program-2026/',
           commit: 'full',
         },
         {
