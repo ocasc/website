@@ -175,27 +175,34 @@
   letter-spacing: 0.03em;
 }
 
-/* ---------- pull quote ---------- */
-.quote {
+/* ---------- mission band ---------- */
+.mission {
   margin: 0;
   padding: 22px 0 24px;
   border-top: 1px solid var(--home-line-strong);
   border-bottom: 1px solid var(--home-line-strong);
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 24px;
+  align-items: baseline;
 }
-.quoteText {
+.missionLabel {
+  font-size: 10.5px;
+  font-weight: 750;
+  letter-spacing: 0.18em;
+  color: var(--home-crimson);
+}
+.missionText {
   font-size: 19px;
   font-weight: 650;
   line-height: 1.6;
   color: var(--home-ink);
   letter-spacing: 0.01em;
-  max-width: 34em;
+  max-width: 32em;
 }
-.quoteSource {
-  margin-top: 10px;
-  font-size: 10.5px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--home-muted3);
+@media (max-width: 900px) {
+  .mission { grid-template-columns: 1fr; gap: 10px; }
+  .missionText { font-size: 17px; }
 }
 
 /* ---------- sections ---------- */

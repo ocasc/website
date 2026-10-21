@@ -51,7 +51,8 @@ export interface Translations {
       metaLang: string;
       joinCta: string;
     };
-    quote: {
+    mission: {
+      label: string;
       text: string;
       source?: string;
     };
@@ -266,8 +267,9 @@ export const translations: Record<Language, Translations> = {
         metaLang: '中文 / English',
         joinCta: '加入社群',
       },
-      quote: {
-        text: '确保人工智能始终处于人类控制之下。',
+      mission: {
+        label: '我们的使命',
+        text: '我们相信，AI 应当始终处在人类的控制之下。',
       },
       statsLabel: '社区数据',
       statsNote: '截至 2026 年 10 月 · 社群成员为微信群成员',
@@ -551,8 +553,9 @@ export const translations: Record<Language, Translations> = {
         metaLang: 'Chinese / English',
         joinCta: 'Join community',
       },
-      quote: {
-        text: 'AI should always remain under human control.',
+      mission: {
+        label: 'Our mission',
+        text: 'We believe AI should always remain under human control.',
       },
       statsLabel: 'Community figures',
       statsNote: 'As of October 2026 · members counted as WeChat group members',
