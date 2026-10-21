@@ -119,9 +119,6 @@ export default function HomePage() {
                 </span>
               </p>
               <p className={styles.lede}>{home.hero.lede}</p>
-              <p className={styles.meta}>
-                <b className={styles.metaItem}>{home.hero.metaAffiliate}</b>
-              </p>
               <div className={styles.heroCta}>
                 <a
                   className={`${styles.btn} ${styles.btnSolid}`}
@@ -300,7 +297,10 @@ export default function HomePage() {
           </div>
 
           <div className={styles.fIn}>
-            <div className={styles.fSite}>{home.footer.site}</div>
+            <div>
+              <div className={styles.fSite}>{home.footer.site}</div>
+              <div className={styles.fAffil}>{home.hero.metaAffiliate}</div>
+            </div>
             <div className={styles.fLinks}>
               <a href="https://space.bilibili.com/1770030225" target="_blank" rel="noopener noreferrer">
                 {t.about.contact.bilibili}
