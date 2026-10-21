@@ -224,8 +224,9 @@
   --home-ink: #171719;
   --home-bg: #f3f0ef;
   --home-crimson: #a51c30;
-  --home-line: #e4dfde;
-  --home-line-strong: #ded8d7;
+  /* 1px 灰线分两级：结构分隔（深）/ 列表行分隔（浅）。两值必须拉开，否则等于只有一级 */
+  --home-line: #ece7e6;
+  --home-line-strong: #d6cfce;
   --home-muted: #56565a;
   --home-muted2: #4c4c50;
   --home-muted3: #6b6b70;

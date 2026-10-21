@@ -209,7 +209,7 @@
   margin: 0;
   padding: 26px 0 28px;
   border-top: 2px solid var(--home-ink);
-  border-bottom: 1px solid var(--home-line-strong);
+  border-bottom: 1px solid var(--home-line);
   display: grid;
   grid-template-columns: max-content 1fr;
   gap: 32px;
@@ -282,7 +282,6 @@
   justify-content: space-between;
   gap: 24px;
   padding-bottom: 18px;
-  border-bottom: 1px solid var(--home-line-strong);
   margin-bottom: 26px;
 }
 
@@ -497,7 +496,7 @@
   align-items: center;
   gap: 18px;
   padding: 20px 0;
-  border-top: 1px solid var(--home-line-strong);
+  border-top: 2px solid var(--home-ink);
   flex-wrap: wrap;
 }
 .partnersLabel {
