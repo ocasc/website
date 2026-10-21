@@ -392,12 +392,6 @@ export const translations: Record<Language, Translations> = {
               note: '兼职、远程，导师监督下的对齐研究，适合有技术背景想转进研究的人。',
               url: 'https://sparai.org/',
             },
-            {
-              name: '80,000 Hours · AI 安全岗位板',
-              kind: '岗位板',
-              note: 'AI 安全与政策方向的公开招聘汇总，已按兼职筛好；到页面里还能按地区、远程与否再改。',
-              url: 'https://jobs.80000hours.org/?refinementList%5Btags_area%5D%5B0%5D=AI%20safety%20%26%20policy&refinementList%5Btags_role_type%5D%5B0%5D=Part-time',
-            },
           ],
         },
         {
@@ -771,12 +765,6 @@ export const translations: Record<Language, Translations> = {
               kind: 'Remote research program',
               note: 'Part-time and remote; supervised alignment research for technical people moving into research.',
               url: 'https://sparai.org/',
-            },
-            {
-              name: '80,000 Hours · AI safety job board',
-              kind: 'Job board',
-              note: 'Live vacancies in AI safety and policy, pre-filtered to part-time; region and remote settings can be changed on the page.',
-              url: 'https://jobs.80000hours.org/?refinementList%5Btags_area%5D%5B0%5D=AI%20safety%20%26%20policy&refinementList%5Btags_role_type%5D%5B0%5D=Part-time',
             },
           ],
         },
