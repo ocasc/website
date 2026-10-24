@@ -93,6 +93,13 @@ export interface Translations {
       site: string;
       copyright: string;
     };
+    qr: {
+      title: string;
+      hintScan: string;
+      hintLongPress: string;
+      afterFollow: string;
+      formFallback: string;
+    };
   };
 
   // Events Section
@@ -347,6 +354,13 @@ export const translations: Record<Language, Translations> = {
         email: '联系邮箱',
         site: 'aisafety-cn.com',
         copyright: '© 2026 AI安全开放社区（OCASC）',
+      },
+      qr: {
+        title: '关注公众号，自动收到入群方式',
+        hintScan: '用微信扫码关注',
+        hintLongPress: '长按识别二维码，关注公众号',
+        afterFollow: '关注后会自动收到入群方式。已经关注过的，直接填问卷也可以。',
+        formFallback: '或者直接填问卷 →',
       },
     },
     resourcesPage: {
@@ -730,6 +744,13 @@ export const translations: Record<Language, Translations> = {
         email: 'Email',
         site: 'aisafety-cn.com',
         copyright: '© 2026 Open Community for AI Safety China',
+      },
+      qr: {
+        title: 'Follow our WeChat account to get the invite',
+        hintScan: 'Scan with WeChat to follow',
+        hintLongPress: 'Long-press the QR code to follow',
+        afterFollow: 'The invite arrives automatically after you follow. Already following? Use the form instead.',
+        formFallback: 'Or fill in the form →',
       },
     },
     resourcesPage: {

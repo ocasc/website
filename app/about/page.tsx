@@ -5,7 +5,7 @@ import { useLanguage } from "@/lib/language-context";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { BrandMark } from "@/components/brand-mark";
 import { localePath } from "@/lib/locale";
-import { JOIN_PATH } from "@/lib/site";
+import { JoinCta } from "@/components/join-cta";
 
 
 export default function AboutPage() {
@@ -28,14 +28,7 @@ export default function AboutPage() {
           <div className={styles.langSlot}>
             <LanguageSwitcher />
           </div>
-          <a
-            className={`${styles.btn} ${styles.btnSm} ${styles.btnSolid}`}
-            href={`${JOIN_PATH}?src=nav`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {t.home.hero.joinCta}
-          </a>
+          <JoinCta src="nav" label={t.home.hero.joinCta} small />
         </div>
         <div className={`${styles.wrap} ${styles.mobileNav}`}>
           <a href={localePath(language, "/#events")}>{t.nav.events}</a>

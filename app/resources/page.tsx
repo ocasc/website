@@ -5,7 +5,7 @@ import { useLanguage } from "@/lib/language-context";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { BrandMark } from "@/components/brand-mark";
 import { localePath } from "@/lib/locale";
-import { JOIN_PATH } from "@/lib/site";
+import { JoinCta } from "@/components/join-cta";
 
 
 export default function ResourcesPage() {
@@ -56,14 +56,7 @@ export default function ResourcesPage() {
             <LanguageSwitcher />
           </div>
 
-          <a
-            className={`${styles.btn} ${styles.btnSm} ${styles.btnSolid}`}
-            href={`${JOIN_PATH}?src=nav`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {t.home.hero.joinCta}
-          </a>
+          <JoinCta src="nav" label={t.home.hero.joinCta} small />
         </div>
         <div className={`${styles.wrap} ${styles.mobileNav}`}>
           <a href={localePath(language, "/#events")}>{t.nav.events}</a>
@@ -104,14 +97,7 @@ export default function ResourcesPage() {
           <section className={styles.section}>
             <div className={styles.endCta}>
               <p className={styles.endCtaText}>{r.endCta.text}</p>
-              <a
-                className={`${styles.btn} ${styles.btnSolid}`}
-                href={`${JOIN_PATH}?src=resources-end`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {r.endCta.button}
-              </a>
+              <JoinCta src="resources-end" label={r.endCta.button} />
             </div>
           </section>
         </div>

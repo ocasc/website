@@ -6,7 +6,8 @@ import { useLanguage } from "@/lib/language-context";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { BrandMark } from "@/components/brand-mark";
 import { localePath } from "@/lib/locale";
-import { JOIN_PATH } from "@/lib/site";
+import { JoinCta } from "@/components/join-cta";
+import { WeChatQrDialog } from "@/components/wechat-qr-dialog";
 import { useEvents } from "@/lib/use-events";
 
 const PROPOSE_TALK_URL =
@@ -69,14 +70,7 @@ export default function HomePage() {
             <LanguageSwitcher />
           </div>
 
-          <a
-            className={`${styles.btn} ${styles.btnSm} ${styles.btnSolid}`}
-            href={`${JOIN_PATH}?src=nav`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {home.hero.joinCta}
-          </a>
+          <JoinCta src="nav" label={home.hero.joinCta} small />
         </div>
         <div className={`${styles.wrap} ${styles.mobileNav}`}>
           <a href="#events">{t.nav.events}</a>
@@ -120,14 +114,7 @@ export default function HomePage() {
               </p>
               <p className={styles.lede}>{home.hero.lede}</p>
               <div className={styles.heroCta}>
-                <a
-                  className={`${styles.btn} ${styles.btnSolid}`}
-                  href={`${JOIN_PATH}?src=hero`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {home.hero.joinCta}
-                </a>
+                <JoinCta src="hero" label={home.hero.joinCta} />
               </div>
             </div>
 
@@ -341,23 +328,7 @@ export default function HomePage() {
         </div>
       </footer>
 
-      {showWechatQR && (
-        <div
-          className={styles.modalBackdrop}
-          onClick={() => setShowWechatQR(false)}
-          role="presentation"
-        >
-          <div className={styles.modal} onClick={(e) => e.stopPropagation()} role="dialog" aria-modal="true">
-            <h3>OCASC 微信公众号</h3>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/ocasc-qrcode.png" alt="OCASC 微信公众号二维码" />
-            <p>扫描二维码关注我们</p>
-            <button type="button" onClick={() => setShowWechatQR(false)}>
-              关闭
-            </button>
-          </div>
-        </div>
-      )}
+      <WeChatQrDialog open={showWechatQR} onClose={() => setShowWechatQR(false)} />
     </div>
   );
 }
