@@ -437,6 +437,8 @@
 
 /* ---------- sections ---------- */
 .section { padding: 62px 0; }
+/* /verify：入口页紧跟 hero，不需要 section 的 62px 上留白 */
+.verifySection { padding: 6px 0 62px; }
 .section + .section { padding-top: 0; }
 .secHead {
   display: flex;
