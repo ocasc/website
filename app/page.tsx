@@ -192,7 +192,7 @@ export default function HomePage() {
               <p className={styles.state}>{home.events.empty}</p>
             ) : (
               visible.map((ev) => {
-                const href = ev.documentLink || ev.videoLink;
+                const href = ev.articleLink || ev.documentLink || ev.videoLink;
                 const dayKey = ev.date.replace(/-/g, "/").replace(
                   /^(\d{4})\/(\d)\//,
                   "$1/0$2/",
