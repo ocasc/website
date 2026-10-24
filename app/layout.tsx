@@ -3,6 +3,7 @@ import { Manrope, Inter } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import { LanguageProvider } from "@/lib/language-context";
+import { SITE_URL, CONTACT_EMAIL, OG_IMAGE } from "@/lib/site";
 
 const manrope = Manrope({
   variable: "--font-manrope",
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
   ],
   creator: "AI安全开放社区",
   publisher: "AI安全开放社区",
-  metadataBase: new URL('https://aisafetystudy.gixia.org'),
+  metadataBase: new URL(SITE_URL),
   alternates: {
     canonical: '/',
     languages: {
@@ -36,24 +37,17 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AI安全开放社区 | Open Community for AI Safety China",
     description: "关注 AI 风险、AI 安全技术及 AI 安全治理等前沿话题，通过交流与合作促进 AI 的安全可持续发展。",
-    url: 'https://aisafetystudy.gixia.org',
+    url: SITE_URL,
     siteName: 'OCASC',
     locale: 'zh_CN',
     type: 'website',
-    images: [
-      {
-        url: '/logo.png',
-        width: 1326,
-        height: 453,
-        alt: 'AI安全开放社区',
-      },
-    ],
+    images: [OG_IMAGE],
   },
   twitter: {
     card: 'summary_large_image',
     title: "AI安全开放社区 | Open Community for AI Safety China",
     description: "关注 AI 风险、AI 安全技术及 AI 安全治理等前沿话题，通过交流与合作促进 AI 的安全可持续发展。",
-    images: ['/logo.png'],
+    images: [OG_IMAGE.url],
   },
   robots: {
     index: true,
@@ -70,6 +64,7 @@ export const metadata: Metadata = {
     icon: [
       { url: '/favicon.ico', type: 'image/x-icon' }
     ],
+    apple: [{ url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
     shortcut: ['/favicon.ico'],
   },
 };
@@ -84,8 +79,8 @@ export default function RootLayout({
     "@type": "Organization",
     "name": "AI安全开放社区",
     "alternateName": "Open Community for AI Safety China",
-    "url": "https://aisafetystudy.gixia.org",
-    "logo": "https://aisafetystudy.gixia.org/logo.png",
+    "url": SITE_URL,
+    "logo": `${SITE_URL}/logo.png`,
     "description": "关注 AI 风险、AI 安全技术及 AI 安全治理等前沿话题，通过交流与合作促进 AI 的安全可持续发展。",
     "sameAs": [
       // Add social media links here
@@ -95,7 +90,7 @@ export default function RootLayout({
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "General Inquiry",
-      "email": "contact@aisafetystudy.gixia.org"
+      "email": CONTACT_EMAIL
     }
   };
 

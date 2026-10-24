@@ -275,6 +275,9 @@
   border-bottom: 1px solid var(--home-line);
   align-items: baseline;
   transition: background .12s, padding .12s, color .12s;
+  /* not-found 页把 .msRow 当链接用：行本身不带下划线，颜色跟随正文 */
+  text-decoration: none;
+  color: inherit;
 }
 .msRow:hover { background: var(--home-ink); color: #fff; padding-left: 12px; }
 .msRow:hover .msDesc { color: #d6d6db; }
@@ -491,6 +494,7 @@
 .tHead span:last-child { text-align: right; }
 .ev {
   padding: 16px 12px 16px 0;
+  scroll-margin-top: 96px; /* 每行带 id=ev-*，深链跳转时避开 sticky header */
   border-bottom: 1px solid var(--home-line);
   text-decoration: none;
   color: inherit;

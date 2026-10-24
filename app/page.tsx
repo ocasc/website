@@ -218,6 +218,7 @@ export default function HomePage() {
                 return (
                   <a
                     key={ev.id}
+                    id={`ev-${ev.id}`}
                     className={`${styles.ev} ${isFuture ? styles.evFuture : ""}`}
                     href={href || "#events"}
                     {...(href ? { target: "_blank", rel: "noopener noreferrer" } : {})}

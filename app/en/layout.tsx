@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SITE_URL, OG_IMAGE_EN } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Open Community for AI Safety China",
@@ -15,8 +16,9 @@ export const metadata: Metadata = {
     title: "Open Community for AI Safety China",
     description:
       "A professional network for Chinese-language readers working on AI safety: talks, paper reading, courses and in-person meetups.",
-    url: "/en",
+    url: `${SITE_URL}/en`,
     locale: "en_US",
+    images: [OG_IMAGE_EN],
   },
 };
 
