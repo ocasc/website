@@ -48,10 +48,10 @@ export default function VerifyPage() {
                 AI 安全核验<em>闭门讨论</em>
               </h1>
               <p className={styles.lede}>
-                12 月在上海和深圳各有一场闭门讨论，席位按方向和报名顺序确认。
+                12 月 14 日，上海，一场小型的闭门讨论，席位按方向和报名顺序确认。
                 先选你在做什么，我们给对应的那份表，问题会短一些。
                 <br />
-                Two closed-door sessions this December, one in Shanghai and one in Shenzhen.
+                Dec 14, Shanghai. One closed-door session, seats confirmed by fit and order of sign-up.
                 Pick who you are and you get the short version of the form.
               </p>
             </div>
