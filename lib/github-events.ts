@@ -1,6 +1,7 @@
 // GitHub Events Integration
 
 import { EVENT_ARTICLES } from "./event-articles";
+import { EVENT_SIGNUPS } from "./event-signups";
 // 这个文件提供了从GitHub自动获取事件数据的功能
 
 export interface GitHubEventData {
@@ -17,6 +18,8 @@ export interface GitHubEventData {
   documentLink?: string;
   /** 公众号文章：活动行优先链这里，读者不该被送进 GitHub 仓库 */
   articleLink?: string;
+  /** 报名表：即将开始的活动优先链这里（腾讯问卷） */
+  signupLink?: string;
   speaker?: string;
   tags: string[];
   isUpcoming: boolean;
@@ -176,6 +179,7 @@ function parseEventFromMarkdown(rawContent: string, filePath: string): GitHubEve
   // 先抽出来并把这两行从正文去掉，避免 "location：" 被中文地点提取的 /Location/ 回退规则误命中
   // 可选公众号原文：+ **公众号**：https://mp.weixin.qq.com/s/…
   const articleMatch = rawContent.match(/\+\s*\*\*公众号\*\*[：:]\s*(https?:\/\/\S+)/i);
+  const signupMatch = rawContent.match(/\+\s*\*\*报名\*\*[：:]\s*(https?:\/\/\S+)/i);
   const enTitleMatch = rawContent.match(/\+\s*\*\*English title\*\*[：:]\s*(.+)/i);
   const enLocationMatch = rawContent.match(/\+\s*\*\*English location\*\*[：:]\s*(.+)/i);
   const titleEn = enTitleMatch ? enTitleMatch[1].trim() : "";
@@ -401,6 +405,7 @@ function parseEventFromMarkdown(rawContent: string, filePath: string): GitHubEve
       videoLink,
       documentLink: `https://github.com/${GITHUB_CONFIG.owner}/${GITHUB_CONFIG.repo}/blob/main/${filePath}`,
       articleLink: articleMatch ? articleMatch[1].trim() : EVENT_ARTICLES[id],
+      signupLink: signupMatch ? signupMatch[1].trim() : EVENT_SIGNUPS[id],
       speaker,
       tags: tags.slice(0, 4), // 限制标签数量
       isUpcoming,

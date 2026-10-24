@@ -192,7 +192,9 @@ export default function HomePage() {
               <p className={styles.state}>{home.events.empty}</p>
             ) : (
               visible.map((ev) => {
-                const href = ev.articleLink || ev.documentLink || ev.videoLink;
+                // 报名表优先（即将开始的活动），其次公众号原文，最后文档
+                const href =
+                  ev.signupLink || ev.articleLink || ev.documentLink || ev.videoLink;
                 const dayKey = ev.date.replace(/-/g, "/").replace(
                   /^(\d{4})\/(\d)\//,
                   "$1/0$2/",
