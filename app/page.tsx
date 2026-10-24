@@ -35,11 +35,6 @@ export default function HomePage() {
   }, []);
   const [expanded, setExpanded] = useState(false);
   const [showWechatQR, setShowWechatQR] = useState(false);
-  // 公众号文章只在微信客户端里能加载正文（站外打开只有标题），所以只在微信内把活动行链过去
-  const [inWeChat, setInWeChat] = useState(false);
-  useEffect(() => {
-    setInWeChat(/MicroMessenger/i.test(navigator.userAgent));
-  }, []);
   const home = t.home;
 
   const sorted = useMemo(() => {
@@ -197,11 +192,7 @@ export default function HomePage() {
               <p className={styles.state}>{home.events.empty}</p>
             ) : (
               visible.map((ev) => {
-                // 微信内 → 公众号原文；站外 → GitHub 文档（文章正文在微信外加载不出来）
-                const href =
-                  inWeChat && ev.articleLink
-                    ? ev.articleLink
-                    : ev.documentLink || ev.videoLink || ev.articleLink;
+                const href = ev.articleLink || ev.documentLink || ev.videoLink;
                 const dayKey = ev.date.replace(/-/g, "/").replace(
                   /^(\d{4})\/(\d)\//,
                   "$1/0$2/",
