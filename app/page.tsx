@@ -71,7 +71,7 @@ export default function HomePage() {
 
           <a
             className={`${styles.btn} ${styles.btnSm} ${styles.btnSolid}`}
-            href={JOIN_PATH}
+            href={`${JOIN_PATH}?src=nav`}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -122,7 +122,7 @@ export default function HomePage() {
               <div className={styles.heroCta}>
                 <a
                   className={`${styles.btn} ${styles.btnSolid}`}
-                  href={JOIN_PATH}
+                  href={`${JOIN_PATH}?src=hero`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >

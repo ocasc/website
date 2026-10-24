@@ -58,7 +58,7 @@ export default function ResourcesPage() {
 
           <a
             className={`${styles.btn} ${styles.btnSm} ${styles.btnSolid}`}
-            href={JOIN_PATH}
+            href={`${JOIN_PATH}?src=nav`}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -97,6 +97,21 @@ export default function ResourcesPage() {
           <section className={styles.section}>
             <div className={styles.criteriaWrap}>
               <p className={styles.criteria}>{r.criteria}</p>
+            </div>
+          </section>
+
+          {/* 读完三段路之后的第二个入口：以前这一页到底没有 CTA，读完即走 */}
+          <section className={styles.section}>
+            <div className={styles.endCta}>
+              <p className={styles.endCtaText}>{r.endCta.text}</p>
+              <a
+                className={`${styles.btn} ${styles.btnSolid}`}
+                href={`${JOIN_PATH}?src=resources-end`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {r.endCta.button}
+              </a>
             </div>
           </section>
         </div>

@@ -109,6 +109,7 @@ export interface Translations {
       note: string;
       rows: Array<{ name: string; kind: string; note: string; url: string }>;
     }>;
+    endCta: { text: string; button: string };
   };
 
   events: {
@@ -352,6 +353,10 @@ export const translations: Record<Language, Translations> = {
       title: '如何进入 AI 安全',
       lede: '没有唯一的入口，但有一条常见的顺序：先上课程打底子，再做兼职项目，最后进全职 fellowship。每一步都只收高质量的项目。',
       criteria: '收录标准：技术向（对齐研究、可解释性、安全工程、评测）与治理向（研究、标准、国际协作），且质量足够高；不收无法验证的项目。',
+      endCta: {
+        text: '不确定从哪一步开始？群里有人正在走这几条路，可以直接问。',
+        button: '加入社群',
+      },
       colName: '名称',
       colKind: '性质',
       colNote: '说明',
@@ -731,6 +736,10 @@ export const translations: Record<Language, Translations> = {
       title: 'How to get into AI safety',
       lede: 'There is no single entry point, but there is a common order: take a course first, then a part-time project, then a full-time fellowship. Every step lists only high-quality programs.',
       criteria: 'Inclusion: technical (alignment research, interpretability, safety engineering, evaluations) or governance (research, standards, international cooperation), and demonstrably high quality; nothing we cannot verify.',
+      endCta: {
+        text: 'Not sure which step to start with? People in the group are already on these paths — ask them.',
+        button: 'Join the community',
+      },
       colName: 'Program',
       colKind: 'Type',
       colNote: 'Notes',

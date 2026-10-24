@@ -30,7 +30,7 @@ export default function AboutPage() {
           </div>
           <a
             className={`${styles.btn} ${styles.btnSm} ${styles.btnSolid}`}
-            href={JOIN_PATH}
+            href={`${JOIN_PATH}?src=nav`}
             target="_blank"
             rel="noopener noreferrer"
           >

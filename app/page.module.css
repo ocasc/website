@@ -313,6 +313,28 @@
   padding-top: 18px;
 }
 
+/* 资源页读完之后的下一个入口（2026-10-24）：2px 墨线开块，一行话 + 一个按钮 */
+.endCta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  border-top: 2px solid var(--home-ink);
+  padding-top: 26px;
+}
+.endCtaText {
+  font-size: 16px;
+  font-weight: 650;
+  letter-spacing: -0.2px;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 34em;
+}
+@media (max-width: 768px) {
+  .endCta { flex-direction: column; align-items: flex-start; gap: 18px; padding-top: 20px; }
+  .endCtaText { font-size: 15px; }
+}
+
 /* ---------- resources page lists ---------- */
 .resGroup + .resGroup { margin-top: 40px; }
 .resGroup + .resGroup .listHead { border-top-width: 1px; }
