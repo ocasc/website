@@ -6,9 +6,9 @@ import { useLanguage } from "@/lib/language-context";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { BrandMark } from "@/components/brand-mark";
 import { localePath } from "@/lib/locale";
+import { JOIN_PATH } from "@/lib/site";
 import { useEvents } from "@/lib/use-events";
 
-const JOIN_FORM_URL = "https://wj.qq.com/s2/28113604/kyqo/";
 const PROPOSE_TALK_URL =
   "https://docs.google.com/forms/d/1-LlnyTAXhM8c8YvQZDddWkfrE-Qp0SwxwYJZbPB-yXo/viewform";
 
@@ -71,7 +71,7 @@ export default function HomePage() {
 
           <a
             className={`${styles.btn} ${styles.btnSm} ${styles.btnSolid}`}
-            href={JOIN_FORM_URL}
+            href={JOIN_PATH}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -122,7 +122,7 @@ export default function HomePage() {
               <div className={styles.heroCta}>
                 <a
                   className={`${styles.btn} ${styles.btnSolid}`}
-                  href={JOIN_FORM_URL}
+                  href={JOIN_PATH}
                   target="_blank"
                   rel="noopener noreferrer"
                 >

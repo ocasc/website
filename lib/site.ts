@@ -24,3 +24,12 @@ export const OG_IMAGE_EN = {
   height: 630,
   alt: "Open Community for AI Safety China",
 };
+
+/** 加入社群的问卷（腾讯问卷）。唯一入口。 */
+export const JOIN_FORM_URL = "https://wj.qq.com/s2/28113604/kyqo/";
+
+/**
+ * 站内跳板：所有「加入社群」按钮指向 /join，由 app/join/route.ts 302 到问卷。
+ * 这样 nginx access.log 里就有 /join 这一条，能不装任何前端脚本数出点击转化。
+ */
+export const JOIN_PATH = "/join";

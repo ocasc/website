@@ -5,8 +5,8 @@ import { useLanguage } from "@/lib/language-context";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { BrandMark } from "@/components/brand-mark";
 import { localePath } from "@/lib/locale";
+import { JOIN_PATH } from "@/lib/site";
 
-const JOIN_FORM_URL = "https://wj.qq.com/s2/28113604/kyqo/";
 
 export default function ResourcesPage() {
   const { t, language } = useLanguage();
@@ -58,7 +58,7 @@ export default function ResourcesPage() {
 
           <a
             className={`${styles.btn} ${styles.btnSm} ${styles.btnSolid}`}
-            href={JOIN_FORM_URL}
+            href={JOIN_PATH}
             target="_blank"
             rel="noopener noreferrer"
           >
