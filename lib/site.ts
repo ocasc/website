@@ -10,6 +10,15 @@ export const SITE_URL = "https://aisafety-cn.com";
 /** 页脚与结构化数据共用的联系邮箱（Zoho 托管，sarah.sun@ 是当前唯一真实邮箱）。 */
 export const CONTACT_EMAIL = "sarah.sun@aisafety-cn.com";
 
+/**
+ * 站点运营方（营业执照全称）。ICP 备案主体就是这个公司，关于页与页脚版权行
+ * 都要能读出主体关联性，审核员点开站点时才有据可查。
+ */
+export const OPERATOR_NAME = {
+  zh: "北京安澜奇点科技有限公司",
+  en: "Beijing Anlan Singularity Technology Co., Ltd.",
+} as const;
+
 /** 分享卡：1200×630，微信 / Twitter / OG 通用尺寸。 */
 export const OG_IMAGE = {
   url: "/og-cover.png",

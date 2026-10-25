@@ -24,7 +24,6 @@ export interface Translations {
 
   // Hero Section
   hero: {
-    badge: string;
     titlePrefix: string;
     titleStrikethrough: string;
     titleHighlight: string;
@@ -228,7 +227,6 @@ export interface Translations {
   // About Page
   aboutPage: {
     hero: {
-      badge: string;
       title: string;
       description: string;
     };
@@ -259,7 +257,6 @@ export const translations: Record<Language, Translations> = {
       proposeTalk: '申请分享',
     },
     hero: {
-      badge: '中文互联网最大的AI安全社区',
       titlePrefix: '推动 AI 走向',
       titleStrikethrough: '更强大',
       titleHighlight: '更安全',
@@ -353,7 +350,7 @@ export const translations: Record<Language, Translations> = {
         wechat: '公众号',
         email: '联系邮箱',
         site: 'aisafety-cn.com',
-        copyright: '© 2026 AI安全开放社区（OCASC）',
+        copyright: '© 2026 北京安澜奇点科技有限公司 · AI安全开放社区（OCASC）',
       },
       qr: {
         title: '关注公众号，自动收到入群方式',
@@ -578,7 +575,7 @@ export const translations: Record<Language, Translations> = {
     about: {
       title: '关注我们',
       description:
-        'AI安全开放社区（Open Community for AI Safety China）是中文互联网最大的 AI 安全开放性社区，我们关注 AI 风险、AI 安全技术及 AI 安全治理等前沿话题，力图通过交流与合作促进 AI 的安全可持续发展。社区以微信群为核心，并在多个平台同步更新动态。机构合作或意见反馈，可通过邮件或各平台私信联系。',
+        'AI安全开放社区（Open Community for AI Safety China）关注 AI 风险、AI 安全技术及 AI 安全治理等前沿话题，力图通过交流与合作促进 AI 的安全可持续发展。社区以微信群为核心，并在多个平台同步更新动态。机构合作或意见反馈，可通过邮件或各平台私信联系。',
       contact: {
         bilibili: 'Bilibili',
         circle: '知乎圈子',
@@ -594,14 +591,13 @@ export const translations: Record<Language, Translations> = {
     },
     aboutPage: {
       hero: {
-        badge: '中文互联网最大的AI安全社区',
         title: '关于我们',
         description: 'AI安全开放社区（OCASC）由一群关注AI安全的研究者和爱好者共同创立，致力于在中国构建高质量的AI安全知识生态，推动AI的安全可持续发展。',
       },
       story: {
         title: '我们的故事',
         paragraphs: [
-          'AI安全开放社区（Open Community for AI Safety China，OCASC）起初是一个小型学习小组，由一群对AI安全充满热情的研究者和爱好者共同创立。我们不定期阅读和讨论国际前沿AI安全研究，随着越来越多志同道合的朋友加入，社区逐渐壮大，成为中文互联网最大的AI安全开放社区。',
+          'AI安全开放社区（Open Community for AI Safety China，OCASC）起初是一个小型学习小组，由一群对AI安全充满热情的研究者和爱好者共同创立。我们不定期阅读和讨论国际前沿AI安全研究，随着越来越多志同道合的朋友加入，社区逐渐壮大。',
           '我们的使命是通过改善前沿AI安全研究的获取渠道、促进技术交流与讨论、建立与国际AI安全网络的连接，在中国构建一个开放、高质量的AI安全生态系统。',
           '目前，社区以微信群为核心，并在Bilibili、知乎、LinkedIn、GitHub等多个平台同步运营，累计覆盖超过10,000名关注者，核心共创成员超过20人，社群成员超过600人。',
         ],
@@ -648,7 +644,6 @@ export const translations: Record<Language, Translations> = {
       proposeTalk: 'Propose a Talk',
     },
     hero: {
-      badge: "China's Largest AI Safety Community",
       titlePrefix: 'Toward a ',
       titleStrikethrough: 'More Powerful',
       titleHighlight: 'Safer',
@@ -743,7 +738,7 @@ export const translations: Record<Language, Translations> = {
         wechat: 'WeChat',
         email: 'Email',
         site: 'aisafety-cn.com',
-        copyright: '© 2026 Open Community for AI Safety China',
+        copyright: '© 2026 Beijing Anlan Singularity Technology Co., Ltd. · Open Community for AI Safety China',
       },
       qr: {
         title: 'Follow our WeChat account to get the invite',
@@ -981,7 +976,7 @@ export const translations: Record<Language, Translations> = {
     about: {
       title: 'Follow Us',
       description:
-        'Open Community for AI Safety China (OCASC) is the largest AI safety open community in the Chinese-speaking internet. We focus on AI risks, AI safety technologies and AI safety governance, aiming to promote the safe and sustainable development of AI. The community is centered around WeChat groups and syncs updates across multiple platforms. For institutional cooperation or feedback, please reach out via email or direct message on any platform.',
+        'Open Community for AI Safety China (OCASC) focuses on AI risks, AI safety technologies and AI safety governance, aiming to promote the safe and sustainable development of AI. The community is centered around WeChat groups and syncs updates across multiple platforms. For institutional cooperation or feedback, please reach out via email or direct message on any platform.',
       contact: {
         bilibili: 'Bilibili',
         circle: 'Zhihu Ring',
@@ -997,14 +992,13 @@ export const translations: Record<Language, Translations> = {
     },
     aboutPage: {
       hero: {
-        badge: "China's Largest AI Safety Community",
         title: 'About Us',
         description: 'Open Community for AI Safety China (OCASC) was founded by researchers and enthusiasts passionate about AI safety, dedicated to building a high-quality AI safety knowledge ecosystem in China.',
       },
       story: {
         title: 'Our Story',
         paragraphs: [
-          'Open Community for AI Safety China (OCASC) began as a small study group, founded by a group of researchers and enthusiasts passionate about AI safety. We started by periodically reading and discussing frontier international AI safety research. As more like-minded people joined, the community grew to become the largest AI safety open community in the Chinese-speaking internet.',
+          'Open Community for AI Safety China (OCASC) began as a small study group, founded by a group of researchers and enthusiasts passionate about AI safety. We started by periodically reading and discussing frontier international AI safety research. As more like-minded people joined, the community grew.',
           'Our mission is to support an open, high-quality AI safety ecosystem in China by improving access to frontier AI safety research, fostering technical discussion, and building connections with the global AI safety network.',
           'Today, the community is centered around WeChat groups and active across multiple platforms including Bilibili, Zhihu, LinkedIn, and GitHub, reaching over 10,000 followers, with 600+ community members and 20+ core contributors.',
         ],

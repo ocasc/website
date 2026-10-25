@@ -5,6 +5,7 @@ import { useLanguage } from "@/lib/language-context";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { BrandMark } from "@/components/brand-mark";
 import { localePath } from "@/lib/locale";
+import { OPERATOR_NAME } from "@/lib/site";
 import { JoinCta } from "@/components/join-cta";
 
 
@@ -57,6 +58,11 @@ export default function AboutPage() {
                 ))}
               </div>
             </div>
+            <p className={styles.operatorNote}>
+              {language === "en"
+                ? `This site is operated by ${OPERATOR_NAME.en}.`
+                : `本站由${OPERATOR_NAME.zh}运营。`}
+            </p>
           </section>
 
           <section className={styles.section}>
