@@ -350,7 +350,7 @@ export const translations: Record<Language, Translations> = {
         wechat: '公众号',
         email: '联系邮箱',
         site: 'aisafety-cn.com',
-        copyright: '© 2026 北京安澜奇点科技有限公司 · AI安全开放社区（OCASC）',
+        copyright: '© 2026 AI安全开放社区（OCASC）',
       },
       qr: {
         title: '关注公众号，自动收到入群方式',
@@ -738,7 +738,7 @@ export const translations: Record<Language, Translations> = {
         wechat: 'WeChat',
         email: 'Email',
         site: 'aisafety-cn.com',
-        copyright: '© 2026 Beijing Anlan Singularity Technology Co., Ltd. · Open Community for AI Safety China',
+        copyright: '© 2026 Open Community for AI Safety China',
       },
       qr: {
         title: 'Follow our WeChat account to get the invite',

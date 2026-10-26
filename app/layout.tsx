@@ -78,7 +78,6 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "AI安全开放社区",
-    "legalName": "北京安澜奇点科技有限公司",
     "alternateName": "Open Community for AI Safety China",
     "url": SITE_URL,
     "logo": `${SITE_URL}/logo.png`,
