@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "结课证书 · OCASC 前沿 AI 安全课程",
   description:
     "OCASC 前沿 AI 安全课程结课证书验证页。Verify a certificate of completion for the OCASC Frontier AI Safety course.",
+  // ICP 备案审核期（2026-11-01 起）不对搜索引擎开放：这一页的标题是「结课证书」，
+  // 抽查时容易被读成有前置审批的类目。页面本身保留（证书核验链接要能用），只是不进索引。
+  robots: { index: false, follow: false },
 };
 
 /**

@@ -1,0 +1,19 @@
+{
+  "/[lang]/page": "app/[lang]/page.js",
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/about/page": "app/about/page.js",
+  "/api/events/route": "app/api/events/route.js",
+  "/api/join-click/route": "app/api/join-click/route.js",
+  "/certification/page": "app/certification/page.js",
+  "/en/about/page": "app/en/about/page.js",
+  "/en/page": "app/en/page.js",
+  "/en/resources/page": "app/en/resources/page.js",
+  "/join/route": "app/join/route.js",
+  "/page": "app/page.js",
+  "/resources/page": "app/resources/page.js",
+  "/robots.txt/route": "app/robots.txt/route.js",
+  "/sitemap.xml/route": "app/sitemap.xml/route.js",
+  "/v/[type]/route": "app/v/[type]/route.js",
+  "/verify/page": "app/verify/page.js"
+}

@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../app/en/about/page.tsx"],"sourcesContent":["\"use client\";\n\nexport { default } from \"../../about/page\";\n"],"names":[],"mappings":"uCAEA,IAAA,EAAA,EAAA,CAAA,CAAA"}

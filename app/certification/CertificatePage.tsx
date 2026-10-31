@@ -80,7 +80,7 @@ export default function CertificatePage() {
 
       <footer className="relative z-10 border-t border-white/10 print:hidden">
         <div className="max-w-6xl mx-auto px-5 py-5 flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] text-slate-500">
-          <p>© 2026 AI安全开放社区（OCASC）</p>
+          <p>© 2026 北京安澜奇点科技有限公司 · AI安全开放社区（OCASC）</p>
           <p className="tracking-widest">TOWARD A SAFER FUTURE FOR AI</p>
         </div>
       </footer>

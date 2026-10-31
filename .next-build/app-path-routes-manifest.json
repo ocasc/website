@@ -1,0 +1,19 @@
+{
+  "/[lang]/page": "/[lang]",
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/about/page": "/about",
+  "/api/events/route": "/api/events",
+  "/api/join-click/route": "/api/join-click",
+  "/certification/page": "/certification",
+  "/en/about/page": "/en/about",
+  "/en/page": "/en",
+  "/en/resources/page": "/en/resources",
+  "/join/route": "/join",
+  "/page": "/",
+  "/resources/page": "/resources",
+  "/robots.txt/route": "/robots.txt",
+  "/sitemap.xml/route": "/sitemap.xml",
+  "/v/[type]/route": "/v/[type]",
+  "/verify/page": "/verify"
+}

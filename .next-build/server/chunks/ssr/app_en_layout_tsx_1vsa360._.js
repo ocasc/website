@@ -1,0 +1,3 @@
+module.exports=[69406,a=>{"use strict";var b=a.i(34403);let c={title:"Open Community for AI Safety China",description:"A professional network for Chinese-language readers working on AI safety: talks, paper reading, courses and in-person meetups.",alternates:{canonical:"/en",languages:{"zh-CN":"/",en:"/en"}},openGraph:{title:"Open Community for AI Safety China",description:"A professional network for Chinese-language readers working on AI safety: talks, paper reading, courses and in-person meetups.",url:`${b.SITE_URL}/en`,locale:"en_US",images:[b.OG_IMAGE_EN]}};a.s(["default",0,function({children:a}){return a},"metadata",0,c])},82235,function(a){a.n(a.i(69406))}];
+
+//# sourceMappingURL=app_en_layout_tsx_1vsa360._.js.map
