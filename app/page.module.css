@@ -612,6 +612,15 @@
 .fLinks a:hover { color: var(--home-crimson); }
 .fCopy { font-size: 11.5px; color: var(--home-muted3); }
 
+/* 关于页：运营方（备案主体）声明，跟在故事段后面，小字不抢正文 */
+.operatorNote {
+  max-width: 44em;
+  margin: 22px 0 0;
+  font-size: 12.5px;
+  line-height: 1.7;
+  color: var(--home-muted3);
+}
+
 /* ---------- responsive ---------- */
 @media (max-width: 1024px) {
   .tier { padding: 0 10px; }

@@ -18,7 +18,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "AI安全开放社区 | Open Community for AI Safety China",
+  title: "安澜奇点 · AI安全开放社区 | Open Community for AI Safety China",
   description: "关注 AI 风险、AI 安全技术及 AI 安全治理等前沿话题，通过交流与合作促进 AI 的安全可持续发展。",
   keywords: ["AI安全", "AI对齐", "AI伦理", "AI治理", "机器学习安全", "人工智能安全", "人工智能伦理", "AI Safety", "AI Alignment", "AI安全学习小组", "AI Safety Study Group", "AI安全开放社区", "Open Community for AI Safety China", "AI安全社区", "AI Safety社区", "AI安全社群", "AI安全共创计划", "中国", "China"],
   authors: [
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "AI安全开放社区 | Open Community for AI Safety China",
+    title: "安澜奇点 · AI安全开放社区 | Open Community for AI Safety China",
     description: "关注 AI 风险、AI 安全技术及 AI 安全治理等前沿话题，通过交流与合作促进 AI 的安全可持续发展。",
     url: SITE_URL,
     siteName: 'OCASC',
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "AI安全开放社区 | Open Community for AI Safety China",
+    title: "安澜奇点 · AI安全开放社区 | Open Community for AI Safety China",
     description: "关注 AI 风险、AI 安全技术及 AI 安全治理等前沿话题，通过交流与合作促进 AI 的安全可持续发展。",
     images: [OG_IMAGE.url],
   },
@@ -78,6 +78,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "AI安全开放社区",
+    "legalName": "北京安澜奇点科技有限公司",
     "alternateName": "Open Community for AI Safety China",
     "url": SITE_URL,
     "logo": `${SITE_URL}/logo.png`,

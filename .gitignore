@@ -15,6 +15,10 @@
 
 # next.js
 /.next/
+# 原子发布用的旁路构建目录（构建产物，永不入库；git add -A 会误吃）
+/.next-build/
+/.next-old/
+/.next-broken/
 /out/
 
 # production
