@@ -4,125 +4,107 @@
   background: var(--home-bg);
   color: var(--home-ink);
   min-height: 100vh;
-  padding: 52px 24px 80px;
+  padding: 48px 28px 80px;
 }
 
 .ws {
-  max-width: 640px;
+  max-width: 1080px;
   margin: 0 auto;
 }
 
+/* ---------- 首屏 ---------- */
 .ws-eyebrow {
   color: var(--home-crimson);
   font-size: 11px;
   font-weight: 750;
   letter-spacing: 0.18em;
-  margin: 0 0 16px;
+  margin: 0 0 20px;
 }
 
 .ws h1 {
-  font-size: clamp(26px, 4vw, 34px);
-  line-height: 1.35;
-  letter-spacing: -0.005em;
+  font-size: clamp(30px, 4.4vw, 50px);
+  line-height: 1.24;
+  letter-spacing: -0.015em;
   font-weight: 800;
+  margin: 0 0 22px;
+  max-width: 16em;
+}
+
+.ws-lead {
+  text-wrap: pretty;
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--home-muted2);
+  max-width: 32em;
   margin: 0 0 24px;
 }
 
-/* ---------- 信息条：活动页的第一眼，不是文章开头 ---------- */
 .ws-meta {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0;
-  border-top: 1px solid var(--home-line-strong);
-  border-bottom: 1px solid var(--home-line-strong);
-  margin: 0 0 26px;
-}
-
-.ws-meta span {
   display: flex;
-  flex-direction: column;
-  gap: 4px;
-  padding: 14px 0;
-  font-size: 14px;
-  line-height: 1.5;
-  color: var(--home-ink);
+  flex-wrap: wrap;
+  gap: 10px 0;
+  padding: 14px 0 0;
+  border-top: 1px solid var(--home-line-strong);
+  font-size: 13.5px;
+  color: var(--home-muted2);
 }
 
-.ws-meta span:nth-child(odd) {
-  padding-right: 18px;
+.ws-meta span + span::before {
+  content: "／";
+  margin: 0 12px;
+  color: var(--home-line-strong);
 }
 
-.ws-meta span:nth-child(even) {
-  padding-left: 18px;
-  border-left: 1px solid var(--home-line);
+.ws-hero {
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--home-line-strong);
+  margin-bottom: 36px;
 }
 
-.ws-meta span:nth-child(n + 3) {
+/* ---------- 主栏 + 右栏 ---------- */
+.ws-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 0 64px;
+  align-items: start;
+}
+
+.ws-main {
+  min-width: 0;
+}
+
+/* ---------- 小节 ---------- */
+.ws-section {
+  padding: 0 0 34px;
+}
+
+.ws-section + .ws-section {
+  padding-top: 34px;
   border-top: 1px solid var(--home-line);
 }
 
-.ws-meta b {
+.ws-num {
   font-size: 11px;
   font-weight: 750;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.2em;
   color: var(--home-muted3);
-}
-
-.ws-cta {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
-  margin: 0 0 40px;
-}
-
-.ws-cta-bottom {
-  margin: 44px 0 0;
-  padding-top: 30px;
-  border-top: 1px solid var(--home-line-strong);
-}
-
-.ws-btn {
-  display: inline-block;
-  background: var(--home-ink);
-  border: 1px solid var(--home-ink);
-  color: #fff;
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: 650;
-  padding: 14px 24px;
-  border-radius: 2px;
-}
-
-.ws-btn:hover {
-  background: #000;
-  border-color: #000;
-}
-
-.ws-note {
-  color: var(--home-muted2);
-  font-size: 13.5px;
-  line-height: 1.6;
-}
-
-/* ---------- 正文：四段，别写成文章 ---------- */
-.ws-section {
-  padding: 26px 0 0;
+  margin: 0 0 8px;
 }
 
 .ws-section h2 {
-  font-size: 16px;
+  font-size: 21px;
   font-weight: 800;
-  letter-spacing: 0.06em;
-  color: var(--home-crimson);
-  margin: 0 0 12px;
+  letter-spacing: -0.005em;
+  margin: 0 0 14px;
 }
 
 .ws-section p {
+  text-wrap: pretty;
   font-size: 15.5px;
   line-height: 1.9;
   color: var(--home-muted2);
-  margin: 0 0 12px;
+  margin: 0 0 13px;
+  max-width: 34em;
 }
 
 .ws-section a {
@@ -137,46 +119,172 @@
 }
 
 .ws-section ul {
-  margin: 0 0 12px;
-  padding-left: 22px;
-  list-style: disc outside;
+  margin: 0 0 13px;
+  padding-left: 20px;
+  list-style: none;
 }
 
 .ws-section li {
-  display: list-item;
+  position: relative;
+  text-wrap: pretty;
   font-size: 15.5px;
   line-height: 1.9;
   color: var(--home-muted2);
-  margin-bottom: 6px;
+  margin-bottom: 8px;
+  padding-left: 4px;
+  max-width: 34em;
 }
 
-/* ---------- 海报：只出现一次，作为转发的物料 ---------- */
-.ws-poster {
-  margin: 48px 0 0;
+.ws-section li::before {
+  content: "";
+  position: absolute;
+  left: -14px;
+  top: 0.92em;
+  width: 5px;
+  height: 5px;
+  background: var(--home-crimson);
+  border-radius: 50%;
 }
 
-.ws-poster-cap {
-  font-size: 13px;
+/* ---------- 右栏卡片 ---------- */
+.ws-rail {
+  position: sticky;
+  top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.ws-card {
+  background: #fff;
+  border: 1px solid var(--home-line-strong);
+  padding: 20px 20px 22px;
+}
+
+.ws-card dl {
+  margin: 0 0 20px;
+}
+
+.ws-card dl > div {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  gap: 4px 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--home-line);
+}
+
+.ws-card dl > div:first-child {
+  padding-top: 0;
+}
+
+.ws-card dt {
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.12em;
   color: var(--home-muted3);
-  margin: 0 0 12px;
+  padding-top: 2px;
 }
 
-.ws-poster img {
+.ws-card dd {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--home-ink);
+}
+
+.ws-card dd span {
+  display: block;
+  font-size: 12.5px;
+  color: var(--home-muted3);
+  line-height: 1.6;
+}
+
+.ws-btn {
+  display: block;
+  background: var(--home-ink);
+  border: 1px solid var(--home-ink);
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  font-size: 14.5px;
+  font-weight: 650;
+  padding: 13px 18px;
+  border-radius: 2px;
+}
+
+.ws-btn:hover {
+  background: #000;
+  border-color: #000;
+}
+
+.ws-note {
+  color: var(--home-muted3);
+  font-size: 12.5px;
+  line-height: 1.7;
+  margin: 12px 0 0;
+}
+
+/* ---------- 转发物料：左图右文 ---------- */
+.ws-forward {
+  display: grid;
+  grid-template-columns: 360px minmax(0, 1fr);
+  gap: 20px 48px;
+  align-items: start;
+  margin-top: 48px;
+  padding-top: 34px;
+  border-top: 1px solid var(--home-line-strong);
+}
+
+.ws-forward-img img {
   display: block;
   width: 100%;
   height: auto;
-  border: 1px solid var(--home-line);
+  border: 1px solid var(--home-line-strong);
 }
 
+.ws-forward-txt h2 {
+  font-size: 21px;
+  font-weight: 800;
+  margin: 0 0 12px;
+}
+
+.ws-forward-txt p:not(.ws-num):not(.ws-note) {
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--home-muted2);
+  margin: 0 0 18px;
+  max-width: 26em;
+}
+
+.ws-dl {
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--home-ink);
+  text-decoration: none;
+  border-bottom: 2px solid var(--home-crimson);
+  padding-bottom: 3px;
+  margin-bottom: 10px;
+}
+
+.ws-forward-txt .ws-note {
+  margin: 0;
+}
+
+.ws-dl:hover {
+  color: var(--home-crimson);
+}
+
+/* ---------- 页脚 ---------- */
 .ws-foot {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 16px;
-  margin-top: 36px;
+  margin-top: 40px;
   padding-top: 18px;
   border-top: 1px solid var(--home-line-strong);
-  font-size: 13px;
+  font-size: 12.5px;
   color: var(--home-muted3);
 }
 
@@ -186,26 +294,79 @@
   border-bottom: 1px solid var(--home-line-strong);
 }
 
-@media (max-width: 640px) {
+/* ---------- 窄屏：右栏回到正文上方 ---------- */
+@media (max-width: 900px) {
   .workshop-shell {
-    padding: 30px 18px 56px;
+    padding: 36px 20px 64px;
   }
+
+  .ws-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+
+  .ws-rail {
+    position: static;
+    order: -1;
+    margin-bottom: 34px;
+  }
+
+  .ws-hero {
+    padding-bottom: 32px;
+    margin-bottom: 30px;
+  }
+
+  .ws h1 {
+    font-size: clamp(26px, 7vw, 34px);
+  }
+
+  /* 手机上信息全在卡片里，摘要行不再重复 */
   .ws-meta {
-    grid-template-columns: 1fr;
+    display: none;
   }
-  .ws-meta span:nth-child(even) {
-    padding-left: 0;
-    border-left: none;
-  }
-  .ws-meta span:nth-child(n + 2) {
-    border-top: 1px solid var(--home-line);
-  }
+
   .ws-section p,
   .ws-section li {
     font-size: 15px;
   }
-  .ws-btn {
-    width: 100%;
-    text-align: center;
+
+  .ws-forward {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+    margin-top: 34px;
+  }
+
+  .ws-forward-img img {
+    max-width: 300px;
+  }
+}
+
+/* ---------- 矮屏（13 寸笔记本）压缩首屏，保证报名按钮在第一屏 ---------- */
+@media (min-width: 901px) and (max-height: 840px) {
+  .workshop-shell {
+    padding-top: 32px;
+  }
+
+  .ws-eyebrow {
+    margin-bottom: 14px;
+  }
+
+  .ws h1 {
+    font-size: clamp(28px, 3.6vw, 40px);
+    margin-bottom: 16px;
+  }
+
+  .ws-lead {
+    font-size: 16px;
+    margin-bottom: 18px;
+  }
+
+  .ws-hero {
+    padding-bottom: 24px;
+    margin-bottom: 28px;
+  }
+
+  .ws-card dl > div {
+    padding: 8px 0;
   }
 }
