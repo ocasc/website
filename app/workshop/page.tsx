@@ -95,7 +95,7 @@ export default function WorkshopPage() {
           由 AI 安全中文社区 OCASC 发起，是 muShenzhen 当天的共创活动之一，场地由 muShenzhen 提供。发起人 Sarah，在牛津大学马丁学院做 AI 安全技术治理方向的研究。
         </p>
         <p>
-          参会不需要自己买 muShenzhen 通行证，门票由主办方承担。
+          分享与圆桌嘉宾的 muShenzhen 通行证由主办方承担；听众需要自己买当天通行证入场。
         </p>
         <p>
           需要一份活动说明用于单位内部报备的，在报名表里注明，我们单独发给你。
