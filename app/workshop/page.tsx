@@ -23,17 +23,23 @@ export default function WorkshopPage() {
       <section className="ws-section">
         <h2>为什么会有这场讨论</h2>
         <p>
-          这几个名字在国内的讨论里出现得不多，先交代背景。2023 年 9 月，Anthropic 第一个把「能力到什么水平就必须加什么防护」写成公开文件，叫
-          <a href="https://www.secrss.com/articles/63015" target="_blank" rel="noopener noreferrer">负责任扩展政策（Responsible Scaling Policy）</a>；同年 12 月，OpenAI 发布
-          <a href="https://www.ithome.com/0/845/524.htm" target="_blank" rel="noopener noreferrer">准备框架（Preparedness Framework）</a>，规定发布模型前怎么评风险；2024 年 5 月，Google DeepMind 推出
-          <a href="https://www.ithome.com/0/769/655.htm" target="_blank" rel="noopener noreferrer">前沿安全框架（Frontier Safety Framework）</a>。</p>
-        <p>
-          同月首尔峰会上，
-          <a href="https://www.chinanews.com.cn/cj/2024/05-23/10222198.shtml" target="_blank" rel="noopener noreferrer">16 家公司联署「前沿 AI 安全承诺」</a>，中国的智谱 AI 也在内。承诺里有一条是：基于安全框架，说明自己怎么衡量模型风险。
+          这几份文件在国内的讨论里出现得不多，先交代背景。过去三年，几家海外实验室陆续把「能力到什么水平、必须先加什么防护」写成公开文件：Anthropic 的
+          <a href="https://www.secrss.com/articles/87619" target="_blank" rel="noopener noreferrer">负责任扩展政策（Responsible Scaling Policy）</a>，2023 年 9 月第一版，现在到 3.4 版（2026 年 7 月生效）；OpenAI 的
+          <a href="https://www.ithome.com/0/845/524.htm" target="_blank" rel="noopener noreferrer">准备框架（Preparedness Framework）</a>，2025 年 4 月的第二版；Google DeepMind 的
+          <a href="https://www.thepaper.cn/newsDetail_forward_31665820" target="_blank" rel="noopener noreferrer">前沿安全框架（Frontier Safety Framework）</a>，2025 年 9 月第三版，2026 年 4 月升到 3.1。
         </p>
         <p>
-          国内走的路径不太一样，主要是算法备案、安全评估和内容标识，
-          <a href="https://www.cac.gov.cn/2025-09/15/c_1759653448369123.htm" target="_blank" rel="noopener noreferrer">《人工智能安全治理框架》2.0 版</a>把风险分级和对应的技术措施写得更细。形式不同，但两边最后都要落到同一个问题上：写下来的东西，过一段时间怎么核对。
+          2026 年 5 月，OpenAI 又单独发了一份面向监管的
+          <a href="https://www.secrss.com/articles/90937" target="_blank" rel="noopener noreferrer">前沿治理框架（Frontier Governance Framework）</a>，用来说明自己的做法怎么对齐加州和欧盟的新规。再往前，2024 年 5 月首尔峰会上，
+          <a href="https://www.chinanews.com.cn/cj/2024/05-23/10222198.shtml" target="_blank" rel="noopener noreferrer">16 家公司联署「前沿 AI 安全承诺」</a>，中国的智谱 AI 也在内；承诺里有一条是：基于安全框架，说明自己怎么衡量模型风险。
+        </p>
+        <p>
+          这些文件一直在改。2026 年 2 月，Anthropic 把 RSP 从第二版改到第三版，同时
+          <a href="https://www.ithome.com/0/923/451.htm" target="_blank" rel="noopener noreferrer">取消了「没有足够防护就不训练、不发布模型」这条核心承诺</a>，理由是对手推进太快、单方面约束不合理。改与不改是它自己的判断，但这件事说明：承诺本身会变。那变之前那一版有没有兑现，过一段时间就更难查了。
+        </p>
+        <p>
+          国内走的是另一条路：算法备案、安全评估、内容标识。全国网安标委 2026 年 9 月 14 日发布
+          <a href="https://www.cac.gov.cn/2026-09/14/c_1791137092283345.htm" target="_blank" rel="noopener noreferrer">《人工智能安全治理框架》3.0</a>，把风险的分类分级和对应的技术措施写得更细。路径不同，最后都要落到同一个问题：写下来的东西，一年后怎么核对。
         </p>
         <p>
           承诺里说的都是可核对的事：不使用某类数据、训练不超过某个算力、评测结果要能复现。可谁来核、拿什么核？OCASC 这两年在中文社区办过评测复现和算力核查的讨论，每次都卡在同一处——材料在谁手里，一年后还拿不拿得出来。所以这次不再泛泛地谈，挑最小的一层开始：一间机房，验收合格、钱也付完之后，怎么核对里面的机器还是当初验收的那批。
