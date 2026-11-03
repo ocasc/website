@@ -8,7 +8,7 @@ export default function WorkshopPage() {
         <h1>AI 安全承诺核验</h1>
         <p className="ws-en">Verifying AI Safety Commitments</p>
         <p className="ws-lead">
-          一次三小时的小范围技术讨论。训练和推理跑在别人的机房里，安全承诺写得再细，也要落到能被复核的材料上。那天下午只看一间机房：验收合格、钱付完之后，当初留下的材料一年后还核不核得动。
+          一次三小时的小范围技术讨论。训练和推理跑在别人的机房里，安全承诺写得再细，也要落到能被复核的材料上。那天下午只看一间机房。验收合格、钱付完之后，当初留下的材料一年后还核不核得动。
         </p>
         <div className="ws-meta">
           <span>12 月 3 日下午 · 三小时</span>
