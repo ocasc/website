@@ -429,3 +429,38 @@
     margin-bottom: 14px;
   }
 }
+
+/* ---------- 手机：让报名按钮落在第一屏 ---------- */
+@media (max-width: 900px) and (max-height: 900px) {
+  .workshop-shell {
+    padding-top: 24px;
+  }
+
+  .ws h1 {
+    font-size: clamp(24px, 6.4vw, 30px);
+    margin-bottom: 14px;
+  }
+
+  .ws-en {
+    margin: -8px 0 14px;
+  }
+
+  .ws-lead {
+    font-size: 15px;
+    line-height: 1.72;
+    margin-bottom: 14px;
+  }
+
+  .ws-hero {
+    padding-bottom: 20px;
+    margin-bottom: 22px;
+  }
+
+  .ws-card {
+    padding: 16px 18px 18px;
+  }
+
+  .ws-card dl > div {
+    padding: 7px 0;
+  }
+}
