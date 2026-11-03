@@ -4,13 +4,13 @@ export default function WorkshopPage() {
   return (
     <main className="ws">
       <header className="ws-head">
-        <p className="ws-eyebrow">OCASC 闭门技术讨论 · 深圳</p>
+        <p className="ws-eyebrow">OCASC 小范围技术讨论 · 深圳</p>
         <h1>一年后还能证明，机房里的机器还是当初那批吗？</h1>
         <div className="ws-meta">
           <span><b>时间</b>12 月 3 日下午</span>
           <span><b>地点</b>深圳，具体场地报名后告知</span>
           <span><b>规模</b>二十人左右，分享嘉宾 6–8 位</span>
-          <span><b>形式</b>闭门，不做公开传播</span>
+          <span><b>形式</b>凭报名入场，不录像、不公开转述</span>
         </div>
         <div className="ws-cta">
           <a className="ws-btn" href={SIGNUP} target="_blank" rel="noopener noreferrer">
@@ -64,7 +64,7 @@ export default function WorkshopPage() {
       <section className="ws-section">
         <h2>适合谁来</h2>
         <p>
-          二十人左右，闭门讨论。适合做过验收测试、跑过集群调度、做远程证明和日志完整的工程师，也包括买方那边负责算力项目审核的人——你要拿材料去举证，这件事跟你直接有关。
+          二十人左右，凭报名入场。适合做过验收测试、跑过集群调度、做远程证明和日志完整的工程师，也包括买方那边负责算力项目审核的人——你要拿材料去举证，这件事跟你直接有关。
         </p>
         <p>
           不适合想找合作、想招人、或者只想听一遍 AI 安全概览的朋友。名额有限，请确认那天下午真的能腾出三个小时再报名。
@@ -85,7 +85,7 @@ export default function WorkshopPage() {
         <a className="ws-btn" href={SIGNUP} target="_blank" rel="noopener noreferrer">
           填写报名表
         </a>
-        <span className="ws-note">截止 11 月 17 日 · 我们会通过微信跟你确认</span>
+        <span className="ws-note">截止 11 月 17 日 · 二十人左右，凭报名入场；不录像，不做公开转述</span>
       </section>
 
       <section className="ws-poster">
