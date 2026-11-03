@@ -373,7 +373,19 @@
     margin-bottom: 28px;
   }
 
+  .ws-card {
+    padding: 16px 18px 18px;
+  }
+
   .ws-card dl > div {
-    padding: 8px 0;
+    padding: 6px 0;
+  }
+
+  .ws-card dl {
+    margin-bottom: 16px;
+  }
+
+  .ws-lead {
+    margin-bottom: 14px;
   }
 }

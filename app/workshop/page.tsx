@@ -11,9 +11,8 @@ export default function WorkshopPage() {
           一次三小时的小范围技术讨论。训练和推理跑在别人的机房里，安全承诺写得再细，也要落到能被复核的材料上。那天下午只看一间机房。验收合格、钱付完之后，当初留下的材料一年后还核不核得动。
         </p>
         <div className="ws-meta">
-          <span>12 月 3 日下午 · 三小时</span>
-          <span>深圳，具体场地报名后告知</span>
-          <span>听众二十人左右 · 嘉宾 6–8 位</span>
+          <span>12 月 3 日下午 · 深圳</span>
+          <span>OCASC × muShenzhen</span>
         </div>
       </header>
 
@@ -73,6 +72,7 @@ export default function WorkshopPage() {
               <li>哪些检查现在做不到，是技术上做不了，还是没人负责做</li>
               <li>同一套基准隔几个月重跑，性能数字一般会差多少</li>
             </ul>
+            <p>全程以讨论为主，不安排动手环节，不用带电脑。</p>
             <p>
               结束时我们带走两张清单：一张记下现有材料里哪些能支撑事后核对，一张记下哪些检查现在补不上。会后公开这两张清单的不指名版本，只写方法和缺口。
             </p>
@@ -82,7 +82,7 @@ export default function WorkshopPage() {
             <p className="ws-num">03</p>
             <h2>适合谁来</h2>
             <p>
-              更适合做过验收测试、集群调度、remote attestation、日志完整性（log integrity）的工程师，也欢迎买方负责算力项目审核的同行，这些材料最后要由你们拿去核对。
+              更适合做过验收测试、集群调度、远程证明（remote attestation）、日志完整性的工程师，也欢迎买方负责算力项目审核的同行，这些材料最后要由你们拿去核对。
             </p>
             <p>名额有限，请确认那天下午真的能腾出三个小时。带着一个你实际遇到的卡点来，讨论会更有收获。</p>
           </section>
@@ -122,10 +122,17 @@ export default function WorkshopPage() {
                 </dd>
               </div>
               <div>
+                <dt>语言</dt>
+                <dd>
+                  中文进行
+                  <span>专有名词用英文原词</span>
+                </dd>
+              </div>
+              <div>
                 <dt>形式</dt>
                 <dd>
-                  凭报名入场
-                  <span>不录像、不对外转述</span>
+                  只做现场，凭报名入场
+                  <span>不录像、不对外转述、不设回放</span>
                 </dd>
               </div>
               <div>
@@ -139,7 +146,7 @@ export default function WorkshopPage() {
             <a className="ws-btn" href={SIGNUP} target="_blank" rel="noopener noreferrer">
               填写报名表
             </a>
-            <p className="ws-note">报名截止 11 月 17 日，我们会用微信跟你确认。</p>
+            <p className="ws-note">报名截止 11 月 17 日，坐满即止。我们会用微信跟你确认。</p>
           </div>
 
         </aside>
@@ -162,7 +169,6 @@ export default function WorkshopPage() {
           <a className="ws-dl" href="/workshop/poster.jpg" download="ai-verification-1203-poster.jpg">
             下载海报原图 ↗
           </a>
-          <p className="ws-note">报名截止 11 月 17 日 · 二十人左右，凭报名入场 · 不录像、不对外转述</p>
         </div>
       </section>
 
