@@ -8,7 +8,7 @@ export default function WorkshopPage() {
         <h1>AI 安全承诺核验</h1>
         <p className="ws-en">Verifying AI Safety Commitments</p>
         <p className="ws-lead">
-          一次三小时的小范围技术讨论。训练和推理跑在别人的机房里，安全承诺写得再细，也要落到能被复核的材料上。那天下午只看一间机房。验收合格、钱付完之后，当初留下的材料一年后还核不核得动。
+          一次三小时的小范围技术讨论。训练和推理跑在别人的机房里，安全承诺由公司自己执行、自己报告，外部能做的只有事后核对留下的材料。那天下午只看一间机房。验收合格、钱付完之后，当初留下的材料一年后还核不核得动。
         </p>
         <div className="ws-meta">
           <span>12 月 3 日下午 · 深圳</span>
@@ -20,44 +20,44 @@ export default function WorkshopPage() {
         <div className="ws-main">
           <section className="ws-section">
             <p className="ws-num">01</p>
-            <h2>为什么会有这场讨论</h2>
-            <p>过去三年，几家海外实验室陆续把「能力到什么水平、必须先加什么防护」写成公开文件：</p>
+            <h2>为什么需要核验</h2>
+            <p>过去三年，Anthropic、OpenAI、Google DeepMind 陆续把「能力到什么水平、必须先加什么防护」写成公开文件：</p>
             <ul>
               <li>
                 Anthropic 的
-                <a href="https://www.secrss.com/articles/87619" target="_blank" rel="noopener noreferrer">负责任扩展政策（Responsible Scaling Policy）</a>
-                ，2023 年 9 月第一版，现在到 3.4 版（2026 年 7 月生效）
+                <a href="https://www.secrss.com/articles/87619" target="_blank" rel="noopener noreferrer">负责任扩展政策（RSP）</a>
+                ，现在到 3.4 版
               </li>
               <li>
                 OpenAI 的
                 <a href="https://www.ithome.com/0/845/524.htm" target="_blank" rel="noopener noreferrer">准备框架（Preparedness Framework）</a>
-                ，2025 年 4 月的第二版
+                ，2025 年的第二版
               </li>
               <li>
                 Google DeepMind 的
                 <a href="https://www.thepaper.cn/newsDetail_forward_31665820" target="_blank" rel="noopener noreferrer">前沿安全框架（Frontier Safety Framework）</a>
-                ，2025 年 9 月第三版，2026 年 4 月升到 3.1
+                ，2026 年升到 3.1
               </li>
             </ul>
             <p>
-              2026 年 5 月，OpenAI 又单独发了一份面向监管的
-              <a href="https://www.secrss.com/articles/90937" target="_blank" rel="noopener noreferrer">前沿治理框架（Frontier Governance Framework）</a>，说明自己的做法怎么满足加州和欧盟的新规。
+              这些文件有一个共同点：判断由公司自己做，执行由公司自己监督，外部能看到的只有公开发出来的文件。所以「承诺有没有兑现」，读文件回答不了，要看能不能拿到可以核对的东西：评测记录、训练和推理跑在什么环境里、配置什么时候改过。
             </p>
             <p>
-              再往前，2024 年 5 月首尔峰会上，首批
-              <a href="https://www.chinanews.com.cn/cj/2024/05-23/10222198.shtml" target="_blank" rel="noopener noreferrer">16 家公司签署「前沿 AI 安全承诺」</a>，中国的智谱 AI 也在内；承诺里有一条是：按各自的安全框架，说明如何评估模型风险。
+              2024 年 5 月首尔峰会上，首批
+              <a href="https://www.chinanews.com.cn/cj/2024/05-23/10222198.shtml" target="_blank" rel="noopener noreferrer">16 家公司签署「前沿 AI 安全承诺」</a>
+              ，智谱 AI 也在内；承诺要求各家公司按自己的安全框架说明如何评估模型风险，交的仍然是自己的说明。
             </p>
             <p>
-              这些文件一直在改。2026 年 2 月，Anthropic 发布 RSP 第三版，
-              <a href="https://www.ithome.com/0/923/451.htm" target="_blank" rel="noopener noreferrer">删去了「防护不足就不训练、不发布模型」这条核心承诺</a>；据《时代》对该公司首席科学官的采访，理由是对手推进太快、单方面约束不合理。怎么改是它自己的判断。承诺本身会变，改之前那一版有没有兑现，时间一长就更难查。
+              承诺本身还会改。2026 年 2 月，Anthropic 发布 RSP 第三版，
+              <a href="https://www.ithome.com/0/923/451.htm" target="_blank" rel="noopener noreferrer">删去了「防护不足就不训练、不发布模型」这条核心承诺</a>；据《时代》对该公司首席科学官的采访，理由是对手推进太快、单方面约束不合理。怎么改是它自己的判断，但改之前那一版有没有兑现，时间一长就更难查，核验要在当时做，而且要留下材料。
             </p>
             <p>
-              国内走的是另一条路：算法备案、安全评估、内容标识。全国网络安全标准化技术委员会（全国网安标委）2026 年 9 月 14 日发布
+              国内走的是另一条路：算法备案、安全评估、内容标识。全国网络安全标准化技术委员会（全国网安标委）2026 年 9 月 14 日发布的
               <a href="https://www.cac.gov.cn/2026-09/14/c_1791137092283345.htm" target="_blank" rel="noopener noreferrer">《人工智能安全治理框架》3.0</a>
-              ，比上一版更细地写了风险分类分级和对应的技术措施。路径不同，问题一样：写下来的东西一年后怎么核对。
+              ，比上一版更细地写了风险分类分级和对应技术措施。路径不同，落到同一件事：写下来的要求，事后能不能核对。
             </p>
             <p>
-              承诺里写的大多是可核对的东西：能力到哪一档要加什么防护、评测怎么做、什么时候该停。谁来核、拿什么核？OCASC 这两年在中文社区办过评测复现和算力核查的讨论，每次卡在同一处：材料在谁手里，一年后还拿不拿得出来。这次就从一间机房开始。
+              OCASC 这两年在中文社区办过评测复现和算力核查的讨论，每次卡在同一处：材料在谁手里，一年后还拿不拿得出来。这次就从一间机房开始。
             </p>
           </section>
 
