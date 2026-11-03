@@ -8,7 +8,7 @@ export default function WorkshopPage() {
         <h1>AI 安全承诺核验</h1>
         <p className="ws-en">Verifying AI Safety Commitments</p>
         <p className="ws-lead">
-          一次三小时的小范围技术讨论。训练和推理跑在别人的机房里，安全承诺由公司自己执行、自己报告，外部能做的只有事后核对留下的材料。那天下午只看一间机房。验收合格、钱付完之后，当初留下的材料一年后还核不核得动。
+          我们想请一批对 AI 安全和验证技术感兴趣的人，用三个小时讨论一件事：怎么设计一套真能用起来的验证流程。
         </p>
         <div className="ws-meta">
           <span>12 月 3 日下午 · 深圳</span>
@@ -20,8 +20,8 @@ export default function WorkshopPage() {
         <div className="ws-main">
           <section className="ws-section">
             <p className="ws-num">01</p>
-            <h2>为什么 AI 安全需要核验（verification）技术</h2>
-            <p>AI 安全上的判断，大多建立在别人给出的结论上：模型能力有多强、加了哪些防护、训练和推理跑在什么环境里。系统闭源，机器在别人的机房，评测往往只给汇总数字，外面的人没法自己量一遍。核验（verification）技术要做的就是这件事：把「相信你说的」换成「我能自己查一遍」。</p>
+            <h2>为什么 AI 安全需要验证（verification）技术</h2>
+            <p>AI 安全上的判断，大多建立在别人给出的结论上：模型能力有多强、加了哪些防护、训练和推理跑在什么环境里。系统闭源，机器在别人的机房，评测往往只给汇总数字，外面的人没法自己量一遍。验证（verification）技术要做的就是这件事：把「相信你说的」换成「我能自己查一遍」。</p>
             <p>最公开的一类结论，是各家自己发布的安全文件。过去三年，Anthropic、OpenAI、Google DeepMind 各发了一份，写清能力到什么水平、必须先做到哪些防护：</p>
             <ul>
               <li>
@@ -50,7 +50,7 @@ export default function WorkshopPage() {
             </p>
             <p>
               承诺本身还会改。2026 年 2 月，Anthropic 发布 RSP 第三版，
-              <a href="https://www.ithome.com/0/923/451.htm" target="_blank" rel="noopener noreferrer">删去了「防护不足就不训练、不发布模型」这条核心承诺</a>；据《时代》对该公司首席科学官的采访，理由是对手推进太快、单方面约束不合理。怎么改是它自己的判断，但改之前那一版有没有兑现，时间一长就更难查，核验要在当时做，而且要留下材料。
+              <a href="https://www.ithome.com/0/923/451.htm" target="_blank" rel="noopener noreferrer">删去了「防护不足就不训练、不发布模型」这条核心承诺</a>；据《时代》对该公司首席科学官的采访，理由是对手推进太快、单方面约束不合理。怎么改是它自己的判断，但改之前那一版有没有兑现，时间一长就更难查，验证要在当时做，而且要留下材料。
             </p>
             <p>
               国内走的是另一条路：算法备案、安全评估、内容标识。全国网络安全标准化技术委员会（全国网安标委）2026 年 9 月 14 日发布的
@@ -70,22 +70,31 @@ export default function WorkshopPage() {
 
           <section className="ws-section">
             <p className="ws-num">02</p>
-            <h2>那天下午怎么过</h2>
+            <h2>验证要满足什么</h2>
             <p>
-              第一个小时，请三到四位做过验收测试、集群运维、远程证明（remote attestation）的工程师各讲十分钟上下，说自己怎么做、哪一步会卡住。后面两个小时一起讨论三件事：
+              验证有两方：证明方和外部验证方。证明方有商业机密，所以验证要在自己的环境里完成，外部读不到原始数据，只拿到结论。但结论必须能被外部独立复核，靠的是硬件背书（TEE 出的远程证明报告），不是证明方自己的声明。
             </p>
             <ul>
-              <li>验收当天留下的材料，一年后还剩多少，在谁手里</li>
-              <li>哪些检查现在做不到，是技术上做不了，还是没人负责做</li>
-              <li>同一套基准隔几个月重跑，性能数字一般会差多少</li>
+              <li>角色和信任根：证明方只负责生成证据，判定在外部；外部凭什么信，要落到可信执行环境和厂商证书链上</li>
+              <li>开销：取证要轻到不影响日常运转，哪些检查是常数开销、哪些必须占机时，要分开算</li>
+              <li>覆盖：抽查数据中心一小部分，就要能对整个数据中心给出保证。前提是配置和镜像一致，并且留了一份可核对的清单；异构集群和动态调度下，抽样能覆盖到哪里要说清楚</li>
+              <li>可复现、可留存：别人按同样步骤能重算出同样结论；一年后材料还在，还取得回</li>
             </ul>
+          </section>
+
+          <section className="ws-section">
+            <p className="ws-num">03</p>
+            <h2>那天下午怎么过</h2>
+            <p>
+              第一个小时，请三到四位做过验收测试、集群运维、远程证明（remote attestation）的工程师各讲十分钟上下，说自己怎么做、哪一步会卡住。后面两个小时按上面四条逐条讨论：这套流程在技术上怎么设计，哪一条现在做不到，是技术上做不了，还是没人负责做。
+            </p>
             <p>
               结束时我们带走两张清单：一张记下现有材料里哪些能支撑事后核对，一张记下哪些检查现在补不上。会后公开这两张清单的不指名版本，只写方法和缺口。
             </p>
           </section>
 
           <section className="ws-section">
-            <p className="ws-num">03</p>
+            <p className="ws-num">04</p>
             <h2>适合谁来</h2>
             <p>
               更适合做过验收测试、集群调度、远程证明（remote attestation）、日志完整性的工程师，也欢迎买方负责算力项目审核的同行，这些材料最后要由你们拿去核对。
@@ -94,7 +103,7 @@ export default function WorkshopPage() {
           </section>
 
           <section className="ws-section">
-            <p className="ws-num">04</p>
+            <p className="ws-num">05</p>
             <h2>谁办的</h2>
             <p>
               由 AI 安全中文社区 OCASC 发起，是 muShenzhen 当天的共创活动之一，场地由 muShenzhen 提供。发起人 Sarah，在牛津大学马丁学院做 AI 安全技术治理方向的研究。
@@ -169,7 +178,7 @@ export default function WorkshopPage() {
           />
         </div>
         <div className="ws-forward-txt">
-          <p className="ws-num">05</p>
+          <p className="ws-num">06</p>
           <h2>想转给同事</h2>
           <p>把这张图转给相关的工程师就行，上面有二维码和报名地址；转发时不用另外解释。</p>
           <a className="ws-dl" href="/workshop/poster.jpg" download="ai-verification-1203-poster.jpg">
