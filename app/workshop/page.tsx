@@ -21,22 +21,22 @@ export default function WorkshopPage() {
           <section className="ws-section">
             <p className="ws-num">01</p>
             <h2>为什么需要核验</h2>
-            <p>过去三年，Anthropic、OpenAI、Google DeepMind 陆续把「能力到什么水平、必须先加什么防护」写成公开文件：</p>
+            <p>过去三年，Anthropic、OpenAI、Google DeepMind 各发了一份文件，写清能力到什么水平、必须先做到哪些防护：</p>
             <ul>
               <li>
                 Anthropic 的
                 <a href="https://www.secrss.com/articles/87619" target="_blank" rel="noopener noreferrer">负责任扩展政策（RSP）</a>
-                ，现在到 3.4 版
+                ：能力分档，每一档写明必须做到的防护
               </li>
               <li>
                 OpenAI 的
                 <a href="https://www.ithome.com/0/845/524.htm" target="_blank" rel="noopener noreferrer">准备框架（Preparedness Framework）</a>
-                ，2025 年的第二版
+                ：先定评估方法和上线门槛，再按能力分档报告
               </li>
               <li>
                 Google DeepMind 的
                 <a href="https://www.thepaper.cn/newsDetail_forward_31665820" target="_blank" rel="noopener noreferrer">前沿安全框架（Frontier Safety Framework）</a>
-                ，2026 年升到 3.1
+                ：能力阈值对应到具体的安全措施
               </li>
             </ul>
             <p>
@@ -57,8 +57,14 @@ export default function WorkshopPage() {
               ，比上一版更细地写了风险分类分级和对应技术措施。路径不同，落到同一件事：写下来的要求，事后能不能核对。
             </p>
             <p>
-              OCASC 这两年在中文社区办过评测复现和算力核查的讨论，每次卡在同一处：材料在谁手里，一年后还拿不拿得出来。这次就从一间机房开始。
+              OCASC 这两年在中文社区办过评测复现和算力核查的讨论，每次卡在同一处：材料在谁手里，一年后还拿不拿得出来。这次就从一间机房开始，核的是四样东西：
             </p>
+            <ul>
+              <li>机器是不是验收时那一批：型号、序列号、加速卡数量、卡间互联的拓扑，和验收记录逐项对</li>
+              <li>环境有没有被动过：固件、驱动、启动配置的版本，以及 TEE 出的远程证明（remote attestation）报告</li>
+              <li>跑的东西有没有换：镜像和权重的哈希、集群调度配置、日志是否连续完整</li>
+              <li>性能还是不是当初那个水平：同一套基准重跑，偏差落在什么范围</li>
+            </ul>
           </section>
 
           <section className="ws-section">
