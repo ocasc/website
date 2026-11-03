@@ -125,6 +125,17 @@
   margin: 0 0 12px;
 }
 
+.ws-section a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid var(--home-line-strong);
+}
+
+.ws-section a:hover {
+  border-bottom-color: var(--home-crimson);
+  color: var(--home-crimson);
+}
+
 .ws-section ul {
   margin: 0 0 12px;
   padding-left: 22px;

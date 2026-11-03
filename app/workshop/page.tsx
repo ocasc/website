@@ -23,10 +23,20 @@ export default function WorkshopPage() {
       <section className="ws-section">
         <h2>为什么会有这场讨论</h2>
         <p>
-          这几年 AI 安全的承诺写得越来越多：不用某类数据、训练不超过某个算力、评测结果要能复现。承诺写下来容易，难的是过一段时间，谁来核对它有没有被兑现。
+          这几个名字在国内的讨论里出现得不多，先交代背景。2023 年 9 月，Anthropic 第一个把「能力到什么水平就必须加什么防护」写成公开文件，叫
+          <a href="https://www.secrss.com/articles/63015" target="_blank" rel="noopener noreferrer">负责任扩展政策（Responsible Scaling Policy）</a>；同年 12 月，OpenAI 发布
+          <a href="https://www.ithome.com/0/845/524.htm" target="_blank" rel="noopener noreferrer">准备框架（Preparedness Framework）</a>，规定发布模型前怎么评风险；2024 年 5 月，Google DeepMind 推出
+          <a href="https://www.ithome.com/0/769/655.htm" target="_blank" rel="noopener noreferrer">前沿安全框架（Frontier Safety Framework）</a>。</p>
+        <p>
+          同月首尔峰会上，
+          <a href="https://www.chinanews.com.cn/cj/2024/05-23/10222198.shtml" target="_blank" rel="noopener noreferrer">16 家公司联署「前沿 AI 安全承诺」</a>，中国的智谱 AI 也在内。承诺里有一条是：基于安全框架，说明自己怎么衡量模型风险。
         </p>
         <p>
-          OCASC 这两年在中文社区做讲座和课程，也办过评测复现和算力核查的讨论。每次聊到最后都会卡在同一处：材料在谁手里，一年后还拿不拿得出来。所以我们不再泛泛地谈，挑最小的一层开始——一间机房，验收合格、钱也付完之后，怎么核对里面的机器还是当初验收的那批。
+          国内走的路径不太一样，主要是算法备案、安全评估和内容标识，
+          <a href="https://www.cac.gov.cn/2025-09/15/c_1759653448369123.htm" target="_blank" rel="noopener noreferrer">《人工智能安全治理框架》2.0 版</a>把风险分级和对应的技术措施写得更细。形式不同，但两边最后都要落到同一个问题上：写下来的东西，过一段时间怎么核对。
+        </p>
+        <p>
+          承诺里说的都是可核对的事：不使用某类数据、训练不超过某个算力、评测结果要能复现。可谁来核、拿什么核？OCASC 这两年在中文社区办过评测复现和算力核查的讨论，每次都卡在同一处——材料在谁手里，一年后还拿不拿得出来。所以这次不再泛泛地谈，挑最小的一层开始：一间机房，验收合格、钱也付完之后，怎么核对里面的机器还是当初验收的那批。
         </p>
       </section>
 
