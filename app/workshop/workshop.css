@@ -348,6 +348,36 @@
   }
 }
 
+/* ---------- 中等高度（900px 级笔记本）：只收间距与字号，不动版式 ---------- */
+@media (min-width: 901px) and (max-height: 940px) {
+  .workshop-shell {
+    padding-top: 30px;
+  }
+
+  .ws-eyebrow {
+    margin-bottom: 14px;
+  }
+
+  .ws h1 {
+    font-size: clamp(30px, 4vw, 46px);
+    margin-bottom: 16px;
+  }
+
+  .ws-lead {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  .ws-hero {
+    padding-bottom: 22px;
+    margin-bottom: 24px;
+  }
+
+  .ws-card dl > div {
+    padding: 8px 0;
+  }
+}
+
 /* ---------- 矮屏（13 寸笔记本）压缩首屏，保证报名按钮在第一屏 ---------- */
 @media (min-width: 901px) and (max-height: 840px) {
   .workshop-shell {
@@ -369,8 +399,18 @@
   }
 
   .ws-hero {
-    padding-bottom: 24px;
-    margin-bottom: 28px;
+    padding-bottom: 18px;
+    margin-bottom: 20px;
+  }
+
+  .workshop-shell {
+    padding-top: 24px;
+  }
+
+  .ws-lead {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 12px;
   }
 
   .ws-card {
