@@ -4,11 +4,11 @@
   background: var(--home-bg);
   color: var(--home-ink);
   min-height: 100vh;
-  padding: 56px 24px 80px;
+  padding: 52px 24px 80px;
 }
 
 .ws {
-  max-width: 620px;
+  max-width: 640px;
   margin: 0 auto;
 }
 
@@ -16,32 +16,56 @@
   color: var(--home-crimson);
   font-size: 11px;
   font-weight: 750;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  margin: 0 0 18px;
+  letter-spacing: 0.18em;
+  margin: 0 0 16px;
 }
 
 .ws h1 {
-  font-size: clamp(30px, 5vw, 44px);
-  line-height: 1.15;
-  letter-spacing: -0.01em;
+  font-size: clamp(26px, 4vw, 34px);
+  line-height: 1.35;
+  letter-spacing: -0.005em;
   font-weight: 800;
-  margin: 0 0 20px;
+  margin: 0 0 24px;
 }
 
-.ws h1 span {
-  display: block;
-  margin-top: 12px;
-  font-size: 15px;
-  font-weight: 550;
-  letter-spacing: 0;
-  color: var(--home-muted);
+/* ---------- 信息条：活动页的第一眼，不是文章开头 ---------- */
+.ws-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border-top: 1px solid var(--home-line-strong);
+  border-bottom: 1px solid var(--home-line-strong);
+  margin: 0 0 26px;
 }
 
-.ws-lead {
-  font-size: 17px;
-  line-height: 1.75;
-  margin: 0 0 28px;
+.ws-meta span {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--home-ink);
+}
+
+.ws-meta span:nth-child(odd) {
+  padding-right: 18px;
+}
+
+.ws-meta span:nth-child(even) {
+  padding-left: 18px;
+  border-left: 1px solid var(--home-line);
+}
+
+.ws-meta span:nth-child(n + 3) {
+  border-top: 1px solid var(--home-line);
+}
+
+.ws-meta b {
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.14em;
+  color: var(--home-muted3);
 }
 
 .ws-cta {
@@ -49,8 +73,13 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 10px;
-  padding-bottom: 34px;
-  border-bottom: 1px solid var(--home-line-strong);
+  margin: 0 0 40px;
+}
+
+.ws-cta-bottom {
+  margin: 44px 0 0;
+  padding-top: 30px;
+  border-top: 1px solid var(--home-line-strong);
 }
 
 .ws-btn {
@@ -59,9 +88,9 @@
   border: 1px solid var(--home-ink);
   color: #fff;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 650;
-  padding: 13px 22px;
+  padding: 14px 24px;
   border-radius: 2px;
 }
 
@@ -73,24 +102,25 @@
 .ws-note {
   color: var(--home-muted2);
   font-size: 13.5px;
+  line-height: 1.6;
 }
 
+/* ---------- 正文：四段，别写成文章 ---------- */
 .ws-section {
-  padding: 34px 0 0;
+  padding: 26px 0 0;
 }
 
 .ws-section h2 {
-  font-size: 19px;
+  font-size: 16px;
   font-weight: 800;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.06em;
+  color: var(--home-crimson);
   margin: 0 0 12px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid var(--home-line);
 }
 
 .ws-section p {
   font-size: 15.5px;
-  line-height: 1.85;
+  line-height: 1.9;
   color: var(--home-muted2);
   margin: 0 0 12px;
 }
@@ -104,13 +134,20 @@
 .ws-section li {
   display: list-item;
   font-size: 15.5px;
-  line-height: 1.85;
+  line-height: 1.9;
   color: var(--home-muted2);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
+/* ---------- 海报：只出现一次，作为转发的物料 ---------- */
 .ws-poster {
-  margin: 44px 0 0;
+  margin: 48px 0 0;
+}
+
+.ws-poster-cap {
+  font-size: 13px;
+  color: var(--home-muted3);
+  margin: 0 0 12px;
 }
 
 .ws-poster img {
@@ -125,7 +162,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 16px;
-  margin-top: 32px;
+  margin-top: 36px;
   padding-top: 18px;
   border-top: 1px solid var(--home-line-strong);
   font-size: 13px;
@@ -140,13 +177,24 @@
 
 @media (max-width: 640px) {
   .workshop-shell {
-    padding: 32px 18px 56px;
+    padding: 30px 18px 56px;
   }
-  .ws-lead {
-    font-size: 16px;
+  .ws-meta {
+    grid-template-columns: 1fr;
+  }
+  .ws-meta span:nth-child(even) {
+    padding-left: 0;
+    border-left: none;
+  }
+  .ws-meta span:nth-child(n + 2) {
+    border-top: 1px solid var(--home-line);
   }
   .ws-section p,
   .ws-section li {
     font-size: 15px;
+  }
+  .ws-btn {
+    width: 100%;
+    text-align: center;
   }
 }
