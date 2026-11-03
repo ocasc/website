@@ -20,8 +20,9 @@ export default function WorkshopPage() {
         <div className="ws-main">
           <section className="ws-section">
             <p className="ws-num">01</p>
-            <h2>为什么需要核验</h2>
-            <p>过去三年，Anthropic、OpenAI、Google DeepMind 各发了一份文件，写清能力到什么水平、必须先做到哪些防护：</p>
+            <h2>为什么 AI 安全需要核验（verification）技术</h2>
+            <p>AI 安全上的判断，大多建立在别人给出的结论上：模型能力有多强、加了哪些防护、训练和推理跑在什么环境里。系统闭源，机器在别人的机房，评测往往只给汇总数字，外面的人没法自己量一遍。核验（verification）技术要做的就是这件事：把「相信你说的」换成「我能自己查一遍」。</p>
+            <p>最公开的一类结论，是各家自己发布的安全文件。过去三年，Anthropic、OpenAI、Google DeepMind 各发了一份，写清能力到什么水平、必须先做到哪些防护：</p>
             <ul>
               <li>
                 Anthropic 的
