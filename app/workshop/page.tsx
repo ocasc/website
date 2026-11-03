@@ -23,7 +23,7 @@ export default function WorkshopPage() {
       <section className="ws-section">
         <h2>为什么会有这场讨论</h2>
         <p>
-          这几份文件在国内的讨论里出现得不多，先交代背景。过去三年，几家海外实验室陆续把「能力到什么水平、必须先加什么防护」写成公开文件：Anthropic 的
+          过去三年，几家海外实验室陆续把「能力到什么水平、必须先加什么防护」写成公开文件：Anthropic 的
           <a href="https://www.secrss.com/articles/87619" target="_blank" rel="noopener noreferrer">负责任扩展政策（Responsible Scaling Policy）</a>，2023 年 9 月第一版，现在到 3.4 版（2026 年 7 月生效）；OpenAI 的
           <a href="https://www.ithome.com/0/845/524.htm" target="_blank" rel="noopener noreferrer">准备框架（Preparedness Framework）</a>，2025 年 4 月的第二版；Google DeepMind 的
           <a href="https://www.thepaper.cn/newsDetail_forward_31665820" target="_blank" rel="noopener noreferrer">前沿安全框架（Frontier Safety Framework）</a>，2025 年 9 月第三版，2026 年 4 月升到 3.1。
@@ -64,10 +64,10 @@ export default function WorkshopPage() {
       <section className="ws-section">
         <h2>适合谁来</h2>
         <p>
-          二十人左右，凭报名入场。适合做过验收测试、跑过集群调度、做远程证明和日志完整的工程师，也包括买方那边负责算力项目审核的人——你要拿材料去举证，这件事跟你直接有关。
+          二十人左右，凭报名入场。更适合做过验收测试、跑过集群调度、做远程证明和日志完整的工程师，也包括买方那边负责算力项目审核的人——你要拿材料去举证，这件事跟你直接有关。
         </p>
         <p>
-          不适合想找合作、想招人、或者只想听一遍 AI 安全概览的朋友。名额有限，请确认那天下午真的能腾出三个小时再报名。
+          名额有限，请确认那天下午真的能腾出三个小时。带着一个具体的卡点来，讨论会更值。
         </p>
       </section>
 
