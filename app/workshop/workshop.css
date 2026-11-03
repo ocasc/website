@@ -1,0 +1,152 @@
+/* 12 月 3 日 深圳工作坊落地页 —— 沿用首页令牌（globals.css 里的 --home-*） */
+
+.workshop-shell {
+  background: var(--home-bg);
+  color: var(--home-ink);
+  min-height: 100vh;
+  padding: 56px 24px 80px;
+}
+
+.ws {
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.ws-eyebrow {
+  color: var(--home-crimson);
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin: 0 0 18px;
+}
+
+.ws h1 {
+  font-size: clamp(30px, 5vw, 44px);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  font-weight: 800;
+  margin: 0 0 20px;
+}
+
+.ws h1 span {
+  display: block;
+  margin-top: 12px;
+  font-size: 15px;
+  font-weight: 550;
+  letter-spacing: 0;
+  color: var(--home-muted);
+}
+
+.ws-lead {
+  font-size: 17px;
+  line-height: 1.75;
+  margin: 0 0 28px;
+}
+
+.ws-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding-bottom: 34px;
+  border-bottom: 1px solid var(--home-line-strong);
+}
+
+.ws-btn {
+  display: inline-block;
+  background: var(--home-ink);
+  border: 1px solid var(--home-ink);
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 650;
+  padding: 13px 22px;
+  border-radius: 2px;
+}
+
+.ws-btn:hover {
+  background: #000;
+  border-color: #000;
+}
+
+.ws-note {
+  color: var(--home-muted2);
+  font-size: 13.5px;
+}
+
+.ws-section {
+  padding: 34px 0 0;
+}
+
+.ws-section h2 {
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  margin: 0 0 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--home-line);
+}
+
+.ws-section p {
+  font-size: 15.5px;
+  line-height: 1.85;
+  color: var(--home-muted2);
+  margin: 0 0 12px;
+}
+
+.ws-section ul {
+  margin: 0 0 12px;
+  padding-left: 22px;
+  list-style: disc outside;
+}
+
+.ws-section li {
+  display: list-item;
+  font-size: 15.5px;
+  line-height: 1.85;
+  color: var(--home-muted2);
+  margin-bottom: 8px;
+}
+
+.ws-poster {
+  margin: 44px 0 0;
+}
+
+.ws-poster img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--home-line);
+}
+
+.ws-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-top: 32px;
+  padding-top: 18px;
+  border-top: 1px solid var(--home-line-strong);
+  font-size: 13px;
+  color: var(--home-muted3);
+}
+
+.ws-foot a {
+  color: var(--home-ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--home-line-strong);
+}
+
+@media (max-width: 640px) {
+  .workshop-shell {
+    padding: 32px 18px 56px;
+  }
+  .ws-lead {
+    font-size: 16px;
+  }
+  .ws-section p,
+  .ws-section li {
+    font-size: 15px;
+  }
+}
