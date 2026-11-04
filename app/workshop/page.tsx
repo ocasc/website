@@ -21,18 +21,18 @@ export default function WorkshopPage() {
           <section className="ws-section">
             <p className="ws-num">01</p>
             <h2>为什么 AI 安全需要验证（verification）技术</h2>
-            <p>AI 安全上的判断，大多建立在别人给出的结论上：模型能力有多强、加了哪些防护、训练和推理跑在什么环境里。系统闭源，机器在别人的机房，评测往往只给汇总数字，外面的人没法自己量一遍。验证（verification）技术要做的就是这件事：把「相信你说的」换成「我能自己查一遍」。</p>
+            <p>AI 安全上的判断，大多建立在别人给出的结论上：模型能力有多强、加了哪些防护、训练和推理跑在什么环境里。系统闭源，机器在别人的机房，评测往往只给汇总数字，外面的人没法自己量一遍。验证（verification）技术要做的就是把「相信你说的」换成「我能自己查一遍」。</p>
             <p>最公开的一类结论，是各家自己发布的安全文件。过去三年，Anthropic、OpenAI、Google DeepMind 各发了一份，写清能力到什么水平、必须先做到哪些防护。</p>
             <ul>
               <li>
                 Anthropic 的
                 <a href="https://www.secrss.com/articles/87619" target="_blank" rel="noopener noreferrer">负责任扩展政策（RSP）</a>
-                按能力分档，每一档写明必须做到的防护
+                按能力分档，每一档写明要做的防护措施
               </li>
               <li>
                 OpenAI 的
                 <a href="https://www.ithome.com/0/845/524.htm" target="_blank" rel="noopener noreferrer">准备框架（Preparedness Framework）</a>
-                先定评估方法和上线门槛，再按能力分档报告
+                先定评估方法和上线门槛，再按能力分档写报告
               </li>
               <li>
                 Google DeepMind 的
@@ -41,7 +41,7 @@ export default function WorkshopPage() {
               </li>
             </ul>
             <p>
-              判断由公司自己做，执行由公司自己监督，外部能看到的只有公开发出来的文件。所以「承诺有没有兑现」，读文件回答不了，要看能不能拿到可核对的东西，比如评测记录、训练和推理在什么环境里、配置什么时候改过。
+              这些判断由公司自己做，执行也由自己监督，外部能看到的只有公开发出来的文件。所以「承诺有没有兑现」，读文件回答不了，要看能不能拿到可核对的东西，比如评测记录、训练和推理在什么环境里、配置什么时候改过。
             </p>
             <p>
               2024 年 5 月首尔峰会上，首批
@@ -55,7 +55,7 @@ export default function WorkshopPage() {
             <p>
               国内走的是另一条路，算法备案、安全评估、内容标识。全国网络安全标准化技术委员会（全国网安标委）2026 年 9 月 14 日发布的
               <a href="https://www.cac.gov.cn/2026-09/14/c_1791137092283345.htm" target="_blank" rel="noopener noreferrer">《人工智能安全治理框架》3.0</a>
-              ，比上一版更细地写了风险分类分级和对应技术措施。路径不同，落到同一件事：写下来的要求，事后能不能核对。
+              ，比上一版更细地写了风险分类分级和对应技术措施。两条路最后卡在同一个问题上：写下来的要求，事后能不能核对。
             </p>
             <p>
               OCASC 这两年在中文社区办过评测复现和算力核查的讨论，每次卡在同一处，材料在谁手里，一年后还拿不拿得出来。这次从一间机房开始，一样一样核。
