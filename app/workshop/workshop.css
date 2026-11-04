@@ -73,7 +73,7 @@
   display: grid;
   grid-template-columns: minmax(0, 1fr) 320px;
   gap: 0 64px;
-  align-items: start;
+  align-items: stretch;
 }
 
 .ws-main {
@@ -155,14 +155,14 @@
 
 /* ---------- 右栏卡片 ---------- */
 .ws-rail {
-  position: sticky;
-  top: 40px;
   display: flex;
   flex-direction: column;
   gap: 28px;
 }
 
 .ws-card {
+  position: sticky;
+  top: 28px;
   background: #fff;
   border: 1px solid var(--home-line-strong);
   padding: 20px 20px 22px;
