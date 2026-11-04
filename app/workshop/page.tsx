@@ -172,26 +172,6 @@ export default function WorkshopPage() {
         </aside>
       </div>
 
-      <section className="ws-forward">
-        <div className="ws-forward-img">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/workshop/poster.jpg"
-            alt="AI 安全承诺核验 · 12 月 3 日 深圳 嘉宾招募海报"
-            width={900}
-            height={1660}
-          />
-        </div>
-        <div className="ws-forward-txt">
-          <p className="ws-num">06</p>
-          <h2>想转给同事</h2>
-          <p>把这张图转给相关的工程师就行，上面有二维码和报名地址；转发时不用另外解释。</p>
-          <a className="ws-dl" href="/workshop/poster.jpg" download="ai-verification-1203-poster.jpg">
-            下载海报原图 ↗
-          </a>
-        </div>
-      </section>
-
       <footer className="ws-foot">
         <span>AI 安全中文社区 OCASC · muShenzhen</span>
         <a href={SIGNUP} target="_blank" rel="noopener noreferrer">
