@@ -80,6 +80,11 @@ export default function WorkshopPage() {
               <li>覆盖：抽查数据中心一小部分，就要能对整个数据中心给出保证。前提是配置和镜像一致，并且留了一份可核对的清单；异构集群和动态调度下，抽样能覆盖到哪里要说清楚</li>
               <li>可复现、可留存：别人按同样步骤能重算出同样结论；一年后材料还在，还取得回</li>
             </ul>
+            <p>
+              软件这条路也在往前走。Anthropic 11 月开源了一个可验证推理（provable inference）的原型
+              <a href="https://www.anthropic.com/research/provable-inference" target="_blank" rel="noopener noreferrer">FlashProve</a>
+              ：模型方附一份零知识证明，外部只拿结论就能确认这条回复出自所声称的模型，证明不泄露权重。代价是生成证明要用 70–95 倍的推理算力，验证那一端很便宜。这条和上面「开销」那一条是同一件事的两面。
+            </p>
           </section>
 
           <section className="ws-section">
