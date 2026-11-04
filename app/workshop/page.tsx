@@ -166,7 +166,7 @@ export default function WorkshopPage() {
             <a className="ws-btn" href={SIGNUP} target="_blank" rel="noopener noreferrer">
               填写报名表
             </a>
-            <p className="ws-note">报名截止 11 月 17 日，坐满即止。我们会用微信跟你确认。</p>
+            <p className="ws-note">报名截止 11 月 17 日，坐满即止，我们用微信确认。</p>
           </div>
 
         </aside>
