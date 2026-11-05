@@ -4,7 +4,12 @@ export default function WorkshopPage() {
   return (
     <main className="ws">
       <header className="ws-hero">
-        <p className="ws-eyebrow">OCASC 小范围技术讨论 · 深圳</p>
+        <div className="ws-eyebrow-row">
+          <p className="ws-eyebrow">OCASC 小范围技术讨论 · 深圳</p>
+          <a className="ws-lang" href="/workshop/en" hrefLang="en">
+            EN
+          </a>
+        </div>
         <h1>AI 安全承诺核验</h1>
         <p className="ws-en">Verifying AI Safety Commitments</p>
         <p className="ws-lead">

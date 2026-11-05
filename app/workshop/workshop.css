@@ -13,12 +13,41 @@
 }
 
 /* ---------- 首屏 ---------- */
+.ws-eyebrow-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 0 0 20px;
+}
+
 .ws-eyebrow {
   color: var(--home-crimson);
   font-size: 11px;
   font-weight: 750;
   letter-spacing: 0.18em;
-  margin: 0 0 20px;
+  margin: 0;
+}
+
+.ws-lang {
+  flex: none;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  min-height: 26px;
+  padding: 6px 10px;
+  border: 1px solid var(--home-line-strong);
+  color: var(--home-ink);
+  text-decoration: none;
+}
+
+.ws-lang:hover {
+  background: var(--home-ink);
+  color: #fff;
+  border-color: var(--home-ink);
 }
 
 .ws h1 {
@@ -174,7 +203,7 @@
 
 .ws-card dl > div {
   display: grid;
-  grid-template-columns: 44px minmax(0, 1fr);
+  grid-template-columns: minmax(44px, auto) minmax(0, 1fr);
   gap: 4px 12px;
   padding: 10px 0;
   border-bottom: 1px solid var(--home-line);
