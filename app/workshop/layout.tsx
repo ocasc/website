@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: "AI 安全承诺核验 · 12 月 3 日 深圳",
     description:
       "一次小范围技术讨论：机房验收之后，怎么核对机器还是当初那批。",
-    images: ["/workshop/poster.jpg"],
+    images: [{ url: "/workshop/og-zh.png", width: 1200, height: 630 }],
   },
 };
 

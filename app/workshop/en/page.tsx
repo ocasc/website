@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: "Verifying AI Safety Commitments · 3 December, Shenzhen",
     description:
       "A small technical workshop: after acceptance, how do you check the machines are still the ones you paid for?",
-    images: ["/workshop/poster.jpg"],
+    images: [{ url: "/workshop/og-en.png", width: 1200, height: 630 }],
   },
 };
 
