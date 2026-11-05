@@ -32,7 +32,7 @@ export default function WorkshopPageEn() {
           discuss a single question: what would a verification process look like that actually works?
         </p>
         <div className="ws-meta">
-          <span>3 December, afternoon · Shenzhen</span>
+          <span>18:00–21:00, 3 December · Shenzhen</span>
           <span>OCASC × muShenzhen</span>
         </div>
       </header>
@@ -177,7 +177,7 @@ export default function WorkshopPageEn() {
 
           <section className="ws-section">
             <p className="ws-num">03</p>
-            <h2>How the afternoon runs</h2>
+            <h2>How the evening runs</h2>
             <p>
               In the first hour, three or four engineers who have done acceptance testing, cluster
               operations or remote attestation each speak for about ten minutes: how they do it, where it
@@ -227,15 +227,15 @@ export default function WorkshopPageEn() {
               <div>
                 <dt>Time</dt>
                 <dd>
-                  3 December, afternoon, three hours
-                  <span>exact times sent after registration</span>
+                  18:00–21:00, 3 December
+                  <span>three hours, in the evening</span>
                 </dd>
               </div>
               <div>
                 <dt>Place</dt>
                 <dd>
                   Shenzhen
-                  <span>venue sent after registration</span>
+                  <span>venue holds 40–60 people; location sent after registration</span>
                 </dd>
               </div>
               <div>

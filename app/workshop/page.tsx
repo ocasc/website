@@ -16,7 +16,7 @@ export default function WorkshopPage() {
           我们想请一批对 AI 安全和验证技术感兴趣的人，用三个小时讨论一件事：怎么设计一套真能用起来的验证流程。
         </p>
         <div className="ws-meta">
-          <span>12 月 3 日下午 · 深圳</span>
+          <span>12 月 3 日 18:00–21:00 · 深圳</span>
           <span>OCASC × muShenzhen</span>
         </div>
       </header>
@@ -94,7 +94,7 @@ export default function WorkshopPage() {
 
           <section className="ws-section">
             <p className="ws-num">03</p>
-            <h2>那天下午怎么过</h2>
+            <h2>那天晚上怎么过</h2>
             <p>
               第一个小时，请三到四位做过验收测试、集群运维、远程证明（remote attestation）的工程师各讲十分钟上下，说自己怎么做、哪一步会卡住。后面两个小时按上面四条逐条讨论，这套流程在技术上怎么设计，哪一条现在做不到，是技术上做不了，还是没人负责做。
             </p>
@@ -109,7 +109,7 @@ export default function WorkshopPage() {
             <p>
               更适合做过验收测试、集群调度、远程证明（remote attestation）、日志完整性的工程师，也欢迎买方负责算力项目审核的同行，这些材料最后要由你们拿去核对。
             </p>
-            <p>名额有限，请确认那天下午真的能腾出三个小时。带着一个你实际遇到的卡点来，讨论会更有收获。</p>
+            <p>名额有限，请确认那天晚上真的能腾出三个小时。带着一个你实际遇到的卡点来，讨论会更有收获。</p>
           </section>
 
           <section className="ws-section">
@@ -128,15 +128,15 @@ export default function WorkshopPage() {
               <div>
                 <dt>时间</dt>
                 <dd>
-                  12 月 3 日下午，三小时
-                  <span>起止时间报名后告知</span>
+                  12 月 3 日 18:00–21:00
+                  <span>晚上，三小时</span>
                 </dd>
               </div>
               <div>
                 <dt>地点</dt>
                 <dd>
                   深圳
-                  <span>具体场地报名后告知</span>
+                  <span>场地可容纳 40–60 人，具体位置报名后告知</span>
                 </dd>
               </div>
               <div>
