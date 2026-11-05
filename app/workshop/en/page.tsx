@@ -112,10 +112,9 @@ export default function WorkshopPageEn() {
               was written down be checked afterwards?
             </p>
             <p>
-              Over the past two years OCASC has run discussions in the Chinese-language community on
-              reproducing evaluations and on checking compute. Each one stalled in the same place: who holds
-              the material, and whether it can still be produced a year later. This time we start with one
-              datacenter and go through it item by item.
+              Over the past two years OCASC has been doing field building in the Chinese-language AI safety
+              community: running events and connecting the people who work on it. This time we want the
+              discussion to land on something concrete. One datacenter, checked item by item.
             </p>
             <ul>
               <li>
