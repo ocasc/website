@@ -116,7 +116,7 @@ export default function WorkshopPage() {
             <p className="ws-num">05</p>
             <h2>谁办的</h2>
             <p>
-              由 AI 安全中文社区 OCASC 发起，是 muShenzhen 当天的共创活动之一，场地由 muShenzhen 提供。发起人 Sarah，在牛津大学马丁学院做 AI 安全技术治理方向的研究。
+              由 AI 安全中文社区 OCASC 发起，是 muShenzhen 当天的共创活动之一，场地由 muShenzhen 提供。AI Safety Node（Ecomonitor，今年 5 月 muShanghai AI Week 中 AI Security Day 的组织方）共同组织。发起人 Sarah，在牛津大学马丁学院做 AI 安全技术治理方向的研究。
             </p>
             <p>需要一份活动说明用于单位内部报备的，在报名表里注明，我们单独发给你。</p>
           </section>

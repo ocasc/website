@@ -211,8 +211,9 @@ export default function WorkshopPageEn() {
             <h2>Who runs it</h2>
             <p>
               Initiated by OCASC, the Chinese-language AI safety community, as one of the muShenzhen
-              co-creation events that day; muShenzhen provides the venue. Convened by Sarah, who researches
-              technical AI safety governance at the Oxford Martin School.
+              co-creation events that day; muShenzhen provides the venue. AI Safety Node (Ecomonitor), the
+              group behind AI Security Day at muShanghai AI Week in May, co-organises. Convened by Sarah,
+              who researches technical AI safety governance at the Oxford Martin School.
             </p>
             <p>
               If you need a written description for internal approval, say so in the sign-up form and we
