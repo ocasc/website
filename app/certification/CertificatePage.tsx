@@ -1,11 +1,9 @@
 'use client'
 
-import { useMemo } from 'react'
-import { useSearchParams } from 'next/navigation'
 import CertificateCard from './_components/CertificateCard'
 import VerificationPanel from './_components/VerificationPanel'
 import OcascLogo from './_components/OcascLogo'
-import { findCertificate } from './_data/certificates'
+import type { CertificateRecord } from './_data/certificates'
 
 function Header() {
   return (
@@ -58,11 +56,10 @@ function NotFound({ id }: { id: string }) {
   )
 }
 
-export default function CertificatePage() {
-  const searchParams = useSearchParams()
-  const rawId = searchParams.get('id')
-  const record = useMemo(() => findCertificate(rawId), [rawId])
-
+export default function CertificatePage({ rawId, record }: {
+  rawId: string | null
+  record: CertificateRecord | undefined
+}) {
   return (
     <div className="min-h-screen bg-[#0a0e1a] text-slate-200 flex flex-col print:bg-white">
       <Header />
@@ -75,7 +72,11 @@ export default function CertificatePage() {
             <CertificateCard record={record} />
             <VerificationPanel record={record} />
           </div>
-        ) : null}
+        ) : (
+          <p className="text-center text-sm text-slate-400 mt-24">
+            请使用完整的个人证书链接查看证书。
+          </p>
+        )}
       </main>
 
       <footer className="relative z-10 border-t border-white/10 print:hidden">

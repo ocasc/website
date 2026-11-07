@@ -1,5 +1,3 @@
-import studentsData from './students.json'
-
 export type Track = 'technical' | 'governance'
 
 export interface CertificateRecord {
@@ -16,10 +14,6 @@ export interface CertificateRecord {
   /** 签发日期（ISO） */
   issuedAt: string
 }
-
-/** 本期统一属性：期次与签发日期（新一期开课时在这里改） */
-const COHORT = '第一期'
-const ISSUED_AT = '2026-09-07'
 
 /** 说明段开头（两个方向共用），后接各方向的 descZh / descEn */
 export const INTRO_ZH =
@@ -48,31 +42,6 @@ export const TRACK_INFO: Record<
     descEn:
       'The earner has systematically studied the development and safety landscape of frontier AI, the foundations of governance and related policies, evaluated the goals and pathways of different approaches, and explored challenges including rapid AI development, open versus closed model weights, and international governance. The earner has identified a personal entry point for work in the field, building connections with mentors and AI safety communities in China and around the world.',
   },
-}
-
-interface StudentEntry {
-  id: string
-  nameZh: string
-  nameEn?: string
-  track: Track
-}
-
-/**
- * 证书登记簿：学员名单在 src/data/students.json（已被 .gitignore 排除，方便直接修改）。
- * 生产环境可替换为后端接口或 Airtable 查询，页面逻辑保持不变：通过 URL 参数 ?id= 检索记录。
- */
-export const CERTIFICATES: CertificateRecord[] = (studentsData as StudentEntry[]).map((s) => ({
-  id: s.id,
-  nameZh: s.nameZh,
-  nameEn: s.nameEn,
-  track: s.track,
-  cohort: COHORT,
-  issuedAt: ISSUED_AT,
-}))
-
-export function findCertificate(id: string | null): CertificateRecord | undefined {
-  if (!id) return CERTIFICATES[0]
-  return CERTIFICATES.find((c) => c.id.toLowerCase() === id.trim().toLowerCase())
 }
 
 export function formatDateZh(iso: string): string {
