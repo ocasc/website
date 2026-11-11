@@ -33,7 +33,7 @@ export default function WorkshopPageEn() {
         </p>
         <div className="ws-meta">
           <span>18:00–21:00, 3 December · Shenzhen</span>
-          <span>OCASC × muShenzhen</span>
+          <span>OCASC × AI Safety Node × muShenzhen</span>
         </div>
       </header>
 
@@ -280,7 +280,7 @@ export default function WorkshopPageEn() {
       </div>
 
       <footer className="ws-foot">
-        <span>OCASC · muShenzhen</span>
+        <span>OCASC · AI Safety Node · muShenzhen</span>
         <a href={SIGNUP} target="_blank" rel="noopener noreferrer">
           Sign-up form ↗
         </a>

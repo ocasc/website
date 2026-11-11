@@ -17,7 +17,7 @@ export default function WorkshopPage() {
         </p>
         <div className="ws-meta">
           <span>12 月 3 日 18:00–21:00 · 深圳</span>
-          <span>OCASC × muShenzhen</span>
+          <span>OCASC × AI Safety Node × muShenzhen</span>
         </div>
       </header>
 
@@ -178,7 +178,7 @@ export default function WorkshopPage() {
       </div>
 
       <footer className="ws-foot">
-        <span>AI 安全中文社区 OCASC · muShenzhen</span>
+        <span>AI 安全中文社区 OCASC · AI Safety Node · muShenzhen</span>
         <a href={SIGNUP} target="_blank" rel="noopener noreferrer">
           报名表 ↗
         </a>
