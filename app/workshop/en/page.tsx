@@ -179,11 +179,10 @@ export default function WorkshopPageEn() {
             <p className="ws-num">03</p>
             <h2>How the evening runs</h2>
             <p>
-              In the first hour, three or four engineers who have done acceptance testing, cluster
-              operations or remote attestation each speak for about ten minutes: how they do it, where it
-              gets stuck. The remaining two hours go through the four points above one by one. How would
-              such a process be designed? Which one cannot be met today, and is that a technical limit or
-              nobody&apos;s job?
+              In the first hour, three engineers each speak for twenty minutes, one of them joining
+              remotely: how they do it, where it gets stuck. The remaining two hours go through the four
+              points above one by one. How would such a process be designed? Which one cannot be met today,
+              and is that a technical limit or nobody&apos;s job?
             </p>
             <p>
               We leave with two lists: which material that exists today can support a later check, and which
@@ -198,7 +197,9 @@ export default function WorkshopPageEn() {
             <p>
               Engineers who have worked on acceptance testing, cluster scheduling, remote attestation or log
               integrity, and colleagues on the buyer side who audit compute projects. This material ends up
-              in your hands to check.
+              in your hands to check. People working on zero-knowledge proofs or verifiable computation are
+              welcome too: letting an outsider confirm a conclusion without raw data is the step this room
+              has the least practice with.
             </p>
             <p>
               Seats are limited, so please make sure you can give the full three hours. Bring a problem you
@@ -243,7 +244,7 @@ export default function WorkshopPageEn() {
                 <dt>Size</dt>
                 <dd>
                   about 20 attendees
-                  <span>3–4 talks, 6–8 in the roundtable</span>
+                  <span>3 talks (1 remote), 6–8 in the roundtable</span>
                 </dd>
               </div>
               <div>
@@ -256,7 +257,7 @@ export default function WorkshopPageEn() {
               <div>
                 <dt>Format</dt>
                 <dd>
-                  in person only, by registration
+                  in the room, one speaker remote, by registration
                   <span>no recording, no external reporting, no playback</span>
                 </dd>
               </div>
