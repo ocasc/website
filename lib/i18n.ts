@@ -259,7 +259,7 @@ export interface Translations {
 export const translations: Record<Language, Translations> = {
   zh: {
     nav: {
-      siteName: 'AI安全中文社区',
+      siteName: 'AI安全开放社区',
       events: '活动',
       resources: '资源',
       about: '关于我们',
@@ -277,7 +277,7 @@ export const translations: Record<Language, Translations> = {
     },
     stats: {
       coreTeam: { value: '20+', label: '核心共创成员' },
-      community: { value: '700+', label: '社群成员' },
+      community: { value: '600+', label: '社群成员' },
       reach: { value: '10,000+', label: '泛社区覆盖' },
     },
 
@@ -288,7 +288,7 @@ export const translations: Record<Language, Translations> = {
         titleLine1: 'AI',
         titleLine2: '',
         titleAccent: '安全',
-        titleTail: '中文社区',
+        titleTail: '开放社区',
         lede: '一个面向中文读者的专业网络：定期举办讲座与论文研读，开设共学课程，也组织线下聚会。成员包括研究者、工程师、产业从业者，以及政策与法律背景的朋友。',
         metaAffiliate: '国际安全与伦理人工智能协会（IASEAI）成员机构',
         metaMid: '线上为主',
@@ -360,7 +360,7 @@ export const translations: Record<Language, Translations> = {
         wechat: '公众号',
         email: '联系邮箱',
         site: 'aisafety-cn.com',
-        copyright: '© 2026 北京安澜奇点科技有限公司 · AI安全中文社区（OCASC）',
+        copyright: '© 2026 北京安澜奇点科技有限公司 · AI安全开放社区（OCASC）',
       },
       qr: {
         title: '关注公众号，自动收到入群方式',
@@ -583,7 +583,7 @@ export const translations: Record<Language, Translations> = {
       },
     },
     join: {
-      title: '加入AI安全中文社区',
+      title: '加入AI安全开放社区',
       description: '填写表单加入我们的社区，获取最新的AI安全资讯和活动通知。',
       button: '加入社区',
       note: '我们会尽快与你取得联系。',
@@ -591,7 +591,7 @@ export const translations: Record<Language, Translations> = {
     about: {
       title: '关注我们',
       description:
-        'AI安全中文社区（Open Community for AI Safety China）关注 AI 风险、AI 安全技术及 AI 安全治理等前沿话题，力图通过交流与合作促进 AI 的安全可持续发展。社区以微信群为核心，并在多个平台同步更新动态。机构合作或意见反馈，可通过邮件或各平台私信联系。',
+        'AI安全开放社区（Open Community for AI Safety China）关注 AI 风险、AI 安全技术及 AI 安全治理等前沿话题，力图通过交流与合作促进 AI 的安全可持续发展。社区以微信群为核心，并在多个平台同步更新动态。机构合作或意见反馈，可通过邮件或各平台私信联系。',
       contact: {
         bilibili: 'Bilibili',
         circle: '知乎圈子',
@@ -608,7 +608,7 @@ export const translations: Record<Language, Translations> = {
     aboutPage: {
       hero: {
         title: '关于我们',
-        description: 'AI安全中文社区（OCASC）由一群关注AI安全的研究者和爱好者共同创立，致力于在中国构建高质量的AI安全知识生态，推动AI的安全可持续发展。',
+        description: 'AI安全开放社区（OCASC）由一群关注AI安全的研究者和爱好者共同创立，致力于在中国构建高质量的AI安全知识生态，推动AI的安全可持续发展。',
       },
       lead: {
         label: '负责人',
@@ -627,7 +627,7 @@ export const translations: Record<Language, Translations> = {
       story: {
         title: '我们的故事',
         paragraphs: [
-          'AI安全中文社区（Open Community for AI Safety China，OCASC）起初是一个小型学习小组，由一群对AI安全充满热情的研究者和爱好者共同创立。我们不定期阅读和讨论国际前沿AI安全研究，随着越来越多志同道合的朋友加入，社区逐渐壮大。',
+          'AI安全开放社区（Open Community for AI Safety China，OCASC）起初是一个小型学习小组，由一群对AI安全充满热情的研究者和爱好者共同创立。我们不定期阅读和讨论国际前沿AI安全研究，随着越来越多志同道合的朋友加入，社区逐渐壮大。',
           '我们的使命是通过改善前沿AI安全研究的获取渠道、促进技术交流与讨论、建立与国际AI安全网络的连接，在中国构建一个开放、高质量的AI安全生态系统。',
           '目前，社区以微信群为核心，并在Bilibili、知乎、LinkedIn、GitHub等多个平台同步运营，累计覆盖超过10,000名关注者，核心共创成员超过20人，社群成员超过600人。',
         ],
@@ -685,7 +685,7 @@ export const translations: Record<Language, Translations> = {
     },
     stats: {
       coreTeam: { value: '20+', label: 'Core Team' },
-      community: { value: '700+', label: 'Members' },
+      community: { value: '600+', label: 'Members' },
       reach: { value: '10,000+', label: 'Extended Reach' },
     },
 
