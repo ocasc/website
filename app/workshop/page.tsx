@@ -1,4 +1,6 @@
-const SIGNUP = "https://wj.qq.com/s2/28235369/w9ei/";
+import { IcpNotice } from "@/components/icp-notice";
+
+const SIGNUP = "https://luma.com/hamj9ow5";
 
 export default function WorkshopPage() {
   return (
@@ -96,8 +98,15 @@ export default function WorkshopPage() {
             <p className="ws-num">03</p>
             <h2>那天晚上怎么过</h2>
             <p>
-              第一个小时，请三位工程师各讲二十分钟，其中一位远程接入。他们做过验收测试、集群运维或远程证明（remote attestation），说自己怎么做、哪一步会卡住。后面两个小时按上面四条逐条讨论，这套流程在技术上怎么设计，哪一条现在做不到，是技术上做不了，还是没人负责做。
+              晚上将安排嘉宾分享和圆桌讨论。嘉宾将结合公开资料、研究成果和技术实践，讨论验证方法与难点；随后围绕上面四条展开讨论，交流这套流程在技术上如何设计，以及现有检查有哪些限制。具体议程将根据讲者安排更新。
             </p>
+            <p>已确认分享嘉宾：</p>
+            <ul>
+              <li>孙圆圆（Sarah Sun）｜牛津大学马丁学院 AI 治理计划（AIGI）技术治理组研究成员；国际安全与伦理人工智能协会（IASEAI）成员机构活动工作组联合主席</li>
+              <li>Pascal Berrang｜新加坡 AI 安全中心（SASH）AI 验证技术负责人；伯明翰大学副教授，远程分享</li>
+              <li>Wen Fong｜Phala，TEE</li>
+            </ul>
+            <p>其他分享嘉宾待确认。</p>
             <p>
               结束时带走两张清单，一张记下现有材料里哪些能支撑事后核对，一张记下哪些检查现在补不上。会后公开这两张清单的不指名版本，只写方法和缺口。
             </p>
@@ -143,14 +152,7 @@ export default function WorkshopPage() {
                 <dt>规模</dt>
                 <dd>
                   听众二十人左右
-                  <span>分享 3 位（1 位远程），圆桌共 6–8 位</span>
-                </dd>
-              </div>
-              <div>
-                <dt>语言</dt>
-                <dd>
-                  中文进行
-                  <span>专有名词用英文原词</span>
+                  <span>嘉宾分享与圆桌讨论，部分讲者远程</span>
                 </dd>
               </div>
               <div>
@@ -171,7 +173,7 @@ export default function WorkshopPage() {
             <a className="ws-btn" href={SIGNUP} target="_blank" rel="noopener noreferrer">
               填写报名表
             </a>
-            <p className="ws-note">报名截止 11 月 17 日，坐满即止，我们用微信确认。</p>
+            <p className="ws-note">报名需经主办方审核，具体地点报名后告知。</p>
           </div>
 
         </aside>
@@ -182,6 +184,7 @@ export default function WorkshopPage() {
         <a href={SIGNUP} target="_blank" rel="noopener noreferrer">
           报名表 ↗
         </a>
+        <IcpNotice />
       </footer>
     </main>
   );

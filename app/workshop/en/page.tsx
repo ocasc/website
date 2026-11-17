@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import { IcpNotice } from "@/components/icp-notice";
 
-const SIGNUP = "https://wj.qq.com/s2/28235369/w9ei/";
+const SIGNUP = "https://luma.com/hamj9ow5";
 
 export const metadata: Metadata = {
   title: "Verifying AI Safety Commitments · 3 December, Shenzhen",
@@ -179,11 +180,18 @@ export default function WorkshopPageEn() {
             <p className="ws-num">03</p>
             <h2>How the evening runs</h2>
             <p>
-              In the first hour, three engineers each speak for twenty minutes, one of them joining
-              remotely: how they do it, where it gets stuck. The remaining two hours go through the four
-              points above one by one. How would such a process be designed? Which one cannot be met today,
-              and is that a technical limit or nobody&apos;s job?
+              The evening will include guest talks followed by a roundtable. Speakers will draw on public
+              materials, research and technical practice to discuss verification methods and their limits.
+              The discussion will return to the four points above. The detailed programme will be updated
+              as speakers are confirmed.
             </p>
+            <p>Confirmed speakers:</p>
+            <ul>
+              <li>Sarah Sun | Research Affiliate, Oxford Martin AI Governance Initiative, technical governance team; Co-chair, Affiliate Programming Working Group, IASEAI</li>
+              <li>Pascal Berrang | Tech Lead for AI Verification, Singapore AI Safety Hub (SASH); Associate Professor, University of Birmingham. Joining remotely.</li>
+              <li>Wen Fong | Phala, trusted execution environments (TEEs)</li>
+            </ul>
+            <p>Further speakers to be confirmed.</p>
             <p>
               We leave with two lists: which material that exists today can support a later check, and which
               checks cannot be filled in yet. An unattributed version of both lists is published afterwards,
@@ -244,14 +252,7 @@ export default function WorkshopPageEn() {
                 <dt>Size</dt>
                 <dd>
                   about 20 attendees
-                  <span>3 talks (1 remote), 6–8 in the roundtable</span>
-                </dd>
-              </div>
-              <div>
-                <dt>Language</dt>
-                <dd>
-                  Chinese
-                  <span>technical terms kept in English</span>
+                  <span>guest talks and a roundtable; some speakers join remotely</span>
                 </dd>
               </div>
               <div>
@@ -273,7 +274,7 @@ export default function WorkshopPageEn() {
               Sign up
             </a>
             <p className="ws-note">
-              Registration closes 17 November, first come first served, confirmed on WeChat.
+              Registration requires host approval; the precise location is shared after registration.
             </p>
           </div>
         </aside>
@@ -284,6 +285,7 @@ export default function WorkshopPageEn() {
         <a href={SIGNUP} target="_blank" rel="noopener noreferrer">
           Sign-up form ↗
         </a>
+        <IcpNotice />
       </footer>
     </main>
   );
