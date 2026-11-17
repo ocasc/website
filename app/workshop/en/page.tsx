@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { IcpNotice } from "@/components/icp-notice";
 
-const SIGNUP = "https://luma.com/hamj9ow5";
+const SIGNUP = "https://wj.qq.com/s2/28235369/w9ei/";
 
 export const metadata: Metadata = {
   title: "Verifying AI Safety Commitments · 3 December, Shenzhen",
@@ -274,7 +274,7 @@ export default function WorkshopPageEn() {
               Sign up
             </a>
             <p className="ws-note">
-              Registration requires host approval; the precise location is shared after registration.
+              We will contact you on WeChat after registration and share the precise location.
             </p>
           </div>
         </aside>

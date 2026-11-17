@@ -1,6 +1,6 @@
 import { IcpNotice } from "@/components/icp-notice";
 
-const SIGNUP = "https://luma.com/hamj9ow5";
+const SIGNUP = "https://wj.qq.com/s2/28235369/w9ei/";
 
 export default function WorkshopPage() {
   return (
@@ -173,7 +173,7 @@ export default function WorkshopPage() {
             <a className="ws-btn" href={SIGNUP} target="_blank" rel="noopener noreferrer">
               填写报名表
             </a>
-            <p className="ws-note">报名需经主办方审核，具体地点报名后告知。</p>
+            <p className="ws-note">报名后我们会通过微信联系，具体地点随后告知。</p>
           </div>
 
         </aside>
