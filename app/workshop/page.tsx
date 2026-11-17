@@ -158,7 +158,7 @@ export default function WorkshopPage() {
               <div>
                 <dt>形式</dt>
                 <dd>
-                  以现场为主，一位讲者远程，凭报名入场
+                  以现场为主，部分嘉宾远程接入，凭报名入场
                   <span>不录像、不对外转述、不设回放</span>
                 </dd>
               </div>

@@ -258,7 +258,7 @@ export default function WorkshopPageEn() {
               <div>
                 <dt>Format</dt>
                 <dd>
-                  in the room, one speaker remote, by registration
+                  primarily in person, with some speakers joining remotely; registration required
                   <span>no recording, no external reporting, no playback</span>
                 </dd>
               </div>
