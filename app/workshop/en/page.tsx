@@ -189,7 +189,7 @@ export default function WorkshopPageEn() {
             <ul>
               <li>Sarah Sun | Research Affiliate, Oxford Martin AI Governance Initiative, technical governance team; Co-chair, Affiliate Programming Working Group, IASEAI</li>
               <li>Pascal Berrang | Tech Lead for AI Verification, Singapore AI Safety Hub (SASH); Associate Professor, University of Birmingham. Joining remotely.</li>
-              <li>Wen Fong | Phala, trusted execution environments (TEEs)</li>
+              <li>Wen Feng Wang | Phala, trusted execution environments (TEEs)</li>
             </ul>
             <p>Further speakers to be confirmed.</p>
             <p>

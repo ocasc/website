@@ -104,7 +104,7 @@ export default function WorkshopPage() {
             <ul>
               <li>孙圆圆（Sarah Sun）｜牛津大学马丁学院 AI 治理计划（AIGI）技术治理组研究成员；国际安全与伦理人工智能协会（IASEAI）成员机构活动工作组联合主席</li>
               <li>Pascal Berrang｜新加坡 AI 安全中心（SASH）AI 验证技术负责人；伯明翰大学副教授，远程分享</li>
-              <li>Wen Fong｜Phala，TEE</li>
+              <li>Wen Feng Wang｜Phala，TEE</li>
             </ul>
             <p>其他分享嘉宾待确认。</p>
             <p>
