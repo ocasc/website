@@ -1,6 +1,6 @@
 import { IcpNotice } from "@/components/icp-notice";
 
-const SIGNUP = "https://wj.qq.com/s2/28235369/w9ei/";
+const SIGNUP = "https://luma.com/hamj9ow5";
 
 export default function WorkshopPage() {
   return (
