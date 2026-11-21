@@ -41,6 +41,18 @@ export default function WorkshopPageEn() {
       <div className="ws-grid">
         <div className="ws-main">
           <section className="ws-section">
+            <h2>Why attend?</h2>
+            <p>Through the guest talks and roundtable, you can:</p>
+            <ul>
+              <li>Explore verification methods in China and internationally, including what evidence they can provide and their limits</li>
+              <li>Meet researchers, engineers and founders in related fields, and bring a concrete problem from your work</li>
+              <li>Discuss which verification challenges might become products or startup ideas, and who might need them</li>
+              <li>Consider how compute records, remote attestation or reproducible evaluations could be used in your work</li>
+            </ul>
+            <p>After the workshop, we will publish two unattributed checklists drawn from the discussion.</p>
+          </section>
+
+          <section className="ws-section">
             <p className="ws-num">01</p>
             <h2>Why AI safety needs verification</h2>
             <p>
@@ -233,6 +245,9 @@ export default function WorkshopPageEn() {
 
         <aside className="ws-rail">
           <div className="ws-card">
+            <a className="ws-btn" href={SIGNUP} target="_blank" rel="noopener noreferrer" style={{ marginBottom: 20 }}>
+              Sign up
+            </a>
             <dl>
               <div>
                 <dt>Time</dt>
@@ -266,13 +281,10 @@ export default function WorkshopPageEn() {
                 <dt>Ticket</dt>
                 <dd>
                   speakers covered by the organisers
-                  <span>attendees buy the day pass</span>
+                  <span>attendees normally buy a day pass; those with especially relevant backgrounds may apply for organiser support, confirmed via WeChat</span>
                 </dd>
               </div>
             </dl>
-            <a className="ws-btn" href={SIGNUP} target="_blank" rel="noopener noreferrer">
-              Sign up
-            </a>
             <p className="ws-note">
               We will contact you on WeChat after registration and share the precise location.
             </p>

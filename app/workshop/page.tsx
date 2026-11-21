@@ -26,6 +26,18 @@ export default function WorkshopPage() {
       <div className="ws-grid">
         <div className="ws-main">
           <section className="ws-section">
+            <h2>为什么参加？</h2>
+            <p>在嘉宾分享和圆桌讨论中，你可以：</p>
+            <ul>
+              <li>了解国内外正在探索的验证方法，讨论它们能提供哪些证据、还有哪些局限</li>
+              <li>与相关领域的研究者、工程师和创业者交流，带上工作中遇到的具体问题</li>
+              <li>探讨哪些验证难题可能发展成产品或创业方向，以及谁会需要这样的工具</li>
+              <li>讨论算力记录、远程证明或评测复现如何用于自己的工作</li>
+            </ul>
+            <p>会后我们会整理并公开两张不指名的讨论清单。</p>
+          </section>
+
+          <section className="ws-section">
             <p className="ws-num">01</p>
             <h2>为什么 AI 安全需要验证（verification）技术</h2>
             <p>AI 安全上的判断，大多建立在别人给出的结论上：模型能力有多强、加了哪些防护、训练和推理跑在什么环境里。系统闭源，机器在别人的机房，评测往往只给汇总数字，外面的人没法自己量一遍。验证（verification）技术要做的，就是让外面的人能自己查一遍。</p>
@@ -133,6 +145,9 @@ export default function WorkshopPage() {
 
         <aside className="ws-rail">
           <div className="ws-card">
+            <a className="ws-btn" href={SIGNUP} target="_blank" rel="noopener noreferrer" style={{ marginBottom: 20 }}>
+              填写报名表
+            </a>
             <dl>
               <div>
                 <dt>时间</dt>
@@ -166,13 +181,10 @@ export default function WorkshopPage() {
                 <dt>门票</dt>
                 <dd>
                   嘉宾由主办方承担
-                  <span>听众自购当天通行证</span>
+                  <span>听众通常自购当天通行证；背景与讨论特别相关者可申请主办方承担，通过微信确认</span>
                 </dd>
               </div>
             </dl>
-            <a className="ws-btn" href={SIGNUP} target="_blank" rel="noopener noreferrer">
-              填写报名表
-            </a>
             <p className="ws-note">报名后我们会通过微信联系，具体地点随后告知。</p>
           </div>
 
