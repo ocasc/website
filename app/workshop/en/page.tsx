@@ -45,7 +45,7 @@ export default function WorkshopPageEn() {
             <p>Through the guest talks and roundtable, you can:</p>
             <ul>
               <li>Explore verification methods in China and internationally, including what evidence they can provide and their limits</li>
-              <li>Meet researchers, engineers and founders in related fields, and bring a concrete problem from your work</li>
+              <li>Connect with speakers in China and abroad and with peers in related fields; bring a concrete problem from your work</li>
               <li>Discuss which verification challenges might become products or startup ideas, and who might need them</li>
               <li>Consider how compute records, remote attestation or reproducible evaluations could be used in your work</li>
             </ul>
