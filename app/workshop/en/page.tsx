@@ -280,8 +280,8 @@ export default function WorkshopPageEn() {
               <div>
                 <dt>Ticket</dt>
                 <dd>
-                  20 complimentary community passes
-                  <span>Prioritised for attendees whose backgrounds are closely related to the discussion, with arrangements confirmed via WeChat after registration review. Other attendees normally buy a day pass; speakers are covered by the organisers.</span>
+                  Complimentary passes available
+                  <span>Describe your relevant technical background clearly in the registration form. We will confirm arrangements via WeChat after review. Other attendees normally buy a day pass; speakers are covered by the organisers.</span>
                 </dd>
               </div>
             </dl>
