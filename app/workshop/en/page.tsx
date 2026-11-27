@@ -260,7 +260,7 @@ export default function WorkshopPageEn() {
                 <dt>Place</dt>
                 <dd>
                   Shenzhen
-                  <span>venue holds 40–60 people; location sent after registration</span>
+                  <span>venue holds up to 40 people; location sent after registration</span>
                 </dd>
               </div>
               <div>
@@ -280,8 +280,8 @@ export default function WorkshopPageEn() {
               <div>
                 <dt>Ticket</dt>
                 <dd>
-                  speakers covered by the organisers
-                  <span>attendees normally buy a day pass; those with especially relevant backgrounds may apply for organiser support, confirmed via WeChat</span>
+                  20 complimentary community passes
+                  <span>Prioritised for attendees whose backgrounds are closely related to the discussion, with arrangements confirmed via WeChat after registration review. Other attendees normally buy a day pass; speakers are covered by the organisers.</span>
                 </dd>
               </div>
             </dl>

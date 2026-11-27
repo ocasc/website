@@ -160,7 +160,7 @@ export default function WorkshopPage() {
                 <dt>地点</dt>
                 <dd>
                   深圳
-                  <span>场地可容纳 40–60 人，具体位置报名后告知</span>
+                  <span>场地最多容纳 40 人，具体位置报名后告知</span>
                 </dd>
               </div>
               <div>
@@ -180,8 +180,8 @@ export default function WorkshopPage() {
               <div>
                 <dt>门票</dt>
                 <dd>
-                  嘉宾由主办方承担
-                  <span>听众通常自购当天通行证；背景与讨论特别相关者可申请主办方承担，通过微信确认</span>
+                  20 张免费社区通行证
+                  <span>优先提供给背景与讨论议题密切相关的参与者，报名审核后通过微信确认。其他听众通常需自购当天通行证；分享嘉宾由主办方承担。</span>
                 </dd>
               </div>
             </dl>
